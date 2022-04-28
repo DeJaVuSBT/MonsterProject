@@ -6,6 +6,11 @@ public class AllLookAtCamera : MonoBehaviour
 {
     private Transform[] childs;
     private Camera Cam;
+    [SerializeField]
+    private Material depthShader;
+    [SerializeField]
+    private bool testShader;
+    private Material defaultShader;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +22,11 @@ public class AllLookAtCamera : MonoBehaviour
             if (childs[i].GetComponent<SpriteRenderer>())
             {
                 childs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+                if (testShader)
+                {
+                    childs[i].GetComponent<SpriteRenderer>().material = depthShader;
+                }
+                
             }
             
         }

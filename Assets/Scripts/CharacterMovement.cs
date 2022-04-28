@@ -14,7 +14,8 @@ public class CharacterMovement : MonoBehaviour
 
         [SerializeField]
         private SpriteRenderer spriteRenderer;
-
+        private float moveX, moveY;
+        private float oldX,oldY;
         private Vector3 _movement;
     private void Awake()
     {
@@ -39,20 +40,31 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        BasicMoveMentCheck();
-        AnimationCheck();
+        InputCheck();
+        Movement();
+        Animation();
     }
     private void FixedUpdate()
     {
         
     }
-    private void AnimationCheck() {
-        
+    private void Animation() {
+
+        if (moveDir != Vector3.zero)
+        {
+            animator.SetBool("IsMoving", true);
+            oldX = moveX;
+            oldY = moveY;
+        }
+        else { animator.SetBool("IsMoving", false); }
+        animator.SetFloat("InputX", oldX);
+        animator.SetFloat("InputY", oldY);
+        Debug.Log(oldX);
     }
-    private void BasicMoveMentCheck()
+    private void InputCheck()
     {
-        float moveX = 0f;
-        float moveY = 0f;
+        moveX = 0f;
+        moveY = 0f;
         if (Input.GetKey(KeyCode.W))
         {
             moveY = +1f;
@@ -64,16 +76,17 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             moveX = -1f;
-            spriteRenderer.flipX = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             moveX = +1f;
-            spriteRenderer.flipX = false;
         }
 
-        moveDir = (moveX*transform.right+ transform.up*moveY).normalized;
-       // moveDir = new Vector3 (moveDir.x, moveDir.y, 0);
+       
+    }
+    private void Movement()
+    {
+        moveDir = (moveX * transform.right + transform.up * moveY).normalized;
         rb.velocity = moveDir * moveSpeed;
     }
 }

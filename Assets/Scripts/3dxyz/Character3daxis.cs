@@ -12,6 +12,7 @@ public class Character3daxis : MonoBehaviour
     [Header("Property")]
     [SerializeField]
     private float moveSpeed = 4f;
+    [SerializeField]
     private float interactRange = 1f;
     private Vector3 moveDir;
     private float moveX, moveZ;
@@ -48,14 +49,18 @@ public class Character3daxis : MonoBehaviour
         Interact();
     }
     #region Interaction
-    private GameObject ClosedColliderAround(){
-        Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
-        Collider2D[] ColliderAround = Physics2D.OverlapCircleAll(playerPos, interactRange);
 
-        //collider2d[] includes playerobj itself
+
+    //error!
+    private GameObject ClosedColliderAround(){
+        Vector3 playerPos = transform.position;
+        Vector3 playerPosH = new Vector3(transform.position.x, 0.7f, transform.position.y);
+
+        Collider[] ColliderAround = Physics.OverlapCapsule(playerPos, playerPosH, interactRange);
+
         if (ColliderAround.Length > 1)
         {
-            Collider2D Closest = null;
+            Collider Closest = null;
             for (int i = 0; i < ColliderAround.Length; i++)
             {
                 if (ColliderAround[i].gameObject==this.gameObject)
@@ -67,7 +72,7 @@ public class Character3daxis : MonoBehaviour
                     Closest = ColliderAround[i];
                     continue;
                 }
-                if (Vector2.Distance(playerPos, new Vector2(Closest.transform.position.x, Closest.transform.position.y)) > Vector2.Distance(playerPos, new Vector2(ColliderAround[i].transform.position.x, ColliderAround[i].transform.position.y)))
+                if (Vector3.Distance(playerPos, Closest.transform.position) > Vector3.Distance(playerPos, ColliderAround[i].transform.position))
                 {
                     Closest = ColliderAround[i];
                 }
@@ -84,6 +89,7 @@ public class Character3daxis : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 target.GetComponent<Interactable>().Interact();
+                CinematicBars.Show_Static(400, 0.3f);
             }
 
         }

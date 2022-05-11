@@ -5,47 +5,46 @@ using UnityEngine;
 public class RotatingCamera3d : MonoBehaviour
 {
     public float rotateTime = 0.2f;
-    private bool isRotating = false;
+    private bool closeCamera = false;
     [SerializeField]
     private Transform player;
     [SerializeField]
-    private Vector3 offSet= Vector2.zero;
+    private Vector3 normalOffSet= Vector2.zero;
+    [SerializeField]
+    private Vector3 closeUpOnSet= Vector2.zero;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (player==null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+            
+        }
+       // CinematicBars.Show_Static(400, 0.3f);
     }
 
     void Update()
     {
-        transform.position = player.position+ offSet;
-
-       // Rotate();
-    }
-
-    void Rotate()
-    {
-        if (Input.GetKeyDown(KeyCode.Q) && !isRotating)
+        if (closeCamera)
         {
-            StartCoroutine(RotateAround(-45, rotateTime));
+            transform.position = player.position + closeUpOnSet;
         }
-        if (Input.GetKeyDown(KeyCode.E) && !isRotating)
+        else
         {
-            StartCoroutine(RotateAround(45, rotateTime));
+            transform.position = player.position + normalOffSet;
         }
     }
 
-    IEnumerator RotateAround(float angel, float time)
+    IEnumerator CloseUpCamera()
     {
-        float number = 60 * time;
-        float nextAngel = angel / number;
-        isRotating = true;
-
-        for (int i = 0; i < number; i++)
+        //moving
+        if (closeCamera==false)
         {
-            transform.Rotate(new Vector3(0, 0, nextAngel));
+            float dis = Vector3.Distance(transform.position, closeUpOnSet);
+            if (dis > 0.1f) { 
+                
+            }
+        }
             yield return new WaitForFixedUpdate();
-        }
-
-        isRotating = false;
+        closeCamera = true;
     }
 }

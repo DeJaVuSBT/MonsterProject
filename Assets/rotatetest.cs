@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class rotatetest : MonoBehaviour
 {
-    [Range(0,1)]
+   
     public float speed = 1;
     void Start()
     {
@@ -14,7 +14,7 @@ public class rotatetest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        transform.Rotate(Vector3.up, speed);
+
+        transform.RotateAround(transform.TransformPoint(Vector3.up), transform.TransformPoint(Vector3.up), Time.deltaTime * speed);
     }
 }

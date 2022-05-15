@@ -18,10 +18,10 @@ public class Sprite2dObjHolder : MonoBehaviour
             childs[i] = transform.GetChild(i);
             if (childs[i].GetComponent<SpriteRenderer>())
             {
-                childs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+               // childs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
                 if (testShader)
                 {
-                    childs[i].GetComponent<SpriteRenderer>().material = depthShader;
+                    Preset(childs[i].GetComponent<SpriteRenderer>());
                 }
                 
             }
@@ -31,12 +31,20 @@ public class Sprite2dObjHolder : MonoBehaviour
                 {
                     if (childs[i].GetChild(j).GetComponent<SpriteRenderer>())
                     {
-                        childs[i].GetChild(j).GetComponent<SpriteRenderer>().material = depthShader;
+
+                        Preset(childs[i].GetChild(j).GetComponent<SpriteRenderer>());
                     }
                 }
             }
             
         }
+    }
+
+    void Preset(SpriteRenderer sr) { 
+        sr.material = depthShader;
+        sr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        sr.sortingOrder=(int)(sr.gameObject.transform.position.z*-200);
+       
     }
 
     // Update is called once per frame

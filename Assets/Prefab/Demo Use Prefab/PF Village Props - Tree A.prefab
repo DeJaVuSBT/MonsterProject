@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4653831799294361327}
   - component: {fileID: 2716154941165960177}
   - component: {fileID: 6205557956210004468}
-  - component: {fileID: 2585326385144566388}
+  - component: {fileID: 3976875555561111002}
   m_Layer: 0
   m_Name: PF Village Props - Tree A
   m_TagString: Untagged
@@ -133,8 +133,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &2585326385144566388
-BoxCollider:
+--- !u!136 &3976875555561111002
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,6 +143,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.78125, y: 5.03125, z: 0.2}
-  m_Center: {x: 2.390625, y: 2.515625, z: 0}
+  m_Radius: 0.19
+  m_Height: 5.03125
+  m_Direction: 1
+  m_Center: {x: 2.49, y: 2.32, z: 0}

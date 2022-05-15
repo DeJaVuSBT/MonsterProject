@@ -390,9 +390,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5df2784f78ed9a44a9be95f70ae72921, type: 2}
   - {fileID: 11400000, guid: 83cdf56263e305f47b6db2e7c483b675, type: 2}
   holder: {fileID: 40899695}
-  gridW: 100
-  gridH: 100
-  blockSize: 2
+  gridW: 50
+  gridH: 50
+  blockSize: 10
   debugTime: 20
 --- !u!114 &1192465529
 MonoBehaviour:

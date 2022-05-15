@@ -22,6 +22,8 @@ Shader "Universal Render Pipeline/Unlit Sprite"
         // [HideInInspector] _MainTex("BaseMap", 2D) = "white" {}
         // [HideInInspector] _Color("Base Color", Color) = (0.5, 0.5, 0.5, 1)
         [HideInInspector] _SampleGI("SampleGI", float) = 0.0 // needed from bakedlit
+            _Cutoff("Alpha Cutoff",Range(0,1))=0.5
+
     }
     SubShader
     {
@@ -49,7 +51,7 @@ Shader "Universal Render Pipeline/Unlit Sprite"
 
             #pragma vertex vert
             #pragma fragment frag
-            #pragma shader_feature_local_fragment _ALPHATEST_ON
+            #pragma shader_feature_local_fragment _ALPHATEST_ON _Cutoff addshadow
             #pragma shader_feature_local_fragment _ALPHAPREMULTIPLY_ON
 
             // -------------------------------------

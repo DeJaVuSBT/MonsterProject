@@ -16,4 +16,7 @@ public class MoralityBar : MonoBehaviour
     {
         slider.value -= amount / 100;
     }
+    public int GetMoralAmount() { 
+        return (int)(slider.value*100);
+    }
 }

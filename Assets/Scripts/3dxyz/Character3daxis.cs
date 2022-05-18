@@ -17,6 +17,7 @@ public class Character3daxis : MonoBehaviour
     private Vector3 moveDir;
     private float moveX, moveZ;
     private float oldX, oldZ;
+    private bool beingCatched=false;
     [Header("Interaction")]
     [SerializeField]
     private GameObject target = null;
@@ -43,10 +44,17 @@ public class Character3daxis : MonoBehaviour
 
     private void Update()
     {
-        InputCheck();
-        Movement();
-        Animation();
-        Interact();
+        if (beingCatched)
+        {
+            rb.velocity = new Vector3(0,0,0);
+        }
+        else
+        {
+            InputCheck();
+            Movement();
+            Animation();
+            Interact();
+        }
     }
     #region Interaction
 
@@ -134,5 +142,8 @@ public class Character3daxis : MonoBehaviour
     {
         moveDir = new Vector3 (moveX,0,moveZ).normalized;
         rb.velocity= moveDir * moveSpeed;
+    }
+    public void BeingCatched(bool beCatched) {
+        beingCatched = beCatched;
     }
 }

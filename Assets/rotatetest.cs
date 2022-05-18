@@ -16,5 +16,7 @@ public class rotatetest : MonoBehaviour
     {
 
         transform.RotateAround(transform.TransformPoint(Vector3.up), transform.TransformPoint(Vector3.up), Time.deltaTime * speed);
+        //transform.RotateAround(transform.up, transform.TransformPoint(Vector3.up), Time.deltaTime * speed);
+        
     }
 }

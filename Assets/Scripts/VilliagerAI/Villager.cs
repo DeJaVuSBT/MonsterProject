@@ -36,6 +36,17 @@ public class Villager : MonoBehaviour
     [SerializeField]
     private State state;
     private bool pushable=false;
+
+    private Transform attacker;     // 起始点
+    private Vector3 middlePoint;   // 中间点
+    public float heightOffSet=2f;
+    private Transform playerHeadPos;      // 终止点
+    public GameObject stonePrefab;       // 要移动的物体
+    private GameObject stone;
+
+    private float ticker = 0.0f;
+    [SerializeField]
+    private float attackTime = 0.5f;    // 假设要用2秒飞到目标点
     void Start()
     {
         startPos = transform.position;
@@ -44,11 +55,16 @@ public class Villager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         state = State.Roaming;
         moveSpeed = walkMoveSpeed;
+        attacker = this.transform.GetChild(1);
+        playerHeadPos = player.transform.GetChild(0);
+        stone = Instantiate(stonePrefab);
+        stone.SetActive(false);
     }
     private enum State { 
         Roaming,
         ChasePlayer,
         PushPlayer,
+        ThrowPlayer,
         Flee,
         StandStillAngry
     }
@@ -64,8 +80,8 @@ public class Villager : MonoBehaviour
             case State.ChasePlayer:
                 ChasePlayer();
                 break;
-            case State.PushPlayer:
-                PushPlayer();
+            case State.ThrowPlayer:
+                ThrowPlayer();
                 break;
             case State.Flee:
                 Flee();
@@ -73,6 +89,34 @@ public class Villager : MonoBehaviour
             case State.StandStillAngry:
                 Vigilant();
                 break;
+        }
+    }
+
+    private void ThrowPlayer()
+    {
+        stone.SetActive(true);
+        ticker += Time.deltaTime;
+        float t = ticker / attackTime;  
+        t = Mathf.Clamp(t, 0.0f, 1.0f);
+        Vector3 p1 = attacker.position;
+        Vector3 p3 = playerHeadPos.position;
+        middlePoint = (p3 - p1) / 2 + p1 + new Vector3(0, heightOffSet, 0);
+        Vector3 p2 = middlePoint;
+        Vector3 currPos = ThrowCurve.GetCurvePoint(p1, p2, p3, t);
+        
+        stone.transform.position = currPos;
+ 
+
+
+        if (t == 1.0f)
+        {
+            Vector3 currPos1 = ThrowCurve.GetCurvePoint(p1, p2, p3, t);
+            Vector3 currPos2 = ThrowCurve.GetCurvePoint(p1, p2, p3, t-0.1f);
+            Vector3 stoneEndVelocity = 10 * (currPos1 - currPos2);
+            stone.GetComponent<Rigidbody>().velocity = stoneEndVelocity;
+
+            ticker = 0;
+            state = State.Flee;
         }
     }
 
@@ -84,11 +128,11 @@ public class Villager : MonoBehaviour
     void SensePlayer() {
         if (Vector3.Distance(transform.position,player.transform.position)< senseRange)
         {
-            if (mBar.GetMoralAmount()<=25)
+            if (mBar.GetMoralAmount()<=50)
             {
                 state = State.ChasePlayer;
             }
-            else if (mBar.GetMoralAmount() > 25&& mBar.GetMoralAmount() <= 75)
+            else if (mBar.GetMoralAmount() > 50&& mBar.GetMoralAmount() <= 75)
             {
                 state = State.Flee;
             }
@@ -104,18 +148,18 @@ public class Villager : MonoBehaviour
     void ChasePlayer()
     {
 
-        if (Vector3.Distance(transform.position, player.transform.position) < 1f)
+        if (Vector3.Distance(transform.position, player.transform.position) < 3f)
         {
-            moveSpeed = pushMoveSpeed;
-            if (pushable)
-            {
-                state = State.PushPlayer;
-            }
+            rb.velocity = Vector3.zero ;
+         //   if (pushable)
+          //  {
+                state = State.ThrowPlayer;
+         //   }
             
-            else
-            {
-                MoveTo(player.transform.position);
-            }
+         //   else
+          //  {
+             //   MoveTo(player.transform.position);
+          //  }
         }
         else
         {
@@ -127,10 +171,13 @@ public class Villager : MonoBehaviour
     private void PushPlayer() {
 
         player.transform.position -= pushDis * -GetDirXZ(player.transform.position);
+
+
+
         state = State.Flee;
     }
     
-
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag=="Player")
@@ -138,7 +185,7 @@ public class Villager : MonoBehaviour
             pushable = true;
         }
     }
-
+    */
     void Roaming() {
         MoveTo(roamingDestination);
         if (Vector3.Distance(transform.position, roamingDestination) <0.2f)
@@ -153,6 +200,7 @@ public class Villager : MonoBehaviour
         moveSpeed = runMoveSpeed;
         if (Vector3.Distance(transform.position, player.transform.position) > safeDis)
         {
+            stone.SetActive(false);
             moveSpeed = walkMoveSpeed;
             roamingDestination = GetRoamingPos();
             state = State.Roaming;

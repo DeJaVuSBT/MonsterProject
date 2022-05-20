@@ -52,7 +52,7 @@ public class Character3daxis : MonoBehaviour
         {
             InputCheck();
             Movement();
-            Animation();
+         //   Animation();
             Interact();
         }
     }
@@ -103,6 +103,7 @@ public class Character3daxis : MonoBehaviour
         }
     }
     #endregion
+    /*
     private void Animation() {
 
         if (moveDir != Vector3.zero)
@@ -115,6 +116,7 @@ public class Character3daxis : MonoBehaviour
         animator.SetFloat("InputX", oldX);
         animator.SetFloat("InputY", oldZ);
     }
+    */
     private void InputCheck()
     {
         moveX = 0f;

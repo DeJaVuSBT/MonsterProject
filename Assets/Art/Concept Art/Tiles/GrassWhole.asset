@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562dc3ed3f91a3044b90be1169fb616c, type: 3}
+  m_Name: GrassWhole
+  m_EditorClassIdentifier: 
+  nameString: GrassWhole
+  prefab: {fileID: 3646665529252981325, guid: 16dae9e99c24dfa4fbed6ee86d744118, type: 3}
+  visual: {fileID: 3646665529252981325, guid: 16dae9e99c24dfa4fbed6ee86d744118, type: 3}
+  width: 1
+  height: 1

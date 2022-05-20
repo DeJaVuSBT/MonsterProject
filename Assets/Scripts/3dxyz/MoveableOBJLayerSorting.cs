@@ -15,10 +15,12 @@ public class MoveableOBJLayerSorting : MonoBehaviour
             if (list[i].GetComponent<SpriteRenderer>())
             {
                 renderers.Add(list[i].GetComponent<SpriteRenderer>());
+                list[i].GetComponent<SpriteRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             }
             else
             {
                 renderers.Add(list[i].transform.GetChild(0).GetComponent<SpriteRenderer>());
+                list[i].transform.GetChild(0).GetComponent<SpriteRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             }
             
         }

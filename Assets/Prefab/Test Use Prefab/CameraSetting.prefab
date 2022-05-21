@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateTime: 0.2
-  player: {fileID: 0}
+  player: {fileID: 6706191492569437941, guid: e2043b07c04cc4b4fbf434ceb0863b9f, type: 3}
   normalOffSet: {x: 0, y: 4, z: -2}
   closeUpOnSet: {x: 0, y: 0, z: 0}
 --- !u!1 &1255118004936090319

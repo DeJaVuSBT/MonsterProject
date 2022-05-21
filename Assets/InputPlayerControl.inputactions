@@ -1,0 +1,114 @@
+{
+    "name": "InputPlayerControl",
+    "maps": [
+        {
+            "name": "Input",
+            "id": "cf72adef-a266-4f62-9855-8d8ec22e302e",
+            "actions": [
+                {
+                    "name": "JoyStickLeft",
+                    "type": "Button",
+                    "id": "b4f81b1d-70f8-4d6e-a455-680734d62c4b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoyStickRight",
+                    "type": "Button",
+                    "id": "4365e3e9-dbd4-4897-b33d-1b271060d55b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoyStickUp",
+                    "type": "Button",
+                    "id": "67c0e2d4-c07d-49bb-9fec-eff34801f11c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoyStickDown",
+                    "type": "Button",
+                    "id": "5661a76f-8fef-4673-82a0-d93f754fe9ec",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpeceButtonPress",
+                    "type": "Button",
+                    "id": "a4c87c5e-ebcf-42e1-96c8-4185cd9587b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e61bdb3c-0529-43b2-bacb-f5f23b9e0dd3",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoyStickLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ec96098-a435-49c3-8576-43b053ac03f4",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoyStickRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbff1835-24be-4d8c-b849-17067e39bab3",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoyStickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e06de742-c702-4aa1-869b-bed4f917c84c",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoyStickDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "510f6e78-eff6-43a9-8c3a-cf13e6191017",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeceButtonPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

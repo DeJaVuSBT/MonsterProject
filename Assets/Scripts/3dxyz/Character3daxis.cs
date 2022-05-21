@@ -21,6 +21,11 @@ public class Character3daxis : MonoBehaviour
     [Header("Interaction")]
     [SerializeField]
     private GameObject target = null;
+
+    //input
+    InputPlayerControl playerInput;
+    bool interactButton = false;
+
     private void Awake()
     {
         if (!rb)
@@ -39,6 +44,7 @@ public class Character3daxis : MonoBehaviour
 
             animator = GetComponent<Animator>();
         }
+        playerInput= new InputPlayerControl();
 
     }
 
@@ -50,7 +56,7 @@ public class Character3daxis : MonoBehaviour
         }
         else
         {
-            InputCheck();
+            InPut();
             Movement();
          //   Animation();
             Interact();
@@ -94,7 +100,7 @@ public class Character3daxis : MonoBehaviour
         target = ClosedColliderAround();
         if (target != null&& target.GetComponent<Interactable>()!=null)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (interactButton)
             {
                 target.GetComponent<Interactable>().Interact();
                 CinematicBars.Show_Static(400, 0.3f);
@@ -117,6 +123,31 @@ public class Character3daxis : MonoBehaviour
         animator.SetFloat("InputY", oldZ);
     }
     */
+
+    private void InPut() {
+        playerInput.Input.JoyStickUp.performed += ctx => moveZ = 1;
+        playerInput.Input.JoyStickDown.performed += ctx => moveZ = -1;
+        playerInput.Input.JoyStickLeft.performed += ctx => moveX = -1;
+        playerInput.Input.JoyStickRight.performed += ctx => moveX = 1;
+        playerInput.Input.SpeceButtonPress.performed += ctx => interactButton = true;
+
+        Debug.Log(moveZ);
+        Debug.Log(moveX);
+        playerInput.Input.JoyStickUp.canceled += ctx => moveZ = 0;
+        playerInput.Input.JoyStickDown.canceled += ctx => moveZ = 0;
+        playerInput.Input.JoyStickLeft.canceled += ctx => moveX = 0;
+        playerInput.Input.JoyStickRight.canceled += ctx => moveX = 0;
+        playerInput.Input.SpeceButtonPress.canceled += ctx => interactButton = false;
+    }
+    private void OnEnable()
+    {
+        playerInput.Input.Enable();
+    }
+    private void OnDisable()
+    {
+        playerInput.Input.Disable();
+    }
+    /*
     private void InputCheck()
     {
         moveX = 0f;
@@ -140,6 +171,7 @@ public class Character3daxis : MonoBehaviour
 
        
     }
+    */
     private void Movement()
     {
         moveDir = new Vector3 (moveX,0,moveZ).normalized;

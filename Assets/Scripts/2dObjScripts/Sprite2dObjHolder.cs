@@ -9,9 +9,12 @@ public class Sprite2dObjHolder : MonoBehaviour
     private Material depthShader;
     [SerializeField]
     private bool testShader;
+    [SerializeField]
+    private List<SpriteRenderer> renderers;
     // Start is called before the first frame update
     void Start()
     {
+        //2d static setting
         childs = new Transform[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -38,6 +41,29 @@ public class Sprite2dObjHolder : MonoBehaviour
             }
             
         }
+        //45 look up
+        for (int i = 0; i < childs.Length; i++)
+        {
+            childs[i].rotation = Camera.main.transform.rotation;
+        }
+
+        //2d movable setting not in holder
+        GameObject[] list = GameObject.FindGameObjectsWithTag("Moveable");
+        for (int i = 0; i < list.Length; i++)
+        {
+            if (list[i].GetComponent<SpriteRenderer>())
+            {
+                renderers.Add(list[i].GetComponent<SpriteRenderer>());
+                Preset(list[i].GetComponent<SpriteRenderer>());
+            }
+            else
+            {
+                renderers.Add(list[i].transform.GetChild(0).GetComponent<SpriteRenderer>());
+                Preset(list[i].transform.GetChild(0).GetComponent<SpriteRenderer>());
+            }
+
+        }
+        renderers.Add(GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>());
     }
 
     void Preset(SpriteRenderer sr) { 
@@ -50,12 +76,9 @@ public class Sprite2dObjHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < childs.Length; i++)
+        for (int i = 0; i < renderers.Count; i++)
         {
-
-           // childs[i].transform.LookAt(Cam.transform);
-            childs[i].rotation = Camera.main.transform.rotation;
-
+            renderers[i].sortingOrder = (int)(renderers[i].gameObject.transform.position.z * -200);
         }
     }
 }

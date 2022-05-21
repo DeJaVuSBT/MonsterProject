@@ -103,7 +103,7 @@ public class Character3daxis : MonoBehaviour
             if (interactButton)
             {
                 target.GetComponent<Interactable>().Interact();
-                CinematicBars.Show_Static(400, 0.3f);
+              //  CinematicBars.Show_Static(400, 0.3f);
             }
 
         }

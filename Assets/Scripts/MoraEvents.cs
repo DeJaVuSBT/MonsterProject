@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoraEvents : MonoBehaviour, Interactable
+public class MoraEvents : MonoBehaviour, Interactable,Reward
 {
     [SerializeField]
     private bool badOrGood;
@@ -13,14 +13,13 @@ public class MoraEvents : MonoBehaviour, Interactable
     Animator animator;
     bool open=false;
 
+    int maxDifficulty = 4;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-
-
-    public void MoraEvent()
+    public void Reward()
     {
         if (!istriggered) {
             if (badOrGood)
@@ -38,10 +37,9 @@ public class MoraEvents : MonoBehaviour, Interactable
 
     public void Interact()
     {
-        Visual();
-        MoraEvent();
+    //    Visual();
+    
     }
-
     private void Visual() {
         if (!open)
         {
@@ -52,10 +50,7 @@ public class MoraEvents : MonoBehaviour, Interactable
         {
             animator.SetBool("Open", false);
             open = false;
-        }
-        
+        } 
     }
-
-
 
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class Character3daxis : MonoBehaviour
 {
     [Header("Parts")]
@@ -15,57 +16,111 @@ public class Character3daxis : MonoBehaviour
     [SerializeField]
     private float interactRange = 1f;
     private Vector3 moveDir;
-    private float moveX, moveZ;
-    private float oldX, oldZ;
-    private bool beingCatched=false;
     [Header("Interaction")]
     [SerializeField]
     private GameObject target = null;
 
     //input
-    InputPlayerControl playerInput;
-    bool interactButton = false;
+    InputPlayerControl Input;
+
+    //interaction
+    int difficulty;
+    int phase;
+    int currentInput;
+    int[] puzzleList;
+    bool pressed;
 
     private void Awake()
     {
-        if (!rb)
+        rb = GetComponent<Rigidbody>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        Input = new InputPlayerControl();
+        Input.PlayerInput.Enable();
+        //Input.EventInput.Enable();
+        Input.EventInput.Button5.started+= Button5_started;
+        Input.EventInput.Button4.started += Button4_started;
+        Input.EventInput.Button3.started += Button3_started;
+        Input.EventInput.Button2.started += Button2_started;
+        Input.EventInput.Button1.started += Button1_started;
+        Input.EventInput.AllKey.canceled += AllKey_canceled;
+        
+    }
+
+    private void AllKey_canceled(InputAction.CallbackContext obj)
+    {
+        if (CheckIfInputCorrect())
         {
-            rb = GetComponent<Rigidbody>();
+            phase++;
+            Debug.Log("Good");
+            if (phase>=puzzleList.Length)
+            {
+                target.GetComponent<Reward>().Reward();
+                SwitchToPlayerInput();
+                Debug.Log("Passed");
+            }
         }
-
-        if (!spriteRenderer)
+        else
         {
-
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            SwitchToPlayerInput();
+            Debug.Log("failed");
         }
+       
+    }
 
-        if (!animator)
+    private void Button5_started(InputAction.CallbackContext obj) {
+        currentInput = 5;
+        Debug.Log("Space pressed");
+    }
+    private void Button4_started(InputAction.CallbackContext obj)
+    {
+        currentInput = 4;
+        Debug.Log("right");
+    }
+    private void Button3_started(InputAction.CallbackContext obj)
+    {
+        currentInput = 3;
+        Debug.Log("left");
+    }
+    private void Button2_started(InputAction.CallbackContext obj)
+    {
+        currentInput = 2;
+        Debug.Log("down");
+    }
+    private void Button1_started(InputAction.CallbackContext obj)
+    {
+        currentInput = 1;
+        Debug.Log("up");
+    }
+
+
+    private bool CheckIfInputCorrect()
+    {
+        return currentInput == puzzleList[phase] ? true : false;
+    }
+
+
+    private void Movement()
+    {
+        if (Input.PlayerInput.enabled)
         {
-
-            animator = GetComponent<Animator>();
+            Vector2 moveVector = Input.PlayerInput.Movement.ReadValue<Vector2>();
+            moveDir = new Vector3(moveVector.x, 0, moveVector.y);
+            rb.velocity = moveDir * moveSpeed;
         }
-        playerInput= new InputPlayerControl();
-
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void Update()
     {
-        if (beingCatched)
-        {
-            rb.velocity = new Vector3(0,0,0);
-        }
-        else
-        {
-            InPut();
-            Movement();
-         //   Animation();
-            Interact();
-        }
+        Movement();
+        //   Animation();
+        Interact();
     }
     #region Interaction
-
-
-    //error!
     private GameObject ClosedColliderAround(){
         Vector3 playerPos = transform.position;
         Vector3 playerPosH = new Vector3(transform.position.x, 0.7f, transform.position.y);
@@ -100,10 +155,11 @@ public class Character3daxis : MonoBehaviour
         target = ClosedColliderAround();
         if (target != null&& target.GetComponent<Interactable>()!=null)
         {
-            if (interactButton)
+            if (Input.PlayerInput.Interact.IsPressed())
             {
-                target.GetComponent<Interactable>().Interact();
-              //  CinematicBars.Show_Static(400, 0.3f);
+              target.GetComponent<Interactable>().Interact();
+                //  CinematicBars.Show_Static(400, 0.3f);
+                    RandomInputPuzzle();
             }
 
         }
@@ -124,60 +180,28 @@ public class Character3daxis : MonoBehaviour
     }
     */
 
-    private void InPut() {
-        playerInput.Input.JoyStickUp.performed += ctx => moveZ = 1;
-        playerInput.Input.JoyStickDown.performed += ctx => moveZ = -1;
-        playerInput.Input.JoyStickLeft.performed += ctx => moveX = -1;
-        playerInput.Input.JoyStickRight.performed += ctx => moveX = 1;
-        playerInput.Input.SpeceButtonPress.performed += ctx => interactButton = true;
+    private void RandomInputPuzzle()
+    {
+        SwitchToEventInput();
+        //difficulty 
+        difficulty = UnityEngine.Random.Range(4, 6);
+        //make the puzzle
+        puzzleList = new int[difficulty];
+        for (int i = 0; i < difficulty; i++)
+        {
+            puzzleList[i] = UnityEngine.Random.Range(1, 6);
+            Debug.Log(puzzleList[i]);
+        }
+        phase = 0;
+    }
+    private void SwitchToEventInput() { 
+        Input.PlayerInput.Disable();
+        Input.EventInput.Enable();
+    }
+    private void SwitchToPlayerInput()
+    {
+        Input.PlayerInput.Enable();
+        Input.EventInput.Disable();
+    }
 
-        Debug.Log(moveZ);
-        Debug.Log(moveX);
-        playerInput.Input.JoyStickUp.canceled += ctx => moveZ = 0;
-        playerInput.Input.JoyStickDown.canceled += ctx => moveZ = 0;
-        playerInput.Input.JoyStickLeft.canceled += ctx => moveX = 0;
-        playerInput.Input.JoyStickRight.canceled += ctx => moveX = 0;
-        playerInput.Input.SpeceButtonPress.canceled += ctx => interactButton = false;
-    }
-    private void OnEnable()
-    {
-        playerInput.Input.Enable();
-    }
-    private void OnDisable()
-    {
-        playerInput.Input.Disable();
-    }
-    /*
-    private void InputCheck()
-    {
-        moveX = 0f;
-        moveZ = 0f;
-        if (Input.GetKey(KeyCode.W))
-        {
-            moveZ = +1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            moveZ = -1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveX = -1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveX = +1f;
-        }
-
-       
-    }
-    */
-    private void Movement()
-    {
-        moveDir = new Vector3 (moveX,0,moveZ).normalized;
-        rb.velocity= moveDir * moveSpeed;
-    }
-    public void BeingCatched(bool beCatched) {
-        beingCatched = beCatched;
-    }
 }

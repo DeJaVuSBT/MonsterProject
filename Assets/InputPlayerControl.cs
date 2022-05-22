@@ -24,47 +24,20 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
     ""name"": ""InputPlayerControl"",
     ""maps"": [
         {
-            ""name"": ""Input"",
+            ""name"": ""PlayerInput"",
             ""id"": ""cf72adef-a266-4f62-9855-8d8ec22e302e"",
             ""actions"": [
                 {
-                    ""name"": ""JoyStickLeft"",
-                    ""type"": ""Button"",
-                    ""id"": ""b4f81b1d-70f8-4d6e-a455-680734d62c4b"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""f92be056-b2f2-4345-a7f1-9840bce0b2ba"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""JoyStickRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""4365e3e9-dbd4-4897-b33d-1b271060d55b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""JoyStickUp"",
-                    ""type"": ""Button"",
-                    ""id"": ""67c0e2d4-c07d-49bb-9fec-eff34801f11c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""JoyStickDown"",
-                    ""type"": ""Button"",
-                    ""id"": ""5661a76f-8fef-4673-82a0-d93f754fe9ec"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""SpeceButtonPress"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""a4c87c5e-ebcf-42e1-96c8-4185cd9587b7"",
                     ""expectedControlType"": ""Button"",
@@ -76,71 +49,271 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""e61bdb3c-0529-43b2-bacb-f5f23b9e0dd3"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""JoyStickLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6ec96098-a435-49c3-8576-43b053ac03f4"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""JoyStickRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cbff1835-24be-4d8c-b849-17067e39bab3"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""JoyStickUp"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e06de742-c702-4aa1-869b-bed4f917c84c"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""JoyStickDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""510f6e78-eff6-43a9-8c3a-cf13e6191017"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SpeceButtonPress"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""456a090b-8ca1-4d13-8d49-30266b60b90b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""941fed11-762b-489c-86c2-13420b3e8769"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""ebc1efa4-74e1-482e-8ce6-74292e845738"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""14bbf357-4948-4daa-9a03-0325153bbcca"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""6b24358d-f2f1-4cf7-97a8-a9cb928afda7"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
+        },
+        {
+            ""name"": ""EventInput"",
+            ""id"": ""ddfd8c5b-86eb-4f77-9ed3-fb326924da4c"",
+            ""actions"": [
+                {
+                    ""name"": ""Button5"",
+                    ""type"": ""Button"",
+                    ""id"": ""c8ae33c7-5024-4c53-b379-471b89b6eb62"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Button1"",
+                    ""type"": ""Button"",
+                    ""id"": ""92c78186-441c-4b95-a006-b2540531d4a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Button2"",
+                    ""type"": ""Button"",
+                    ""id"": ""6104e64e-bef6-42bb-835c-3e9f1e75cc3c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Button3"",
+                    ""type"": ""Button"",
+                    ""id"": ""a64c618b-860f-42d3-9946-2651166a7595"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Button4"",
+                    ""type"": ""Button"",
+                    ""id"": ""a5951c6f-bd48-4eb3-a3cb-6533a33d7d1b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AllKey"",
+                    ""type"": ""Button"",
+                    ""id"": ""84609a49-0056-4131-bd26-c689d3fddf95"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""80997c81-2a24-4dd6-a25e-18c967198bf5"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2259f636-dc6d-4ca1-bbd0-1be5cd6cd472"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7250efbf-5447-4497-a13e-350aaeb26b57"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a5bc204-ce66-4565-8d32-06761bbb3e8e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c39678b-fed5-480f-921f-771e40df411e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d48557ac-a0ec-4965-abae-6f63138ab9b3"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e4c9743a-1b4d-4a7b-8223-c0d0f592d185"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61a202c9-2d6e-4faa-825f-8af8be0bdec4"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f44c2860-fcec-4d01-845a-11fa5ea3d943"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c96eb9e8-05b6-43fa-936f-c1f68a27a327"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""KeyBoard"",
+            ""bindingGroup"": ""KeyBoard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
-        // Input
-        m_Input = asset.FindActionMap("Input", throwIfNotFound: true);
-        m_Input_JoyStickLeft = m_Input.FindAction("JoyStickLeft", throwIfNotFound: true);
-        m_Input_JoyStickRight = m_Input.FindAction("JoyStickRight", throwIfNotFound: true);
-        m_Input_JoyStickUp = m_Input.FindAction("JoyStickUp", throwIfNotFound: true);
-        m_Input_JoyStickDown = m_Input.FindAction("JoyStickDown", throwIfNotFound: true);
-        m_Input_SpeceButtonPress = m_Input.FindAction("SpeceButtonPress", throwIfNotFound: true);
+        // PlayerInput
+        m_PlayerInput = asset.FindActionMap("PlayerInput", throwIfNotFound: true);
+        m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
+        m_PlayerInput_Interact = m_PlayerInput.FindAction("Interact", throwIfNotFound: true);
+        // EventInput
+        m_EventInput = asset.FindActionMap("EventInput", throwIfNotFound: true);
+        m_EventInput_Button5 = m_EventInput.FindAction("Button5", throwIfNotFound: true);
+        m_EventInput_Button1 = m_EventInput.FindAction("Button1", throwIfNotFound: true);
+        m_EventInput_Button2 = m_EventInput.FindAction("Button2", throwIfNotFound: true);
+        m_EventInput_Button3 = m_EventInput.FindAction("Button3", throwIfNotFound: true);
+        m_EventInput_Button4 = m_EventInput.FindAction("Button4", throwIfNotFound: true);
+        m_EventInput_AllKey = m_EventInput.FindAction("AllKey", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -197,76 +370,140 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Input
-    private readonly InputActionMap m_Input;
-    private IInputActions m_InputActionsCallbackInterface;
-    private readonly InputAction m_Input_JoyStickLeft;
-    private readonly InputAction m_Input_JoyStickRight;
-    private readonly InputAction m_Input_JoyStickUp;
-    private readonly InputAction m_Input_JoyStickDown;
-    private readonly InputAction m_Input_SpeceButtonPress;
-    public struct InputActions
+    // PlayerInput
+    private readonly InputActionMap m_PlayerInput;
+    private IPlayerInputActions m_PlayerInputActionsCallbackInterface;
+    private readonly InputAction m_PlayerInput_Movement;
+    private readonly InputAction m_PlayerInput_Interact;
+    public struct PlayerInputActions
     {
         private @InputPlayerControl m_Wrapper;
-        public InputActions(@InputPlayerControl wrapper) { m_Wrapper = wrapper; }
-        public InputAction @JoyStickLeft => m_Wrapper.m_Input_JoyStickLeft;
-        public InputAction @JoyStickRight => m_Wrapper.m_Input_JoyStickRight;
-        public InputAction @JoyStickUp => m_Wrapper.m_Input_JoyStickUp;
-        public InputAction @JoyStickDown => m_Wrapper.m_Input_JoyStickDown;
-        public InputAction @SpeceButtonPress => m_Wrapper.m_Input_SpeceButtonPress;
-        public InputActionMap Get() { return m_Wrapper.m_Input; }
+        public PlayerInputActions(@InputPlayerControl wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_PlayerInput_Movement;
+        public InputAction @Interact => m_Wrapper.m_PlayerInput_Interact;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(InputActions set) { return set.Get(); }
-        public void SetCallbacks(IInputActions instance)
+        public static implicit operator InputActionMap(PlayerInputActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerInputActions instance)
         {
-            if (m_Wrapper.m_InputActionsCallbackInterface != null)
+            if (m_Wrapper.m_PlayerInputActionsCallbackInterface != null)
             {
-                @JoyStickLeft.started -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickLeft;
-                @JoyStickLeft.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickLeft;
-                @JoyStickLeft.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickLeft;
-                @JoyStickRight.started -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickRight;
-                @JoyStickRight.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickRight;
-                @JoyStickRight.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickRight;
-                @JoyStickUp.started -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickUp;
-                @JoyStickUp.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickUp;
-                @JoyStickUp.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickUp;
-                @JoyStickDown.started -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickDown;
-                @JoyStickDown.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickDown;
-                @JoyStickDown.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnJoyStickDown;
-                @SpeceButtonPress.started -= m_Wrapper.m_InputActionsCallbackInterface.OnSpeceButtonPress;
-                @SpeceButtonPress.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnSpeceButtonPress;
-                @SpeceButtonPress.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnSpeceButtonPress;
+                @Movement.started -= m_Wrapper.m_PlayerInputActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_PlayerInputActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_PlayerInputActionsCallbackInterface.OnMovement;
+                @Interact.started -= m_Wrapper.m_PlayerInputActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerInputActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerInputActionsCallbackInterface.OnInteract;
             }
-            m_Wrapper.m_InputActionsCallbackInterface = instance;
+            m_Wrapper.m_PlayerInputActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @JoyStickLeft.started += instance.OnJoyStickLeft;
-                @JoyStickLeft.performed += instance.OnJoyStickLeft;
-                @JoyStickLeft.canceled += instance.OnJoyStickLeft;
-                @JoyStickRight.started += instance.OnJoyStickRight;
-                @JoyStickRight.performed += instance.OnJoyStickRight;
-                @JoyStickRight.canceled += instance.OnJoyStickRight;
-                @JoyStickUp.started += instance.OnJoyStickUp;
-                @JoyStickUp.performed += instance.OnJoyStickUp;
-                @JoyStickUp.canceled += instance.OnJoyStickUp;
-                @JoyStickDown.started += instance.OnJoyStickDown;
-                @JoyStickDown.performed += instance.OnJoyStickDown;
-                @JoyStickDown.canceled += instance.OnJoyStickDown;
-                @SpeceButtonPress.started += instance.OnSpeceButtonPress;
-                @SpeceButtonPress.performed += instance.OnSpeceButtonPress;
-                @SpeceButtonPress.canceled += instance.OnSpeceButtonPress;
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
-    public InputActions @Input => new InputActions(this);
-    public interface IInputActions
+    public PlayerInputActions @PlayerInput => new PlayerInputActions(this);
+
+    // EventInput
+    private readonly InputActionMap m_EventInput;
+    private IEventInputActions m_EventInputActionsCallbackInterface;
+    private readonly InputAction m_EventInput_Button5;
+    private readonly InputAction m_EventInput_Button1;
+    private readonly InputAction m_EventInput_Button2;
+    private readonly InputAction m_EventInput_Button3;
+    private readonly InputAction m_EventInput_Button4;
+    private readonly InputAction m_EventInput_AllKey;
+    public struct EventInputActions
     {
-        void OnJoyStickLeft(InputAction.CallbackContext context);
-        void OnJoyStickRight(InputAction.CallbackContext context);
-        void OnJoyStickUp(InputAction.CallbackContext context);
-        void OnJoyStickDown(InputAction.CallbackContext context);
-        void OnSpeceButtonPress(InputAction.CallbackContext context);
+        private @InputPlayerControl m_Wrapper;
+        public EventInputActions(@InputPlayerControl wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Button5 => m_Wrapper.m_EventInput_Button5;
+        public InputAction @Button1 => m_Wrapper.m_EventInput_Button1;
+        public InputAction @Button2 => m_Wrapper.m_EventInput_Button2;
+        public InputAction @Button3 => m_Wrapper.m_EventInput_Button3;
+        public InputAction @Button4 => m_Wrapper.m_EventInput_Button4;
+        public InputAction @AllKey => m_Wrapper.m_EventInput_AllKey;
+        public InputActionMap Get() { return m_Wrapper.m_EventInput; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(EventInputActions set) { return set.Get(); }
+        public void SetCallbacks(IEventInputActions instance)
+        {
+            if (m_Wrapper.m_EventInputActionsCallbackInterface != null)
+            {
+                @Button5.started -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton5;
+                @Button5.performed -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton5;
+                @Button5.canceled -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton5;
+                @Button1.started -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton1;
+                @Button1.performed -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton1;
+                @Button1.canceled -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton1;
+                @Button2.started -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton2;
+                @Button2.performed -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton2;
+                @Button2.canceled -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton2;
+                @Button3.started -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton3;
+                @Button3.performed -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton3;
+                @Button3.canceled -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton3;
+                @Button4.started -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton4;
+                @Button4.performed -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton4;
+                @Button4.canceled -= m_Wrapper.m_EventInputActionsCallbackInterface.OnButton4;
+                @AllKey.started -= m_Wrapper.m_EventInputActionsCallbackInterface.OnAllKey;
+                @AllKey.performed -= m_Wrapper.m_EventInputActionsCallbackInterface.OnAllKey;
+                @AllKey.canceled -= m_Wrapper.m_EventInputActionsCallbackInterface.OnAllKey;
+            }
+            m_Wrapper.m_EventInputActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Button5.started += instance.OnButton5;
+                @Button5.performed += instance.OnButton5;
+                @Button5.canceled += instance.OnButton5;
+                @Button1.started += instance.OnButton1;
+                @Button1.performed += instance.OnButton1;
+                @Button1.canceled += instance.OnButton1;
+                @Button2.started += instance.OnButton2;
+                @Button2.performed += instance.OnButton2;
+                @Button2.canceled += instance.OnButton2;
+                @Button3.started += instance.OnButton3;
+                @Button3.performed += instance.OnButton3;
+                @Button3.canceled += instance.OnButton3;
+                @Button4.started += instance.OnButton4;
+                @Button4.performed += instance.OnButton4;
+                @Button4.canceled += instance.OnButton4;
+                @AllKey.started += instance.OnAllKey;
+                @AllKey.performed += instance.OnAllKey;
+                @AllKey.canceled += instance.OnAllKey;
+            }
+        }
+    }
+    public EventInputActions @EventInput => new EventInputActions(this);
+    private int m_KeyBoardSchemeIndex = -1;
+    public InputControlScheme KeyBoardScheme
+    {
+        get
+        {
+            if (m_KeyBoardSchemeIndex == -1) m_KeyBoardSchemeIndex = asset.FindControlSchemeIndex("KeyBoard");
+            return asset.controlSchemes[m_KeyBoardSchemeIndex];
+        }
+    }
+    public interface IPlayerInputActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IEventInputActions
+    {
+        void OnButton5(InputAction.CallbackContext context);
+        void OnButton1(InputAction.CallbackContext context);
+        void OnButton2(InputAction.CallbackContext context);
+        void OnButton3(InputAction.CallbackContext context);
+        void OnButton4(InputAction.CallbackContext context);
+        void OnAllKey(InputAction.CallbackContext context);
     }
 }

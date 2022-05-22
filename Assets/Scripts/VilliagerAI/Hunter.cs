@@ -70,7 +70,6 @@ public class Hunter : MonoBehaviour
 
     private void CatchPlayer()
     {
-        player.GetComponent<Character3daxis>().BeingCatched(true);
         player.transform.parent = (this.transform);
         moveSpeed = walkMoveSpeed;
         MoveTo(cage.position);

@@ -12,12 +12,16 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     Rigidbody2D rb;
     Animator animator;
     bool open=false;
-
-    int maxDifficulty = 4;
+    [SerializeField]
+    private int maxDifficulty = 3;
+    private bool isInteracting = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+    public int GetDifficulty() {
+        return maxDifficulty;
     }
     public void Reward()
     {
@@ -33,24 +37,22 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
             }
             istriggered = true;
         }
+        isInteracting = false;
     }
 
     public void Interact()
     {
-    //    Visual();
-    
+        isInteracting = true;
     }
     private void Visual() {
-        if (!open)
+        this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f)); ;
+
+    }
+    void Update() {
+        if (isInteracting)
         {
-            animator.SetBool("Open", true);
-            open = true;
+            Visual();
         }
-        else
-        {
-            animator.SetBool("Open", false);
-            open = false;
-        } 
     }
 
 }

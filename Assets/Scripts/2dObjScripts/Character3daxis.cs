@@ -184,7 +184,7 @@ public class Character3daxis : MonoBehaviour
     {
         SwitchToEventInput();
         //difficulty 
-        difficulty = UnityEngine.Random.Range(4, 6);
+        difficulty =  target.GetComponent<MoraEvents>().GetDifficulty();
         //make the puzzle
         puzzleList = new int[difficulty];
         for (int i = 0; i < difficulty; i++)

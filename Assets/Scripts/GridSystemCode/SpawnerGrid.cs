@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 using System;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 public class SpawnerGrid : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class SpawnerGrid : MonoBehaviour
     [SerializeField] private float blockSize = 2f;
     [Header("DebugTime")]
     [SerializeField] private float debugTime = 1f;
+    [SerializeField]
+    private InputField a;
+
     private void Awake()
     {
  
@@ -33,7 +37,7 @@ public class SpawnerGrid : MonoBehaviour
     }
     private void Start()
     {
-      
+        a = GameObject.Find("Canvas/InputField").GetComponent<InputField>();
     }
     private void Update()
     {
@@ -72,7 +76,7 @@ public class SpawnerGrid : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            number = id+1;
+            number = int.Parse(a.text) +1;
             OnSelectedChanged?.Invoke(this, EventArgs.Empty);
         }
 

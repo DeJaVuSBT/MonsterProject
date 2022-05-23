@@ -801,6 +801,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893244169}
   m_CullTransparentMesh: 1
+--- !u!1001 &926394975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3349008
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3349008
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3349008
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1660384031183063813, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fae738be6425d3747bf05fed209f14d4, type: 2}
+    - target: {fileID: 919132149155446097, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_Name
+      value: Medieval House 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620486382901192646, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f4c9a3c29dbaec4daba00faf88d6739, type: 2}
+    - target: {fileID: 3772192158888979193, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 836f65d0e043ce34ea3b5d1a3e99e04e, type: 2}
+    - target: {fileID: 4370951913967234905, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc97545d5e906d648a084d27323b9f10, type: 2}
+    - target: {fileID: 5696494855991954268, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b04cb585b8dd6ba42809d4db94394abd, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a13895bd0cfe57e499ff0df85fd67aa9, type: 3}
 --- !u!1001 &968492969
 PrefabInstance:
   m_ObjectHideFlags: 0

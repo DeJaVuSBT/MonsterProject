@@ -62,26 +62,36 @@ public class SpawnerGrid : MonoBehaviour
             dir = ReturnObjectInList().GetNextDir(dir);
             UtilsClass.CreateWorldTextPopup(""+dir, Mouse3D.GetMouseWorldPosition());
         }
-        /*
+        
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (number< spawnObjScriptable.Length)
+            if (a.value< a.maxValue)
             {
-                number++;
+                a.value++;
+            
             }
-            else if (number==spawnObjScriptable.Length)
+             else if (a.value== a.maxValue)
             {
-                number = 1;
+                a.value = 0;
                 
             }
             OnSelectedChanged?.Invoke(this, EventArgs.Empty);
         }
+       
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            number = int.Parse(a.text) +1;
-            OnSelectedChanged?.Invoke(this, EventArgs.Empty);
+            if (a.value > a.minValue)
+            {
+                a.value--;
+
+            }
+            else if (a.value == a.minValue)
+            {
+                a.value = a.maxValue;
+
+            }
         }
-        */
+        
         number = (int)a.value + 1;
         OnSelectedChanged?.Invoke(this, EventArgs.Empty);
         if (Input.GetKeyDown(KeyCode.E))

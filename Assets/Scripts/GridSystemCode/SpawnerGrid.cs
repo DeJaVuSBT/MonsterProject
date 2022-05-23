@@ -11,6 +11,8 @@ public class SpawnerGrid : MonoBehaviour
     public event EventHandler OnObjectPlaced;
 
     [SerializeField] private SpawnObjScriptable[] spawnObjScriptable;
+    [SerializeField]
+    private int id = 0;
     private GridGeneric<SpawnObject> grid;
     private SpawnObjScriptable.Dir dir;
     private int number;
@@ -23,12 +25,16 @@ public class SpawnerGrid : MonoBehaviour
     [SerializeField] private float debugTime = 1f;
     private void Awake()
     {
+ 
         number = 1;
         Instance = this;
         grid = new GridGeneric<SpawnObject>(gridW, gridH, blockSize, Vector3.zero, (GridGeneric<SpawnObject> g, int x, int y) => new SpawnObject(g, x, y));
 
     }
-
+    private void Start()
+    {
+      
+    }
     private void Update()
     {
         //spawn
@@ -64,6 +70,12 @@ public class SpawnerGrid : MonoBehaviour
             }
             OnSelectedChanged?.Invoke(this, EventArgs.Empty);
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            number = id+1;
+            OnSelectedChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             grid.ShowDebug(debugTime,2,Color.yellow);

@@ -51,6 +51,7 @@ public class Character3daxis : MonoBehaviour
         Input.EventInput.Button2.started += Button2_started;
         Input.EventInput.Button1.started += Button1_started;
         Input.EventInput.AllKey.canceled += AllKey_canceled;
+        Input.EventInput.AllKey.started += AllKey_started;
         //push event
         Input.PushInput.Interact.canceled += Push_canceled;
         
@@ -88,6 +89,11 @@ public class Character3daxis : MonoBehaviour
             Debug.Log("failed");
         }
        
+    }
+    private void AllKey_started(InputAction.CallbackContext obj)
+    {
+        target.GetComponent<MoraEvents>().Shake();
+
     }
 
     private void Button5_started(InputAction.CallbackContext obj) {
@@ -154,8 +160,9 @@ public class Character3daxis : MonoBehaviour
     private GameObject ClosedColliderAround(){
         Vector3 playerPos = transform.position;
         Vector3 playerPosH = new Vector3(transform.position.x, 0.7f, transform.position.y);
-
-        Collider[] ColliderAround = Physics.OverlapCapsule(playerPos, playerPosH, interactRange);
+      
+        
+        Collider[] ColliderAround = Physics.OverlapSphere(playerPosH, interactRange);
 
         if (ColliderAround.Length > 1)
         {

@@ -14,8 +14,12 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     private bool isInteracting = false;
     [SerializeField]
     private InteractType interactType;
+    [SerializeField]
     private int morality;
+    [SerializeField]
     private int hunger;
+    private bool shake = false;
+    private float shaketime = 0;
 
     enum InteractType 
     { 
@@ -55,10 +59,27 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     {
         isInteracting = true;
     }
-    public void ShakingVisual() {
-        this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f)); ;
+    private void ShakingVisual() {
+      
+        this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f)); 
     }
+    public void Shake() {
+        shake = true;
+        shaketime = 0;
+    }
+    private void Update()
+    {
 
-   
+        if (shake)
+        {
+            ShakingVisual();
+            shaketime+=Time.deltaTime;
+            if (shaketime>0.2f)
+            {
+                shake = false;
+            }
+        }
+       
+    }
 
 }

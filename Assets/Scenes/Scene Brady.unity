@@ -881,7 +881,7 @@ MonoBehaviour:
   badOrGood: 1
   istriggered: 0
   bar: {fileID: 1597157216}
-  maxDifficulty: 3
+  DifficultyType: 3
 --- !u!64 &1541443466
 MeshCollider:
   m_ObjectHideFlags: 0

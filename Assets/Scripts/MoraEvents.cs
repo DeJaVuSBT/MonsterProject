@@ -13,7 +13,7 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     Animator animator;
     bool open=false;
     [SerializeField]
-    private int maxDifficulty = 3;
+    private int DifficultyType = 3;
     private bool isInteracting = false;
     void Start()
     {
@@ -21,7 +21,7 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         animator = GetComponent<Animator>();
     }
     public int GetDifficulty() {
-        return maxDifficulty;
+        return DifficultyType;
     }
     public void Reward()
     {
@@ -48,8 +48,9 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f)); ;
 
     }
+
     void Update() {
-        if (isInteracting)
+        if (isInteracting&&DifficultyType!=3)
         {
             Visual();
         }

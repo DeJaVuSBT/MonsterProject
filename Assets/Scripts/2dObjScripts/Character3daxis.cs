@@ -19,6 +19,8 @@ public class Character3daxis : MonoBehaviour
     [Header("Interaction")]
     [SerializeField]
     private GameObject target = null;
+    [SerializeField]
+    private float pushSpeed = 1f;
 
     //input
     InputPlayerControl Input;
@@ -28,7 +30,7 @@ public class Character3daxis : MonoBehaviour
     int phase;
     int currentInput;
     int[] puzzleList;
-    bool pressed;
+    bool runing;
 
     private void Awake()
     {
@@ -38,13 +40,32 @@ public class Character3daxis : MonoBehaviour
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
         //Input.EventInput.Enable();
+
+        Input.PlayerInput.Interact.performed += Interact_performed;
+        Input.PlayerInput.Interact.canceled += Interact_canceled;
+        //key puzzle event
         Input.EventInput.Button5.started+= Button5_started;
         Input.EventInput.Button4.started += Button4_started;
         Input.EventInput.Button3.started += Button3_started;
         Input.EventInput.Button2.started += Button2_started;
         Input.EventInput.Button1.started += Button1_started;
         Input.EventInput.AllKey.canceled += AllKey_canceled;
+        //push event
+        Input.PushInput.Interact.canceled += Push_canceled;
         
+    }
+    private void Interact_canceled(InputAction.CallbackContext obj)
+    {
+        runing = false;
+    }
+    private void Interact_performed(InputAction.CallbackContext obj)
+    {
+        runing = true;
+    }
+
+    private void Push_canceled(InputAction.CallbackContext obj)
+    {
+        SwitchToPlayerInput();
     }
 
     private void AllKey_canceled(InputAction.CallbackContext obj)
@@ -104,6 +125,14 @@ public class Character3daxis : MonoBehaviour
     {
         if (Input.PlayerInput.enabled)
         {
+            if (runing)
+            {
+                moveSpeed = 8f;
+            }
+            else
+            {
+                moveSpeed = 4f;
+            }
             Vector2 moveVector = Input.PlayerInput.Movement.ReadValue<Vector2>();
             moveDir = new Vector3(moveVector.x, 0, moveVector.y);
             rb.velocity = moveDir * moveSpeed;
@@ -152,16 +181,44 @@ public class Character3daxis : MonoBehaviour
         return default;
     }
     private void Interact() {
-        target = ClosedColliderAround();
+        if (Input.PlayerInput.enabled&&!runing)
+        {
+            target = ClosedColliderAround();
+        }
         if (target != null&& target.GetComponent<Interactable>()!=null)
         {
             if (Input.PlayerInput.Interact.IsPressed())
             {
               target.GetComponent<Interactable>().Interact();
                 //  CinematicBars.Show_Static(400, 0.3f);
-                    RandomInputPuzzle();
+                switch (target.GetComponent<MoraEvents>().GetDifficulty())
+                {
+                    case 1:
+                        ShakeInput();
+                        break;
+                    case 2: 
+                        RotateInput();
+                        break;
+                    case 3:
+                        PushInput();
+                        break;
+                    default:
+                        ShakeInput();
+                        break;
+                }
+                
             }
 
+        }
+
+
+        if (Input.PushInput.enabled)
+        {
+            Vector2 moveVector = Input.PushInput.Movement.ReadValue<Vector2>();
+            moveDir = new Vector3(moveVector.x, 0, moveVector.y);
+            transform.position += moveDir * pushSpeed * Time.deltaTime;
+            Vector3 oldPosInteractable = target.transform.position;
+            target.transform.position += moveDir * pushSpeed * Time.deltaTime;
         }
     }
     #endregion
@@ -180,11 +237,36 @@ public class Character3daxis : MonoBehaviour
     }
     */
 
-    private void RandomInputPuzzle()
+    private void ShakeInput()
+    {
+        SwitchToEventInput();
+        puzzleList =new int[] { 3,4,3,4};
+        phase = 0;
+        for (int i = 0; i < puzzleList.Length; i++)
+        {
+            Debug.Log(puzzleList[i]);
+        }
+    }
+    private void RotateInput()
+    {
+        SwitchToEventInput();
+        puzzleList = new int[] { 2, 3, 1, 4 };
+        phase = 0;
+        for (int i = 0; i < puzzleList.Length; i++)
+        {
+            Debug.Log(puzzleList[i]);
+        }
+    }
+    private void PushInput() {
+        SwitchToPushInput();
+      
+    }
+
+    private void RandomInput()
     {
         SwitchToEventInput();
         //difficulty 
-        difficulty =  target.GetComponent<MoraEvents>().GetDifficulty();
+        difficulty = target.GetComponent<MoraEvents>().GetDifficulty();
         //make the puzzle
         puzzleList = new int[difficulty];
         for (int i = 0; i < difficulty; i++)
@@ -197,11 +279,22 @@ public class Character3daxis : MonoBehaviour
     private void SwitchToEventInput() { 
         Input.PlayerInput.Disable();
         Input.EventInput.Enable();
+        Input.PushInput.Disable();
+        Debug.Log("Event");
+    }
+    private void SwitchToPushInput()
+    {
+        Input.PushInput.Enable();
+        Input.PlayerInput.Disable();
+        Input.EventInput.Disable();
+        Debug.Log("PushEvent");
     }
     private void SwitchToPlayerInput()
     {
         Input.PlayerInput.Enable();
         Input.EventInput.Disable();
+        Input.PushInput.Disable();
+        Debug.Log("player normal input");
     }
 
 }

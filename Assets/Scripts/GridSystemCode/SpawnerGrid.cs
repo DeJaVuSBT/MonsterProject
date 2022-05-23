@@ -25,7 +25,7 @@ public class SpawnerGrid : MonoBehaviour
     [Header("DebugTime")]
     [SerializeField] private float debugTime = 1f;
     [SerializeField]
-    private InputField a;
+    private Slider a;
 
     private void Awake()
     {
@@ -37,7 +37,8 @@ public class SpawnerGrid : MonoBehaviour
     }
     private void Start()
     {
-        a = GameObject.Find("Canvas/InputField").GetComponent<InputField>();
+        a= GameObject.Find("Canvas/Slider").GetComponent<Slider>();
+        a.maxValue= spawnObjScriptable.Length-1;
     }
     private void Update()
     {
@@ -61,6 +62,7 @@ public class SpawnerGrid : MonoBehaviour
             dir = ReturnObjectInList().GetNextDir(dir);
             UtilsClass.CreateWorldTextPopup(""+dir, Mouse3D.GetMouseWorldPosition());
         }
+        /*
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (number< spawnObjScriptable.Length)
@@ -79,7 +81,9 @@ public class SpawnerGrid : MonoBehaviour
             number = int.Parse(a.text) +1;
             OnSelectedChanged?.Invoke(this, EventArgs.Empty);
         }
-
+        */
+        number = (int)a.value + 1;
+        OnSelectedChanged?.Invoke(this, EventArgs.Empty);
         if (Input.GetKeyDown(KeyCode.E))
         {
             grid.ShowDebug(debugTime,2,Color.yellow);

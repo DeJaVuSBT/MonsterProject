@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using CodeMonkey.Utils;
 public class Character3daxis : MonoBehaviour
 {
     [Header("Parts")]
@@ -191,18 +192,22 @@ public class Character3daxis : MonoBehaviour
             {
               target.GetComponent<Interactable>().Interact();
                 //  CinematicBars.Show_Static(400, 0.3f);
-                switch (target.GetComponent<MoraEvents>().GetDifficulty())
+                switch (target.GetComponent<MoraEvents>().GetInteractType())
                 {
-                    case 1:
+                    case 0:
+                        UtilsClass.CreateWorldTextPopup("Shaking with " +target.ToString(), transform.position);
                         ShakeInput();
                         break;
-                    case 2: 
+                    case 1:
+                        UtilsClass.CreateWorldTextPopup("Rotating with " + target.ToString(), transform.position);
                         RotateInput();
                         break;
-                    case 3:
+                    case 2:
+                        UtilsClass.CreateWorldTextPopup("Pusing  " + target.ToString(), transform.position);
                         PushInput();
                         break;
                     default:
+                        UtilsClass.CreateWorldTextPopup("Shaking with  " + target.ToString(), transform.position);
                         ShakeInput();
                         break;
                 }
@@ -240,6 +245,7 @@ public class Character3daxis : MonoBehaviour
     private void ShakeInput()
     {
         SwitchToEventInput();
+        
         puzzleList =new int[] { 3,4,3,4};
         phase = 0;
         for (int i = 0; i < puzzleList.Length; i++)
@@ -266,7 +272,7 @@ public class Character3daxis : MonoBehaviour
     {
         SwitchToEventInput();
         //difficulty 
-        difficulty = target.GetComponent<MoraEvents>().GetDifficulty();
+        difficulty = target.GetComponent<MoraEvents>().GetInteractType();
         //make the puzzle
         puzzleList = new int[difficulty];
         for (int i = 0; i < difficulty; i++)

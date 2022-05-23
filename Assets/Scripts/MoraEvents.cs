@@ -5,37 +5,40 @@ using UnityEngine;
 public class MoraEvents : MonoBehaviour, Interactable,Reward
 {
     [SerializeField]
-    private bool badOrGood;
+    private int morality;
     [SerializeField]
-    private bool istriggered = false;
-    public MoralityBar bar;
-    Rigidbody2D rb;
-    Animator animator;
-    bool open=false;
+    private int hunger;
     [SerializeField]
-    private int DifficultyType = 3;
+    private bool rewarded = false;
+    public MoralityBar mBar;
+    public HungerBar hBar;
+    [SerializeField]
     private bool isInteracting = false;
+    [SerializeField]
+    private InteractType interactType;
+    
+    enum InteractType 
+    { 
+        Shaking,
+        Rotating,
+        Take
+    }
+    public int GetInteractType() {
+        Debug.Log((int)interactType);
+        return (int)interactType;
+    }
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
-    public int GetDifficulty() {
-        return DifficultyType;
-    }
+    
     public void Reward()
     {
-        if (!istriggered) {
-            if (badOrGood)
-            {
-                bar.Add(10);
-                
-            }
-            else
-            {
-                bar.Decrease(10);
-            }
-            istriggered = true;
+        if (!rewarded) {
+
+            mBar.Add(morality);
+            hBar.Add(hunger);
+            rewarded = true;
         }
         isInteracting = false;
     }
@@ -44,15 +47,14 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     {
         isInteracting = true;
     }
-    private void Visual() {
+    private void ShakingVisual() {
         this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f)); ;
-
     }
 
     void Update() {
-        if (isInteracting&&DifficultyType!=3)
+        if ((int)interactType== 0&&isInteracting)
         {
-            Visual();
+            ShakingVisual();
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 using System;
+using UnityEngine.InputSystem;
 public class SpawnerGrid : MonoBehaviour
 {
     public static SpawnerGrid Instance { get; private set; }
@@ -25,6 +26,7 @@ public class SpawnerGrid : MonoBehaviour
         number = 1;
         Instance = this;
         grid = new GridGeneric<SpawnObject>(gridW, gridH, blockSize, Vector3.zero, (GridGeneric<SpawnObject> g, int x, int y) => new SpawnObject(g, x, y));
+
     }
 
     private void Update()

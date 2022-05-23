@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class MoraEvents : MonoBehaviour, Interactable,Reward
 {
+   
+    
     [SerializeField]
-    private int morality;
-    [SerializeField]
-    private int hunger;
-    [SerializeField]
+    private bool destroyAtTheEnd = true;
     private bool rewarded = false;
-    public MoralityBar mBar;
-    public HungerBar hBar;
-    [SerializeField]
+    private MoralityBar mBar;
+    private HungerBar hBar;
     private bool isInteracting = false;
     [SerializeField]
     private InteractType interactType;
-    
+    private int morality;
+    private int hunger;
+
     enum InteractType 
     { 
         Shaking,
@@ -30,6 +30,8 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
 
     void Start()
     {
+        mBar = GameObject.Find("Canvas/MoralityBar").GetComponent<MoralityBar>();
+        hBar = GameObject.Find("Canvas/HungerBar").GetComponent<HungerBar>();
     }
     
     public void Reward()
@@ -38,6 +40,12 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
 
             mBar.Add(morality);
             hBar.Add(hunger);
+            
+            if (destroyAtTheEnd)
+            {
+                Destroy(this.gameObject);
+            }
+            
             rewarded = true;
         }
         isInteracting = false;
@@ -47,15 +55,10 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     {
         isInteracting = true;
     }
-    private void ShakingVisual() {
+    public void ShakingVisual() {
         this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f)); ;
     }
 
-    void Update() {
-        if ((int)interactType== 0&&isInteracting)
-        {
-            ShakingVisual();
-        }
-    }
+   
 
 }

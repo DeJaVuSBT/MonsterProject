@@ -414,15 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObjScriptable:
-  - {fileID: 11400000, guid: 6f8d8d1752b510948b323c301eba8224, type: 2}
-  - {fileID: 11400000, guid: 98da1d1a0e35d5740a6e23b103e48bf1, type: 2}
-  - {fileID: 11400000, guid: 86af1e52eb1daad458ce5980d536162e, type: 2}
-  - {fileID: 11400000, guid: a616baeb92a2641498111d14f6113528, type: 2}
-  - {fileID: 11400000, guid: b32267e37d752a94083c4d48ab20f33d, type: 2}
-  - {fileID: 11400000, guid: 3e0651ddec16f054594c2b50b98ef089, type: 2}
-  - {fileID: 11400000, guid: 1809650a6ad338e41994a2de353a690a, type: 2}
-  - {fileID: 11400000, guid: c76e26b91d2645f4881c50b17db812b7, type: 2}
-  - {fileID: 11400000, guid: a40b15dca84e2ab4aad03ddea77e3ccf, type: 2}
+  - {fileID: 11400000, guid: 1a3661c0add09014bb213f5a0ea6b332, type: 2}
   holder: {fileID: 40899695}
   gridW: 20
   gridH: 20

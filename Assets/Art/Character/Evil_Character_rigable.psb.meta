@@ -6752,6 +6752,13 @@ ScriptedImporter:
     spriteID: 8af3b408abf45f14299edd244bfdc62e
     layerID: 10
     mosaicPosition: {x: 4, y: 1285}
+  - name: Leg2
+    spriteName: Leg2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3de553945c366a045bf08591bdfc9afd
+    layerID: 4
+    mosaicPosition: {x: 378, y: 4}
   - name: Arm2
     spriteName: 
     isGroup: 1
@@ -6762,31 +6769,24 @@ ScriptedImporter:
   - name: Upper Arm2
     spriteName: Upper Arm2
     isGroup: 0
-    parentIndex: 8
+    parentIndex: 9
     spriteID: 2fae8591dfd04cd4083a30e6cad10d80
     layerID: 8
     mosaicPosition: {x: 378, y: 817}
   - name: Hand2
     spriteName: Hand2
     isGroup: 0
-    parentIndex: 8
+    parentIndex: 9
     spriteID: a2be91b517635e948869bd25a712ee3e
     layerID: 7
     mosaicPosition: {x: 378, y: 1200}
   - name: Lower Arm2
     spriteName: Lower Arm2
     isGroup: 0
-    parentIndex: 8
+    parentIndex: 9
     spriteID: 3f6b8c369ec40c844a9572ee7f6ec5f0
     layerID: 6
     mosaicPosition: {x: 378, y: 1090}
-  - name: Leg2
-    spriteName: Leg2
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 3de553945c366a045bf08591bdfc9afd
-    layerID: 4
-    mosaicPosition: {x: 378, y: 4}
   - name: Wing1
     spriteName: Wing1
     isGroup: 0

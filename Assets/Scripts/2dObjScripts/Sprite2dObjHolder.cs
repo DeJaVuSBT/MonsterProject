@@ -63,7 +63,17 @@ public class Sprite2dObjHolder : MonoBehaviour
             }
 
         }
-        renderers.Add(GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>());
+      
+        Transform a = GameObject.FindGameObjectWithTag("Player").transform.GetChild(1);
+        for (int i = 0; i < a.childCount; i++)
+        {
+            if (a.GetChild(i).GetComponent<SpriteRenderer>())
+            {
+                renderers.Add(a.GetChild(i).GetComponent<SpriteRenderer>());
+            }
+        }
+    
+
     }
 
     void Preset(SpriteRenderer sr) { 

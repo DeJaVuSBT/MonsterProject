@@ -31,6 +31,13 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         Debug.Log((int)interactType);
         return (int)interactType;
     }
+    public void SetInteractType(int a) {
+        interactType = (InteractType)a;
+    }
+    public void SetReward(int a, int b) { 
+        morality= (int)a;
+        hunger= (int)b;
+    }
 
     void Start()
     {

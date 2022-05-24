@@ -11,6 +11,8 @@ public class Character3daxis : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    Transform middle;
     [Header("Property")]
     [SerializeField]
     private float moveSpeed = 4f;
@@ -159,10 +161,8 @@ public class Character3daxis : MonoBehaviour
     #region Interaction
     private GameObject ClosedColliderAround(){
         Vector3 playerPos = transform.position;
-        Vector3 playerPosH = new Vector3(transform.position.x, 0.7f, transform.position.y);
-      
-        
-        Collider[] ColliderAround = Physics.OverlapSphere(playerPosH, interactRange);
+        //Vector3 playerhead = transform.position + new Vector3(0, 0.5f, -1f);
+        Collider[] ColliderAround = Physics.OverlapSphere(middle.position, interactRange);
 
         if (ColliderAround.Length > 1)
         {
@@ -183,7 +183,7 @@ public class Character3daxis : MonoBehaviour
                     Closest = ColliderAround[i];
                 }
             }
-            return Closest.gameObject;
+            return Closest.transform.gameObject;
         }
        
         return default;
@@ -197,7 +197,8 @@ public class Character3daxis : MonoBehaviour
         {
             if (Input.PlayerInput.Interact.IsPressed())
             {
-              target.GetComponent<Interactable>().Interact();
+               
+                    target.GetComponent<Interactable>().Interact(); 
                 //  CinematicBars.Show_Static(400, 0.3f);
                 switch (target.GetComponent<MoraEvents>().GetInteractType())
                 {
@@ -229,7 +230,7 @@ public class Character3daxis : MonoBehaviour
             Vector2 moveVector = Input.PushInput.Movement.ReadValue<Vector2>();
             moveDir = new Vector3(moveVector.x, 0, moveVector.y);
             transform.position += moveDir * pushSpeed * Time.deltaTime;
-            Vector3 oldPosInteractable = target.transform.position;
+           // Vector3 oldPosInteractable = target.transform.position;
             target.transform.position += moveDir * pushSpeed * Time.deltaTime;
         }
     }
@@ -274,7 +275,7 @@ public class Character3daxis : MonoBehaviour
         SwitchToPushInput();
       
     }
-
+    /*
     private void RandomInput()
     {
         SwitchToEventInput();
@@ -289,6 +290,7 @@ public class Character3daxis : MonoBehaviour
         }
         phase = 0;
     }
+    */
     private void SwitchToEventInput() { 
         Input.PlayerInput.Disable();
         Input.EventInput.Enable();

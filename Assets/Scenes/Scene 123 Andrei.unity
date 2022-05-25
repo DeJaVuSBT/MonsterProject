@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager (5)
@@ -990,6 +990,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4607132051594764126, guid: 25acdfa7922c7b5459269039c3d14b6c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607132051594764126, guid: 25acdfa7922c7b5459269039c3d14b6c, type: 3}
       propertyPath: depthShader
       value: 
       objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
@@ -1402,7 +1406,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager (4)
@@ -1615,7 +1619,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
@@ -1716,7 +1720,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
@@ -2321,7 +2325,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
@@ -3819,7 +3823,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
@@ -4316,7 +4320,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager (1)
@@ -17280,7 +17284,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager
@@ -18354,7 +18358,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager (6)
@@ -19035,7 +19039,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292022129999631, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.92387956
@@ -19112,7 +19116,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
@@ -20016,7 +20020,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager (2)
@@ -20337,7 +20341,7 @@ PrefabInstance:
     - target: {fileID: 6637292022129999630, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
@@ -22716,7 +22720,7 @@ PrefabInstance:
     - target: {fileID: 5800556317374103315, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ca1a555063af5c499ee06f9a8ce6819, type: 2}
     - target: {fileID: 5800556317534509410, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_Name
       value: Villager (3)

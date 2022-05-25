@@ -63,7 +63,7 @@ public class Sprite2dObjHolder : MonoBehaviour
             }
 
         }
-      
+      /*
         Transform a = GameObject.FindGameObjectWithTag("Player").transform.GetChild(1);
         for (int i = 0; i < a.childCount; i++)
         {
@@ -72,6 +72,7 @@ public class Sprite2dObjHolder : MonoBehaviour
                 renderers.Add(a.GetChild(i).GetComponent<SpriteRenderer>());
             }
         }
+      */
     
 
     }

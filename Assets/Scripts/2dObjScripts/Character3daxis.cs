@@ -39,7 +39,7 @@ public class Character3daxis : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
         //Input.EventInput.Enable();
@@ -155,7 +155,7 @@ public class Character3daxis : MonoBehaviour
     private void Update()
     {
         Movement();
-        //   Animation();
+        Animation();
         Interact();
     }
     #region Interaction
@@ -235,20 +235,26 @@ public class Character3daxis : MonoBehaviour
         }
     }
     #endregion
-    /*
+   
     private void Animation() {
 
         if (moveDir != Vector3.zero)
         {
-            animator.SetBool("IsMoving", true);
-            oldX = moveX;
-            oldZ = moveZ;
+            animator.SetBool("New Bool", true);
+            
         }
-        else { animator.SetBool("IsMoving", false); }
-        animator.SetFloat("InputX", oldX);
-        animator.SetFloat("InputY", oldZ);
+        else { animator.SetBool("New Bool", false); }
+        if (runing)
+        {
+            animator.SetBool("New Bool 0", true);
+        }
+        else
+        {
+            animator.SetBool("New Bool 0", false);
+        }
+
     }
-    */
+   
 
     private void ShakeInput()
     {

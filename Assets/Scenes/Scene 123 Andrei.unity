@@ -154,6 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -188,6 +190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -222,6 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -256,6 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -276,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -359,6 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -393,6 +403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -427,6 +439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -461,6 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -495,6 +511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -529,6 +547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -563,6 +583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -597,9 +619,136 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
+--- !u!1001 &88595953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3561016726892301176, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_TagString
+      value: HunBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016726892301182, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016726892301182, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261010, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727164261014, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727196594703, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727196594703, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727196594703, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561016727737709845, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+      propertyPath: m_TagString
+      value: MorBar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
 --- !u!1 &106642075 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4985743488479623211, guid: cf4499e2a8359f04bae70c2344ba5a37, type: 3}
@@ -631,6 +780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -665,6 +816,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -704,6 +857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -738,6 +893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -772,6 +929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -868,6 +1027,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -902,6 +1063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -936,6 +1099,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -970,6 +1135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1004,6 +1171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -1038,6 +1207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1072,6 +1243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1106,6 +1279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1140,6 +1315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1174,6 +1351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1208,6 +1387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1228,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1273,7 +1454,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -1311,6 +1492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1345,6 +1528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1379,6 +1564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1413,6 +1600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1430,14 +1619,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1512,6 +1701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1529,14 +1720,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1611,6 +1802,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1645,6 +1838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1679,6 +1874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1713,6 +1910,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1747,6 +1946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1781,6 +1982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -1815,6 +2018,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -1849,6 +2054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1883,6 +2090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1917,6 +2126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1951,6 +2162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -1985,6 +2198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2019,6 +2234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2053,6 +2270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2087,6 +2306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2104,14 +2325,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2186,6 +2407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2220,6 +2443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2254,6 +2479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2288,6 +2515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2322,6 +2551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -2356,6 +2587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2390,6 +2623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2424,6 +2659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2458,6 +2695,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2492,6 +2731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2526,6 +2767,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2560,6 +2803,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2594,6 +2839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2628,9 +2875,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
+--- !u!1 &597882690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3561016726892301176, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+  m_PrefabInstance: {fileID: 88595953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &597882692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3561016726892301182, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+  m_PrefabInstance: {fileID: 88595953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597882690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &597882694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597882690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571957334575f3d49b0df1257dc60dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 597882692}
+  speed: 10
 --- !u!1 &602855979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9013020642644889816, guid: cf4499e2a8359f04bae70c2344ba5a37, type: 3}
@@ -2662,6 +2941,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2696,6 +2977,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2730,6 +3013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2764,6 +3049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -2798,6 +3085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2833,6 +3122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 0
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 2
   morality: 50
   hunger: -10
@@ -2867,6 +3158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2901,6 +3194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -2935,6 +3230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -2969,6 +3266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3003,6 +3302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3037,6 +3338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3071,6 +3374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3105,6 +3410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3139,6 +3446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3173,6 +3482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3207,9 +3518,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
+--- !u!1 &809607925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3561016727737709845, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+  m_PrefabInstance: {fileID: 88595953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &809607927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3561016727737709851, guid: 0199978bd8cc06f40896a31e0e2b5ad7, type: 3}
+  m_PrefabInstance: {fileID: 88595953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809607925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &809607928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809607925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04af834e9b24cc4fba8b2c71da63253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 809607927}
 --- !u!4 &848936549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6706191491950082632, guid: e2043b07c04cc4b4fbf434ceb0863b9f, type: 3}
@@ -3246,6 +3588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3280,6 +3624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3350,6 +3696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3384,6 +3732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3418,6 +3768,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3452,6 +3804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3469,14 +3823,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3551,6 +3905,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3585,6 +3941,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3619,6 +3977,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3653,6 +4013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3687,6 +4049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3721,6 +4085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3755,6 +4121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3789,6 +4157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3823,6 +4193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3857,6 +4229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3891,6 +4265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3925,6 +4301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -3945,7 +4323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3990,7 +4368,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -4028,6 +4406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4062,6 +4442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4096,6 +4478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4130,6 +4514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4164,6 +4550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4198,6 +4586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4232,6 +4622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4266,6 +4658,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4300,6 +4694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -4334,6 +4730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4368,6 +4766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4407,6 +4807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -4441,6 +4843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -11385,7 +11789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558848630645296703, guid: cf4499e2a8359f04bae70c2344ba5a37, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5558848630645296703, guid: cf4499e2a8359f04bae70c2344ba5a37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16600,6 +17004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16646,7 +17052,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110492661 stripped
 GameObject:
@@ -16679,6 +17085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16713,6 +17121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16747,6 +17157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16781,6 +17193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16815,6 +17229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -16849,6 +17265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16869,7 +17287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16914,7 +17332,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -16952,6 +17370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -16986,6 +17406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17020,6 +17442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17131,6 +17555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -17165,6 +17591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17199,6 +17627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17233,6 +17663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -17267,6 +17699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17301,6 +17735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17335,6 +17771,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17369,6 +17807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17403,6 +17843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17437,6 +17879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17471,6 +17915,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17505,6 +17951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17539,6 +17987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17573,6 +18023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17652,6 +18104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17686,6 +18140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17720,6 +18176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17754,6 +18212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17788,6 +18248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17841,6 +18303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17875,6 +18339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -17895,7 +18361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17940,7 +18406,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -17978,6 +18444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18012,6 +18480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18046,6 +18516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18080,6 +18552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18114,6 +18588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18148,6 +18624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18182,6 +18660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18216,6 +18696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18250,6 +18732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18284,6 +18768,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18318,6 +18804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18352,6 +18840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18386,6 +18876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18420,6 +18912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18454,6 +18948,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18488,6 +18984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18522,6 +19020,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18551,14 +19051,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18616,14 +19116,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18914,6 +19414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -18948,6 +19450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -18982,6 +19486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19016,6 +19522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -19169,6 +19677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19203,6 +19713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19237,6 +19749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19271,20 +19785,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
---- !u!114 &1597157216 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5725660898145594644, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-  m_PrefabInstance: {fileID: 2102063144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c04af834e9b24cc4fba8b2c71da63253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1606470436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5936405961540702396, guid: cf4499e2a8359f04bae70c2344ba5a37, type: 3}
@@ -19316,6 +19821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -19350,6 +19857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -19384,6 +19893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19418,6 +19929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19452,6 +19965,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19486,6 +20001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19506,7 +20023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19551,7 +20068,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -19589,6 +20106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19623,6 +20142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19657,6 +20178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19691,6 +20214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19725,6 +20250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19759,6 +20286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -19793,6 +20322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19810,14 +20341,14 @@ PrefabInstance:
     - target: {fileID: 6637292023223979505, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979507, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_Name
       value: NpcVillager (6)
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6637292023223979511, guid: f0714acd1536bd1448e63d9f27ce331d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19892,6 +20423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19926,6 +20459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19960,6 +20495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -19994,6 +20531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -20028,6 +20567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20062,6 +20603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20096,6 +20639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -20130,6 +20675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20164,6 +20711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20198,6 +20747,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20232,6 +20783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -20266,6 +20819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20300,6 +20855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -20334,6 +20891,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20368,6 +20927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20402,6 +20963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -20436,6 +20999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -20971,6 +21536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21005,6 +21572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21039,6 +21608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21073,6 +21644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21107,6 +21680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21183,7 +21758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1966446558 stripped
 GameObject:
@@ -21216,6 +21791,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21268,7 +21845,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e8d256b6ab5880a479858822bb662fec, type: 2}
     - target: {fileID: 6706191492569437941, guid: e2043b07c04cc4b4fbf434ceb0863b9f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6706191492569437941, guid: e2043b07c04cc4b4fbf434ceb0863b9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21350,6 +21927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21384,6 +21963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21418,6 +21999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21452,6 +22035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21486,6 +22071,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21520,6 +22107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21554,6 +22143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -21612,6 +22203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21646,6 +22239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21680,6 +22275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21714,6 +22311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21748,6 +22347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21782,6 +22383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -21816,6 +22419,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21850,6 +22455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 1
   morality: 100
   hunger: 20
@@ -21884,6 +22491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21918,6 +22527,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21952,6 +22563,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -21983,7 +22596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
 --- !u!1 &2094236809 stripped
 GameObject:
@@ -22016,154 +22629,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
---- !u!1001 &2102063144
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 942645060892834450, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271322674, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897271323086, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897500607723, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897500607723, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660897500607723, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660898145594645, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_Value
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660898691183199, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5725660898691183199, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6523942418266439700, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6523942418266439700, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6523942418266439700, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9051845120551020412, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9051845120551020412, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bec208f9ab35da4448029df2ed0c5fee, type: 3}
 --- !u!1 &2122777247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3793885976450666265, guid: cf4499e2a8359f04bae70c2344ba5a37, type: 3}
@@ -22195,6 +22665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -22229,6 +22701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50
@@ -22249,7 +22723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509420, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22294,7 +22768,7 @@ PrefabInstance:
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: mBar
       value: 
-      objectReference: {fileID: 1597157216}
+      objectReference: {fileID: 0}
     - target: {fileID: 5800556317534509423, guid: 6d55994b9678fed488aaa632299e1675, type: 3}
       propertyPath: heightOffSet
       value: 2
@@ -22332,6 +22806,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
   interactType: 0
   morality: -10
   hunger: 50

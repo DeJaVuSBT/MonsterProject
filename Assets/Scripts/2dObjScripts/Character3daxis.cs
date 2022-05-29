@@ -159,6 +159,11 @@ public class Character3daxis : MonoBehaviour
         Interact();
     }
     #region Interaction
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(middle.position, interactRange);
+    }
     private GameObject ClosedColliderAround(){
         Vector3 playerPos = transform.position;
         //Vector3 playerhead = transform.position + new Vector3(0, 0.5f, -1f);

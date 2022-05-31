@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree_combined
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af22899024a68b74897a2f85762296b3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af22899024a68b74897a2f85762296b3, type: 3}
 --- !u!4 &7245559864191310195 stripped

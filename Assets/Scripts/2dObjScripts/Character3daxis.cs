@@ -34,6 +34,10 @@ public class Character3daxis : MonoBehaviour
     int currentInput;
     int[] puzzleList;
     bool runing;
+    bool tutorialIsOn = false;
+    int tutSelector;
+    public GameObject[] tutorials;
+    bool isPushing = false;
 
     private void Awake()
     {
@@ -56,6 +60,10 @@ public class Character3daxis : MonoBehaviour
         Input.EventInput.AllKey.started += AllKey_started;
         //push event
         Input.PushInput.Interact.canceled += Push_canceled;
+        if(isPushing == false)
+        {
+            endTutorial(2);
+        }
         
     }
     private void Interact_canceled(InputAction.CallbackContext obj)
@@ -70,6 +78,7 @@ public class Character3daxis : MonoBehaviour
     private void Push_canceled(InputAction.CallbackContext obj)
     {
         SwitchToPlayerInput();
+        endTutorial(2);
     }
 
     private void AllKey_canceled(InputAction.CallbackContext obj)
@@ -82,12 +91,14 @@ public class Character3daxis : MonoBehaviour
             {
                 target.GetComponent<Reward>().Reward();
                 SwitchToPlayerInput();
+                endTutorial(tutSelector);
                 Debug.Log("Passed");
             }
         }
         else
         {
             SwitchToPlayerInput();
+            endTutorial(tutSelector);
             Debug.Log("failed");
         }
        
@@ -210,20 +221,25 @@ public class Character3daxis : MonoBehaviour
                     case 0:
                         UtilsClass.CreateWorldTextPopup("Shaking with " +target.ToString(), transform.position);
                         ShakeInput();
+                        tutSelector = 0;
                         break;
                     case 1:
                         UtilsClass.CreateWorldTextPopup("Rotating with " + target.ToString(), transform.position);
                         RotateInput();
+                        tutSelector = 1;
                         break;
                     case 2:
-                        UtilsClass.CreateWorldTextPopup("Pusing  " + target.ToString(), transform.position);
+                        UtilsClass.CreateWorldTextPopup("Pushing  " + target.ToString(), transform.position);
                         PushInput();
+                        tutSelector = 2;
                         break;
                     default:
                         UtilsClass.CreateWorldTextPopup("Shaking with  " + target.ToString(), transform.position);
                         ShakeInput();
+                        tutSelector = 3;
                         break;
                 }
+                if(tutorialIsOn == false){startTutorial(tutSelector); tutorialIsOn = true;}
                 
             }
 
@@ -264,7 +280,6 @@ public class Character3daxis : MonoBehaviour
     private void ShakeInput()
     {
         SwitchToEventInput();
-        
         puzzleList =new int[] { 3,4,3,4};
         phase = 0;
         for (int i = 0; i < puzzleList.Length; i++)
@@ -284,7 +299,6 @@ public class Character3daxis : MonoBehaviour
     }
     private void PushInput() {
         SwitchToPushInput();
-      
     }
     /*
     private void RandomInput()
@@ -311,6 +325,7 @@ public class Character3daxis : MonoBehaviour
     private void SwitchToPushInput()
     {
         Input.PushInput.Enable();
+        isPushing = true;
         Input.PlayerInput.Disable();
         Input.EventInput.Disable();
         Debug.Log("PushEvent");
@@ -320,7 +335,21 @@ public class Character3daxis : MonoBehaviour
         Input.PlayerInput.Enable();
         Input.EventInput.Disable();
         Input.PushInput.Disable();
+        isPushing = false;
         Debug.Log("player normal input");
+    }
+
+
+    //UI Tutorials
+    public void startTutorial(int tutIndex){
+        GameObject tutorialHolder = tutorials[tutIndex];
+        tutorialHolder.SetActive(true);
+    }
+
+    public void endTutorial(int tutIndex){
+        GameObject tutorialHolder = tutorials[tutIndex];
+        tutorialHolder.SetActive(false);
+        tutorialIsOn = false;
     }
 
 }

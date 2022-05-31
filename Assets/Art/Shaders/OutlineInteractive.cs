@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class OutlineInteractive : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class OutlineInteractive : MonoBehaviour
         outlineObject.GetComponent<Renderer>().material = outlineMaterial;
 
         Debug.Log("damn bro ");
+        outlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
     }
 
     private void OnDestroy()

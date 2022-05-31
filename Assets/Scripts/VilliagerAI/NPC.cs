@@ -46,6 +46,7 @@ public class NPC : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         state = State.Roaming;
         moveSpeed = walkMoveSpeed;
+        mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
     }
     private enum State
     {

@@ -37,16 +37,16 @@ public class Villager : MonoBehaviour
     private State state;
     private bool pushable=false;
 
-    private Transform attacker;     // ÆðÊ¼µã
-    private Vector3 middlePoint;   // ÖÐ¼äµã
+    private Transform attacker;     // ï¿½ï¿½Ê¼ï¿½ï¿½
+    private Vector3 middlePoint;   // ï¿½Ð¼ï¿½ï¿½
     public float heightOffSet=2f;
-    private Transform playerHeadPos;      // ÖÕÖ¹µã
-    public GameObject stonePrefab;       // ÒªÒÆ¶¯µÄÎïÌå
+    private Transform playerHeadPos;      // ï¿½ï¿½Ö¹ï¿½ï¿½
+    public GameObject stonePrefab;       // Òªï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private GameObject stone;
 
     private float ticker = 0.0f;
     [SerializeField]
-    private float attackTime = 0.5f;    // ¼ÙÉèÒªÓÃ2Ãë·Éµ½Ä¿±êµã
+    private float attackTime = 0.5f;    // ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½2ï¿½ï¿½Éµï¿½Ä¿ï¿½ï¿½ï¿½
     void Start()
     {
         startPos = transform.position;
@@ -59,6 +59,7 @@ public class Villager : MonoBehaviour
         playerHeadPos = player.transform.GetChild(0);
         stone = Instantiate(stonePrefab);
         stone.SetActive(false);
+        mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
     }
     private enum State { 
         Roaming,

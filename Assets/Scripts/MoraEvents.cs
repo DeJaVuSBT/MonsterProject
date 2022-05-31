@@ -9,8 +9,8 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     [SerializeField]
     private bool destroyAtTheEnd = true;
     private bool rewarded = false;
-    private MoralityBar mBar;
-    private HungerBar hBar;
+    public  MoralityBar mBar;
+    public HungerBar hBar;
     private bool isInteracting = false;
     [SerializeField]
     private InteractType interactType;
@@ -41,8 +41,8 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
 
     void Start()
     {
-        mBar = GameObject.Find("Canvas/MoralityBar").GetComponent<MoralityBar>();
-        hBar = GameObject.Find("Canvas/HungerBar").GetComponent<HungerBar>();
+        mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
+        hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
     }
     
     public void Reward()

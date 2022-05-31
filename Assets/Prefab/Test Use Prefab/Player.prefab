@@ -80,9 +80,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6706191492569437936}
   spriteRenderer: {fileID: 0}
+  middle: {fileID: 0}
   moveSpeed: 4
   interactRange: 1
   target: {fileID: 0}
+  pushSpeed: 1
 --- !u!95 &6706191492569437936
 Animator:
   serializedVersion: 3

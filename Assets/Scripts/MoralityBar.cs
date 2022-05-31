@@ -4,8 +4,11 @@ public class MoralityBar : MonoBehaviour
 {
     public static MoralityBar Instance;
     public Slider slider;
+    
     void Start()
     {
+        //slider = this.GetComponent<Slider>();
+        //slider.value = 50;
     }
 
     //100=1 so amount/100

@@ -280,7 +280,7 @@ public class Character3daxis : MonoBehaviour
     private void ShakeInput()
     {
         SwitchToEventInput();
-        puzzleList =new int[] { 3,4,3,4};
+        puzzleList = new int[] { 3,4,3,4};
         phase = 0;
         for (int i = 0; i < puzzleList.Length; i++)
         {

@@ -13,7 +13,6 @@ public class SpawnerGrid : MonoBehaviour
 
     [SerializeField] private SpawnObjScriptable[] spawnObjScriptable;
     [SerializeField]
-    private int id = 0;
     private GridGeneric<SpawnObject> grid;
     private SpawnObjScriptable.Dir dir;
     private int number;

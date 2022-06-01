@@ -28,9 +28,4 @@ public class OutlineInteractive : MonoBehaviour
         Debug.Log("damn bro ");
         outlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
     }
-
-    private void OnDestroy()
-    {
-        Destroy(outlineMaterial);
-    }
 }

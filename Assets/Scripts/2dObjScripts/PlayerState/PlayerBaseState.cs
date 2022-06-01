@@ -8,16 +8,16 @@ public abstract class PlayerBaseState
         _manager = manager;
         _states = states;
     }
-  public abstract  void EnterState();
+    public abstract  void EnterState();
     public abstract void ExitState();
-    public   abstract void UpdateState();
-  public   abstract void CheckIfSwitchState();
+    public abstract void UpdateState();
+    public abstract void CheckIfSwitchState();
 
    protected void SwitchState(PlayerBaseState newState) {
         ExitState();
 
         newState.EnterState();
-
+        
         _manager.CurrentState = newState;
     }
 }

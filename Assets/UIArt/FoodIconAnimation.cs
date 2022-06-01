@@ -31,7 +31,6 @@ public class FoodIconAnimation : MonoBehaviour
 
         transform.position = mcPosScreen;
         transform.SetParent(mainCanvas.transform);
-        Debug.Log(mcPosScreen);
     }
 
     // Update is called once per frame
@@ -73,7 +72,7 @@ public class FoodIconAnimation : MonoBehaviour
             }
             else
             {
-                if (hungerBar.localScale.x > 1.0f)
+                if (hungerBar.localScale.x >= 1.0f)
                 {
                     hungerBar.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
                 } else

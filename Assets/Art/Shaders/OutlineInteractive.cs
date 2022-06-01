@@ -25,7 +25,6 @@ public class OutlineInteractive : MonoBehaviour
 
         outlineObject.GetComponent<Renderer>().material = outlineMaterial;
 
-        Debug.Log("damn bro ");
         outlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
     }
 }

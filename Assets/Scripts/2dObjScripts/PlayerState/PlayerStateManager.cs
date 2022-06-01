@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PlayerStateManager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class PlayerStateManager : MonoBehaviour
     private Rigidbody rb;
     public Rigidbody RB { get { return rb; } set { rb = value; } }
 
-    private float moveSpeed ;
+    private float moveSpeed;
     [SerializeField]
     private float runSpeed = 8f;
     [SerializeField]
@@ -41,8 +42,8 @@ public class PlayerStateManager : MonoBehaviour
         get { return interactRange; }
     }
     private Vector3 moveDir;
-    public Vector3 MoveDir { 
-     get { return moveDir; }
+    public Vector3 MoveDir {
+        get { return moveDir; }
         set { moveDir = value; }
     }
 
@@ -51,15 +52,21 @@ public class PlayerStateManager : MonoBehaviour
     public InputPlayerControl InPut
     {
         get { return Input; }
-      
+
     }
     [Header("Interaction")]
     [SerializeField]
     private GameObject target = null;
+    private bool switchedTarget = false;
+    private GameObject OutlinedTarget;
     public GameObject Target {
         get { return target; }
         set { target = value; }
     }
+    [SerializeField]
+    private Material outlineM;
+    public Material GetOutLineMaterial { get { return outlineM; } }
+
     private bool pushing=false;
     public bool Pushing {
         get { return pushing; }
@@ -119,8 +126,43 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState();
+        ShowOutLine();
+    }
+    
+    private void ShowOutLine() {
+        if (Target!=null&& switchedTarget)
+        {
+            GameObject copyfromtarget = Target.GetComponentInChildren<MeshRenderer>().gameObject;
+            GameObject CreatedoutlineObject = Instantiate(copyfromtarget, Target.transform);
+
+            CreatedoutlineObject.GetComponent<Renderer>().material = outlineM;
+
+            CreatedoutlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
+
+            if (OutlinedTarget==null)
+            {
+                OutlinedTarget = CreatedoutlineObject;
+            }
+            else
+            {
+                DestoryOutLinedTarget();
+                OutlinedTarget = CreatedoutlineObject;
+            }
+            switchedTarget = false;
+        }
+        
     }
 
+    public void DestoryOutLinedTarget() {
+        if (OutlinedTarget)
+        {
+            Destroy(OutlinedTarget);
+        }
+    
+    }
+    public void SwitchedTarget() {
+        switchedTarget = true;
+    }
     private void OnDrawGizmos()
     {
         Vector3 offset = new Vector3(0, 1, 0.7f);

@@ -11,12 +11,23 @@ public class PlayerState
     public PlayerBaseState MoveState() {
         return new PlayerMoveState(Manager,this);
     }
-    public PlayerBaseState InteractState()
+    public PlayerBaseState PushState()
     {
-        return new PlayerInteractState(Manager,this);
+        return new PlayerPushState(Manager,this);
+    }
+    public PlayerBaseState ShakeState()
+    {
+        return new PlayerShakeState(Manager, this);
+    }
+    public PlayerBaseState RotateState()
+    {
+        return new PlayerRotateState(Manager, this);
     }
 
-
+    public PlayerBaseState RunState()
+    {
+        return new PlayerRunState(Manager, this);
+    }
 
 
 }

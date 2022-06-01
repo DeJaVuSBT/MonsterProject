@@ -1,42 +1,91 @@
 using UnityEngine;
+using System;
 
 public class PlayerMoveState : PlayerBaseState
 {
-    private Transform target;
-    public  int interactRange = 4;
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Moves");
+        _manager.ApplyWalkSpeed();
     }
 
     public override void CheckIfSwitchState()
     {
-        throw new System.NotImplementedException();
+        //set interact target
+        if (ClosedColliderAround()&& ClosedColliderAround().GetComponent<MoraEvents>())
+        {
+            
+           _manager.Target = ClosedColliderAround();
+            
+        }
+        else { _manager.Target = null; }
+
+
+
+        if ( _manager.Target != null)
+        {
+            if (_manager.InPut.PlayerInput.Interact.IsPressed())
+            {
+                _manager.Target.GetComponent<Interactable>().Interact();
+                switch (_manager.Target.GetComponent<MoraEvents>().GetInteractType())
+                {
+                    case 0:
+                        SwitchState(_states.ShakeState());
+                        break;
+                    case 1:
+                        SwitchState(_states.RotateState());
+                        break;
+                    case 2:
+                        SwitchState(_states.PushState());
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+        }
+        else if(_manager.Target==null)
+        {
+            if (_manager.InPut.PlayerInput.Interact.IsPressed())
+            {
+                SwitchState(_states.RunState());
+       
+            }
+        }
     }
 
     public override void UpdateState()
     {
-        ClosedColliderAround();
+        CheckIfSwitchState();
         Movement();
+        Animation();
     }
-    private void MoveInpute() { 
-        
+    private void Animation()
+    {
+
+        if (_manager.MoveDir != Vector3.zero)
+        {
+            _manager.Animator.SetBool("New Bool", true);
+
+        }
+        else { _manager.Animator.SetBool("New Bool", false); }
+
+
     }
     private void Movement()
     {
           
-            Vector2 moveVector = _manager.InPut.PlayerInput.Movement.ReadValue<Vector2>();
-             _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
+        Vector2 moveVector = _manager.InPut.PlayerInput.Movement.ReadValue<Vector2>();
+        _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
 
     private GameObject ClosedColliderAround( )
     {
-        Vector3 offset = new Vector3(1, 1, 1);
+        Vector3 offset = new Vector3(0, 1, 0.7f);
         Vector3 playerPos = _manager.transform.position;
-        //Vector3 playerhead = transform.position + new Vector3(0, 0.5f, -1f);
-        Collider[] ColliderAround = Physics.OverlapSphere(playerPos+offset, interactRange);
+        Collider[] ColliderAround = Physics.OverlapSphere(playerPos+offset, _manager.GetInteractRange);
 
         if (ColliderAround.Length > 1)
         {
@@ -57,14 +106,23 @@ public class PlayerMoveState : PlayerBaseState
                     Closest = ColliderAround[i];
                 }
             }
-            return Closest.transform.gameObject;
+            if (Closest!=null)
+            {
+                return Closest.transform.gameObject;
+            }
+            else
+            {
+                return null;
+            }
+           
         }
+        else { return null; }
 
-        return default;
+      
     }
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
+        _manager.RB.velocity = Vector3.zero;
     }
 }

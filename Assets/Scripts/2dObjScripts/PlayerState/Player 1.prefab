@@ -81,6 +81,7 @@ MonoBehaviour:
   walkSpeed: 4
   interactRange: 1
   target: {fileID: 0}
+  outlineM: {fileID: 2100000, guid: 7fe9db6a985d09647b0499505d533c56, type: 2}
 --- !u!1 &1616571178370785922
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,11 +15,12 @@ public class PlayerMoveState : PlayerBaseState
         //set interact target
         if (ClosedColliderAround()&& ClosedColliderAround().GetComponent<MoraEvents>())
         {
-            
+            //target switched!
            _manager.Target = ClosedColliderAround();
+            _manager.SwitchedTarget();
             
         }
-        else { _manager.Target = null; }
+        else { _manager.Target = null; _manager.DestoryOutLinedTarget(); }
 
 
 

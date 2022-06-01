@@ -34,6 +34,13 @@ public class PlayerShakeState : PlayerBaseState
 
     public override void ExitState()
     {
+     //   _manager.InPut.EventInput.Button5.started -= Button5_started;
+     //   _manager.InPut.EventInput.Button4.started -= Button4_started;
+     //   _manager.InPut.EventInput.Button3.started -= Button3_started;
+     //   _manager.InPut.EventInput.Button2.started -= Button2_started;
+     //   _manager.InPut.EventInput.Button1.started -= Button1_started;
+       _manager.InPut.EventInput.AllKey.canceled -= AllKey_canceled;
+     //   _manager.InPut.EventInput.AllKey.started  -=  AllKey_started;
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
     }

@@ -33,6 +33,7 @@ public class PlayerRotateState : PlayerBaseState
 
     public override void ExitState()
     {
+        _manager.InPut.EventInput.AllKey.canceled -= AllKey_canceled;
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
     }

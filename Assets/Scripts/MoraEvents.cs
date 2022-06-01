@@ -11,6 +11,7 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     private bool rewarded = false;
     public  MoralityBar mBar;
     public HungerBar hBar;
+    public GameObject  sBar;
     private bool isInteracting = false;
     [SerializeField]
     private InteractType interactType;
@@ -25,7 +26,8 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     { 
         Shaking,
         Rotating,
-        Take
+        Take,
+        Smash
     }
     public int GetInteractType() {
         Debug.Log((int)interactType);
@@ -43,6 +45,9 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     {
         mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
         hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
+        sBar = GameObject.FindGameObjectWithTag("SmashBar");
+     //   sBar.SetActive(false);
+
     }
     
     public void Reward()

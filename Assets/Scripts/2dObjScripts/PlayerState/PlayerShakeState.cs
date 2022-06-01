@@ -39,7 +39,7 @@ public class PlayerShakeState : PlayerBaseState
      //   _manager.InPut.EventInput.Button3.started -= Button3_started;
      //   _manager.InPut.EventInput.Button2.started -= Button2_started;
      //   _manager.InPut.EventInput.Button1.started -= Button1_started;
-       _manager.InPut.EventInput.AllKey.canceled -= AllKey_canceled;
+        _manager.InPut.EventInput.AllKey.canceled -= AllKey_canceled;
      //   _manager.InPut.EventInput.AllKey.started  -=  AllKey_started;
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;

@@ -40,6 +40,9 @@ public class PlayerMoveState : PlayerBaseState
                     case 2:
                         SwitchState(_states.PushState());
                         break;
+                    case 3:
+                        SwitchState(_states.SmashState());
+                        break;
                     default:
                         break;
 

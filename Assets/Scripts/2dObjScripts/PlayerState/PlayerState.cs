@@ -28,6 +28,9 @@ public class PlayerState
     {
         return new PlayerRunState(Manager, this);
     }
-
+    public PlayerBaseState SmashState()
+    {
+        return new PlayerSmashButton(Manager, this);
+    }
 
 }

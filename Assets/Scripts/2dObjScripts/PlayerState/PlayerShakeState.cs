@@ -23,6 +23,8 @@ public class PlayerShakeState : PlayerBaseState
         _manager.PuzzleList = null;
         frstcheck = true;
         _manager.SwitchToEventInput();
+        //A you are pressing and B you are also pressing
+        //joystick left, pull back = cancel, go right
         _manager.InPut.EventInput.Button5.started += Button5_started => currentInput = 5;
         _manager.InPut.EventInput.Button4.started += Button4_started => currentInput = 4;
         _manager.InPut.EventInput.Button3.started += Button3_started => currentInput = 3;

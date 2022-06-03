@@ -132,6 +132,7 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState();
+        UpdateRenderOrder();
         ShowOutLine();
         //Debug.Log(currentState);
         //tutorialLogic();
@@ -147,6 +148,11 @@ public class PlayerStateManager : MonoBehaviour
 
             CreatedoutlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
 
+            if (CreatedoutlineObject.GetComponent<SortingGroup>() != null)
+            {
+                CreatedoutlineObject.GetComponent<SortingGroup>().sortingOrder = Target.GetComponentInChildren<SortingGroup>().sortingOrder - 1;
+            }
+
             if (OutlinedTarget==null)
             {
                 OutlinedTarget = CreatedoutlineObject;
@@ -159,6 +165,21 @@ public class PlayerStateManager : MonoBehaviour
             switchedTarget = false;
         }
         
+    }
+
+    private void UpdateRenderOrder()
+    {
+        if (Target != null && Target.GetComponentInChildren<SortingGroup>() != null)
+        {
+            if (transform.position.z < Target.transform.position.z)
+            {
+                Target.GetComponentInChildren<SortingGroup>().sortingOrder = 1;
+            }
+            else
+            {
+                Target.GetComponentInChildren<SortingGroup>().sortingOrder = 20;
+            }
+        }
     }
 
     public void DestoryOutLinedTarget() {

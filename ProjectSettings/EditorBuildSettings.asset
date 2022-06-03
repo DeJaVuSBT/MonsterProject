@@ -8,8 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene 123 Andrei.unity
     guid: 1a5269f1e0d1ba940b3b6b7cb2a3227d
+  - enabled: 1
+    path: Assets/Scenes/Brady/Scene for Coding 1.unity
+    guid: e293f7f88c0bcf34bada10e7c856a21b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a835bd22f345e014ebdf81108085645e, type: 2}

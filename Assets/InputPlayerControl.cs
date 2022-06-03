@@ -59,6 +59,17 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""9a9ea194-d371-426f-b2ba-9e4c46e6526c"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""2D Vector"",
                     ""id"": ""456a090b-8ca1-4d13-8d49-30266b60b90b"",
                     ""path"": ""2DVector"",
@@ -106,6 +117,61 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""name"": ""right"",
                     ""id"": ""6b24358d-f2f1-4cf7-97a8-a9cb928afda7"",
                     ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""8920949a-02f9-4452-84c0-d3f142864864"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""b3e11f4d-b66b-4b9f-acbe-836a2bfbff68"",
+                    ""path"": ""<XInputController>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""598ca437-d140-4d04-9ef1-3fb81861a5da"",
+                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""6e3eeb97-5e27-49c9-bd08-54c1a6e6513c"",
+                    ""path"": ""<XInputController>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""8e225ff7-518c-4e97-aa72-fd6dddfa47db"",
+                    ""path"": ""<XInputController>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",
@@ -243,8 +309,30 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2cf83ff8-5152-43d3-aedc-2b1413cc83dd"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""e4c9743a-1b4d-4a7b-8223-c0d0f592d185"",
                     ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d807dca-c959-4f14-aa54-e6aea9dde362"",
+                    ""path"": ""<XInputController>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",
@@ -265,8 +353,30 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""210d557d-1b25-49fc-9f2d-becaf99fbca5"",
+                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""f44c2860-fcec-4d01-845a-11fa5ea3d943"",
                     ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b0646bb1-0fe9-40c4-8c01-8123a232753f"",
+                    ""path"": ""<XInputController>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",
@@ -282,6 +392,72 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",
                     ""action"": ""Button4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dec6abe3-140d-4bed-baa5-bbe50cb9eafa"",
+                    ""path"": ""<XInputController>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Button4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""524a88cf-ba8f-4829-984c-f543538c50ef"",
+                    ""path"": ""<XInputController>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""872f7fa7-acf1-4995-a483-e01c051ebed1"",
+                    ""path"": ""<XInputController>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4a5f184-7827-4e36-b7ba-4114c772157e"",
+                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b63eb80a-3a1b-475a-984c-9a9b22f5b416"",
+                    ""path"": ""<XInputController>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52171918-3910-4a4c-b760-1f32d5ceb01f"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""AllKey"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -376,6 +552,72 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""ce54c50a-ed37-4c15-9533-3769a7573e8a"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""3362a30b-3cc8-428a-8c80-77d0843e8f1a"",
+                    ""path"": ""<XInputController>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""40ca67ef-bdbd-4728-be2a-7109c90771c5"",
+                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""0054ef5f-43a6-4a2d-9b95-8880d50f22a7"",
+                    ""path"": ""<XInputController>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""0c2091b3-c14e-4e6b-a68a-7d0356086fa3"",
+                    ""path"": ""<XInputController>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1043928-50dd-4739-a380-5f544147d791"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }

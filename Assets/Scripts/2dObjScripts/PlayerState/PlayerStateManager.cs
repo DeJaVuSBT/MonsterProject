@@ -67,6 +67,12 @@ public class PlayerStateManager : MonoBehaviour
     private Material outlineM;
     public Material GetOutLineMaterial { get { return outlineM; } }
 
+    [Header("UI Tutorials")]
+    [SerializeField]
+    bool tutorialIsOn = false;
+    int tutSelector;
+    public GameObject[] tutorials;
+
     private bool pushing=false;
     public bool Pushing {
         get { return pushing; }
@@ -127,6 +133,8 @@ public class PlayerStateManager : MonoBehaviour
     {
         currentState.UpdateState();
         ShowOutLine();
+        //Debug.Log(currentState);
+        //tutorialLogic();
     }
     
     private void ShowOutLine() {
@@ -163,6 +171,28 @@ public class PlayerStateManager : MonoBehaviour
     public void SwitchedTarget() {
         switchedTarget = true;
     }
+
+    //UI Tutorials
+    public void startTutorial(int tutIndex){
+        GameObject tutorialHolder = tutorials[tutIndex];
+        tutorialHolder.SetActive(true);
+    }
+
+    public void endTutorial(int tutIndex){
+        GameObject tutorialHolder = tutorials[tutIndex];
+        tutorialHolder.SetActive(false);
+        tutorialIsOn = false;
+    }
+
+    void tutorialLogic()
+    {
+        //Debug.Log(CurrentState);
+        if(currentState == states.ShakeState())
+        {
+            startTutorial(0);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Vector3 offset = new Vector3(0, 1, 0.7f);

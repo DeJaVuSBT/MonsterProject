@@ -6,6 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
+<<<<<<< Updated upstream
       value: 22424703114646680e0b0227036c6c1313191d6a7d7a75700c271921e7e97a2decee22f0
       flags: 0
     RecentlyUsedScenePath-1:
@@ -14,6 +15,46 @@ EditorUserSettings:
     RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c7d02171301651f2b233e28691b3cf0a01737e6ee38eea76b7129370bfb25
       flags: 0
+=======
+      value: 22424703114646680e0b0227036c6c1313191d6a0129343b633c133af6f9
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 22424703114646680e0b0227036c6c1313191d6a2a2734700e26193aece77a2decee22f0
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c7d0217130165152733702e281373f6e5272ca2ef33fbe2742a323016f6
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c6b150503583f3c2c272428691b21eded741af0e632f0a83331283c10ee3f10370e31e14a0605fa124a051e4ef50f03fb500303c00bd613c61852de1715dad4
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680e0b0227036c6c1313191d6a7d7a75700c271921e7e97a2decee22f0
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 22424703114646680e0b0227036c761e06020c1506273f2339201e38ddd4312bf6a923e7ee2e26
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646680e0b0227036c6b150503587b623d28393930
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c6c1313191d6a18212a3520280d7df7ee3d2cfb
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c6b150503583f3c2c272428691b21eded741af0e632f0a80d36283142e02910320831f74a1e02e2034a181c0fee065fea1e1a05dc
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c7d02171301651f2b233e28691b3cf0a01737e6ee38eea76b7129370bfb25
+      flags: 0
+    UnityEditor.ShaderGraph.Blackboard:
+      value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd3c3e302a07a37e0901373ae01e0008f707250d171df81a53a5405d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd8a908bf0a2a4a0bea8aca4f6adfdfcaf91f2e3bcbc90f1cedec488eddf8ede8b9de882899dee9f90ca9b8cd18689c988c6c4
+      flags: 0
+    UnityEditor.ShaderGraph.FloatingWindowsLayout2:
+      value: 181344140043005e1a220d3b1f364b524c0c5a27130c293326201334cee5322ca0bd22fbf23f737e343dcb3307350831f53e061bb4510c0a1d1df84253f22f2514d70ccc19c91333cd1f0fcbd95f8bbb849882ba88bbb78e8f8ff3a7a5a5b8abb9b3a8c482a7eec9b0a0f0a5aecee8c2c7d9b2d08e9c9b91eb9c8783ee8382858886d68388d28e979b809fbeab8aa2e6c9bae68ed7ffcbfacbd0c4e230e3fe38353638efe8eeeed8f1fb74c12822d5df3c22df202ed3dfd4ddc628dec2dbc6925f87
+      flags: 0
+    UnityEditor.ShaderGraph.InspectorWindow:
+      value: 18135939215a0a5004000b0e15254b524c1119263f2d6a722016393ce1eb3d36e5d339f9a5602b2e2c07a37e0901373ae01e0008f707250d171df81a53a5485d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd80908fecb0f9cfddf1eff4e7a1b1eae482f0fcaee1e1928b86d888ed959594879fea828183ed8387828e83d28ec49a
+      flags: 0
+>>>>>>> Stashed changes
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

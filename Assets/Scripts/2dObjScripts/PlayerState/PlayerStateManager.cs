@@ -59,6 +59,8 @@ public class PlayerStateManager : MonoBehaviour
     private GameObject target = null;
     private bool switchedTarget = false;
     private GameObject OutlinedTarget;
+    private GameObject Interacticon;
+    public GameObject InteractIcon { get { return Interacticon; } }
     public GameObject Target {
         get { return target; }
         set { target = value; }
@@ -101,6 +103,8 @@ public class PlayerStateManager : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
+        // some visual obj
+        Interacticon = GameObject.Find("InteractIcon");
 
     }
 
@@ -132,7 +136,7 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState();
-        UpdateRenderOrder();
+      //  UpdateRenderOrder();
         ShowOutLine();
         //Debug.Log(currentState);
         //tutorialLogic();
@@ -143,15 +147,18 @@ public class PlayerStateManager : MonoBehaviour
         {
             GameObject copyfromtarget = Target.GetComponentInChildren<MeshRenderer>().gameObject;
             GameObject CreatedoutlineObject = Instantiate(copyfromtarget, Target.transform);
+            Debug.Log("created one outline");
 
             CreatedoutlineObject.GetComponent<Renderer>().material = outlineM;
 
             CreatedoutlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
 
-            if (CreatedoutlineObject.GetComponent<SortingGroup>() != null)
-            {
-                CreatedoutlineObject.GetComponent<SortingGroup>().sortingOrder = Target.GetComponentInChildren<SortingGroup>().sortingOrder - 1;
-            }
+            //Maybe code from mark
+            //     if (CreatedoutlineObject.GetComponent<SortingGroup>() != null)
+            //     {
+            //         CreatedoutlineObject.GetComponent<SortingGroup>().sortingOrder = Target.GetComponentInChildren<SortingGroup>().sortingOrder - 1;
+            //     }
+     
 
             if (OutlinedTarget==null)
             {
@@ -162,30 +169,41 @@ public class PlayerStateManager : MonoBehaviour
                 DestoryOutLinedTarget();
                 OutlinedTarget = CreatedoutlineObject;
             }
+            InteractIcon.SetActive(true);
+            ///delete later only for test
+            if (OutlinedTarget.transform.parent.tag == "temporary")
+            {
+                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0, 0.5f, 0);
+                Debug.Log("bush");
+            }
+            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0.5f, 2, 0.5f); }
+
+
             switchedTarget = false;
         }
         
     }
-
-    private void UpdateRenderOrder()
-    {
-        if (Target != null && Target.GetComponentInChildren<SortingGroup>() != null)
-        {
-            if (transform.position.z < Target.transform.position.z)
-            {
-                Target.GetComponentInChildren<SortingGroup>().sortingOrder = 1;
-            }
-            else
-            {
-                Target.GetComponentInChildren<SortingGroup>().sortingOrder = 20;
-            }
-        }
-    }
+    //code from mark
+  //  private void UpdateRenderOrder()
+  //  {
+  //      if (Target != null && Target.GetComponentInChildren<SortingGroup>() != null)
+  //      {
+  //          if (transform.position.z < Target.transform.position.z)
+  //          {
+  //              Target.GetComponentInChildren<SortingGroup>().sortingOrder = 1;
+  //          }
+  //          else
+  //          {
+  //              Target.GetComponentInChildren<SortingGroup>().sortingOrder = 20;
+  //          }
+  //      }
+  //  }
 
     public void DestoryOutLinedTarget() {
         if (OutlinedTarget)
         {
             Destroy(OutlinedTarget);
+            InteractIcon.SetActive(false);
         }
     
     }

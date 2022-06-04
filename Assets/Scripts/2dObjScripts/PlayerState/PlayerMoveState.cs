@@ -16,8 +16,14 @@ public class PlayerMoveState : PlayerBaseState
         if (ClosedColliderAround()&& ClosedColliderAround().GetComponent<MoraEvents>())
         {
             //target switched!
+            GameObject preTarget=_manager.Target;
            _manager.Target = ClosedColliderAround();
-            _manager.SwitchedTarget();
+
+            if (preTarget!=_manager.Target)
+            {
+                _manager.SwitchedTarget();
+            }
+            
             
         }
         else { _manager.Target = null; _manager.DestoryOutLinedTarget(); }
@@ -128,5 +134,6 @@ public class PlayerMoveState : PlayerBaseState
     public override void ExitState()
     {
         _manager.RB.velocity = Vector3.zero;
+        _manager.InteractIcon.SetActive(false);
     }
 }

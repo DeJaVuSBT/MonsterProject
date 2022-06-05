@@ -83,11 +83,6 @@ public class PlayerStateManager : MonoBehaviour
 
     }
 
-    private void Push_canceled(InputAction.CallbackContext obj)
-    {
-        SwitchToPlayerInput();
-    }
-
     public void SwitchToEventInput()
     {
         Input.PlayerInput.Disable();

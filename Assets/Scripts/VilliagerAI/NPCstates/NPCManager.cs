@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class NPCManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //state
+    NPCStateBase currentState;
+    NPCStates states;
+    //obj
+    private GameObject player;
+    private MoralityBar mBar;
+    private Rigidbody rb;
+
+    //get set
+
+    public NPCStateBase CurrentState { get { return currentState; } set { currentState = value; } }
+    public Rigidbody RB { get { return rb; } set { rb = value; } }
+    public GameObject Player { get { return player; } }
+    public MoralityBar MBar { get { return mBar; } set { mBar = value; } }
+
     void Start()
     {
-        
+        mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
+        rb = GetComponent<Rigidbody>();
+        player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         

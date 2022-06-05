@@ -115,7 +115,6 @@ public class NPC : MonoBehaviour
                 state = State.ChasePlayer;
             }
         }
-
     }
  
 

@@ -66,6 +66,7 @@ public class Hunter : MonoBehaviour
                 CatchPlayer();
                 break;
         }
+
     }
 
     private void CatchPlayer()

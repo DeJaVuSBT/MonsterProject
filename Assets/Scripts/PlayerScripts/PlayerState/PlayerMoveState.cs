@@ -1,6 +1,4 @@
 using UnityEngine;
-using System;
-
 public class PlayerMoveState : PlayerBaseState
 {
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }

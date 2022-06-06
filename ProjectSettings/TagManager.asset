@@ -9,6 +9,7 @@ TagManager:
   - HunBar
   - SmashBar
   - temporary
+  - Emoji
   layers:
   - Default
   - TransparentFX

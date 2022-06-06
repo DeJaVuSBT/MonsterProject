@@ -19,12 +19,20 @@ public abstract class NPCStateBase
 
     public abstract void CheckIfSwitchState();
 
-    protected void CheckIfPlayerClose() { 
-        
-        
+    protected bool CheckIfPlayerClose() {
+      return  Vector3.Distance(_manager.transform.position, _manager.Player.transform.position) < _manager.SeneseRange?  true: false;
     }
-   
 
+    protected float GetMoral() {
+        return _manager.MBar.slider.value * 100;
+    }
+    protected bool CheckIfMoralLow() {
+
+        return GetMoral() < _manager.LowMoral ? true : false;
+    }
+    protected bool CheckIfMoralHigh() {
+        return GetMoral() > _manager.HighMoral ? true : false;
+    }
     protected void SwitchState(NPCStateBase newState)
     {
         ExitState();

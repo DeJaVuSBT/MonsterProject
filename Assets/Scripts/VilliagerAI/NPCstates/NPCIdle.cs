@@ -9,13 +9,16 @@ public class NPCIdle : NPCStateBase
     {
         if (CheckIfPlayerClose()&&CheckIfMoralLow())
         {
+            TimerAction.StopTimer("MHRoaming");
             SwitchState(_states.Chase());
         }
     }
 
     public override void EnterState()
     {
+        Debug.Log("AI Idle");
         //animation
+        TimerAction.Create(() => SwitchState(_states.Roaming()), 5f,"MHRoaming");
     }
 
     public override void ExitState()

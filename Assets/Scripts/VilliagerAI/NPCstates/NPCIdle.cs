@@ -19,15 +19,17 @@ public class NPCIdle : NPCStateBase
         Debug.Log("AI Idle");
         //animation
         TimerAction.Create(() => SwitchState(_states.Roaming()), 5f,"MHRoaming");
+        TimerAction.Create(() => _manager.ShowEmotion(Random.Range(0,7)), Random.Range(0.5f,1.5f),"IdleEmoji");
+     
     }
 
     public override void ExitState()
     {
-
+        TimerAction.StopTimer("IdleEmoji");
     }
 
     public override void UpdateState()
     {
-
+        CheckIfSwitchState();
     }
 }

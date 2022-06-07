@@ -33,6 +33,7 @@ public abstract class NPCStateBase
     protected bool CheckIfMoralHigh() {
         return GetMoral() > _manager.HighMoral ? true : false;
     }
+    
     protected void SwitchState(NPCStateBase newState)
     {
         ExitState();

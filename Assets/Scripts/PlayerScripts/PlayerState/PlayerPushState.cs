@@ -9,11 +9,13 @@ public class PlayerPushState : PlayerBaseState
         _manager.Pushing = true;
         _manager.Target.transform.SetParent(_manager.transform);
         _manager.InPut.PlayerInput.Interact.canceled += a => _manager.Pushing = false;
+        _manager.startTutorial(2);
     }
 
     public override void ExitState()
     {
         _manager.Target.transform.SetParent(null);
+        _manager.endTutorial(2);
     }
 
     public override void CheckIfSwitchState()
@@ -47,7 +49,5 @@ public class PlayerPushState : PlayerBaseState
 
         }
         else { _manager.Animator.SetBool("New Bool", false); }
-
-
     }
 }

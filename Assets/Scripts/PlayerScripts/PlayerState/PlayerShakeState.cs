@@ -11,6 +11,8 @@ public class PlayerShakeState : PlayerBaseState
     //private int[] puzzleList=null;
     private bool puzzling = true;
     public PlayerShakeState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
+    GameObject tutObj;
+
     public override void CheckIfSwitchState()
     {
         if (!puzzling)
@@ -31,13 +33,15 @@ public class PlayerShakeState : PlayerBaseState
         _manager.InPut.EventInput.Button3.started += Button3_started => currentInput=3;
         _manager.InPut.EventInput.Button2.started += Button2_started => currentInput=2;
         _manager.InPut.EventInput.Button1.started += Button1_started => currentInput=1;
-
+        _manager.startTutorial(0);
+        
     }
 
     public override void ExitState()
     {
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
+        _manager.endTutorial(0);
     }
 
     public override void UpdateState()

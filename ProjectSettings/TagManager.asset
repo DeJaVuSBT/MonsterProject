@@ -10,6 +10,7 @@ TagManager:
   - SmashBar
   - temporary
   - Emoji
+  - shakeTut
   layers:
   - Default
   - TransparentFX

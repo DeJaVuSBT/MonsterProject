@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6884478420533462898
+--- !u!1 &3551446149889512191
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6107237376294985160}
-  - component: {fileID: 7164839549607219821}
-  - component: {fileID: 4938875209312822951}
-  - component: {fileID: 6717701216447240330}
+  - component: {fileID: 2841793131823127003}
+  - component: {fileID: 632433582130436539}
+  - component: {fileID: 2747931848381597132}
   m_Layer: 0
-  m_Name: Fallen_tree
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6107237376294985160
+--- !u!4 &2841793131823127003
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6884478420533462898}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.781231, y: 0.00000023841858, z: 48.87}
+  m_GameObject: {fileID: 3551446149889512191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 6107237376294985160}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7164839549607219821
+--- !u!33 &632433582130436539
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6884478420533462898}
+  m_GameObject: {fileID: 3551446149889512191}
   m_Mesh: {fileID: -5975844252030314685, guid: fa223d401af967d49ba0e94e5e92199f, type: 3}
---- !u!23 &4938875209312822951
+--- !u!23 &2747931848381597132
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6884478420533462898}
+  m_GameObject: {fileID: 3551446149889512191}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,6 +81,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6884478420533462898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6107237376294985160}
+  - component: {fileID: 6717701216447240330}
+  - component: {fileID: 6297283732088118700}
+  m_Layer: 0
+  m_Name: Fallen_tree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6107237376294985160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884478420533462898}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.781231, y: 0.00000023841858, z: 48.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2841793131823127003}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6717701216447240330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95,3 +127,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5917958, y: 0.7567022, z: 1.4078166}
   m_Center: {x: -0.5485919, y: 0.32228696, z: 1.0727218}
+--- !u!114 &6297283732088118700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884478420533462898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122cd8c84fecf294e9933433fe5e16f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAtTheEnd: 1
+  mBar: {fileID: 0}
+  hBar: {fileID: 0}
+  sBar: {fileID: 0}
+  interactType: 2
+  morality: 0
+  hunger: 0

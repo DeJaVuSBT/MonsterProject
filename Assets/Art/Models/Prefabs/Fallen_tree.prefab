@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6107237376294985160}
   - component: {fileID: 7164839549607219821}
   - component: {fileID: 4938875209312822951}
+  - component: {fileID: 6717701216447240330}
   m_Layer: 0
   m_Name: Fallen_tree
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6717701216447240330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884478420533462898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5917958, y: 0.7567022, z: 1.4078166}
+  m_Center: {x: -0.5485919, y: 0.32228696, z: 1.0727218}

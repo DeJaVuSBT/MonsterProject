@@ -527,7 +527,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-0.5,"y":0.20000000298023225,"z":0.0}}'
+      m_SerializableObject: '{"vector":{"x":-0.699999988079071,"y":0.20000000298023225,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -697,7 +697,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":0.5,"y":2.0,"z":0.5}}'
+      m_SerializableObject: '{"vector":{"x":0.699999988079071,"y":2.0,"z":0.5}}'
     m_Space: 0
   m_Property:
     name: B
@@ -1051,7 +1051,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"a524a81b1b30a9d4282122fadb6f5915","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"823f3297141f090499ba5d69bfbdbcf4","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mainTexture

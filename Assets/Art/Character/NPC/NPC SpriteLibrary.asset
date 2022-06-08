@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: NPC SpriteLibrary
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Emotion NPC Adult Female 2
+    m_Hash: -1697227261
+    m_CategoryList:
+    - m_Name: Angry
+      m_Hash: 16779677
+      m_Sprite: {fileID: -3637171734851457783, guid: 42894f7068a906a49ae436c833f95d53, type: 3}
+    - m_Name: Neutral
+      m_Hash: 1805245548
+      m_Sprite: {fileID: 9204063151036102749, guid: 42894f7068a906a49ae436c833f95d53, type: 3}
+    - m_Name: Scared
+      m_Hash: 1676722332
+      m_Sprite: {fileID: -1066114856609608823, guid: 42894f7068a906a49ae436c833f95d53, type: 3}
+  - m_Name: Emotion NPC Adult Female 3
+    m_Hash: -305041771
+    m_CategoryList:
+    - m_Name: Angry
+      m_Hash: 16779677
+      m_Sprite: {fileID: -3228631625019796873, guid: d662a8e579d930d42832f242c300ae91, type: 3}
+    - m_Name: Neutral
+      m_Hash: 1805245548
+      m_Sprite: {fileID: 4544606804028039144, guid: d662a8e579d930d42832f242c300ae91, type: 3}
+    - m_Name: Scared
+      m_Hash: 1676722332
+      m_Sprite: {fileID: -9167630106380364210, guid: d662a8e579d930d42832f242c300ae91, type: 3}
+  - m_Name: Emotion NPC Adult Male 1
+    m_Hash: -1632885886
+    m_CategoryList:
+    - m_Name: Angry
+      m_Hash: 16779677
+      m_Sprite: {fileID: 8775073843576067590, guid: 32961d423fa3d8540aa370fb98447511, type: 3}
+    - m_Name: Neutral
+      m_Hash: 1805245548
+      m_Sprite: {fileID: 2706307660422059697, guid: 32961d423fa3d8540aa370fb98447511, type: 3}
+    - m_Name: Scared
+      m_Hash: 1676722332
+      m_Sprite: {fileID: 8137674418992879720, guid: 32961d423fa3d8540aa370fb98447511, type: 3}

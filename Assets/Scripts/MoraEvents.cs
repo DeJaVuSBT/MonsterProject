@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MoraEvents : MonoBehaviour, Interactable,Reward
 {
-   
-    
+
+
     [SerializeField]
+    public bool GoodDeedorBadDeed = true;
     private bool destroyAtTheEnd = true;
     private bool rewarded = false;
     public  MoralityBar mBar;

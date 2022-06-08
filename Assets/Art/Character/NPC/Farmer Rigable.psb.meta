@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 86de1aa81bdff4345ae28e45913c4480
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Folder 21 Copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 882
+      width: 189
+      height: 64
+    spriteID: e7ffc342629b19a419edb0f41bca0b22
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -18, y: 646}
+  - name: Farmer Rigable Scared head Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 369
+      width: 186
+      height: 163
+    spriteID: 2970b1f340642904caa4b6236ee8b8eb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -146, y: 107}
+  - name: Farmer Rigable Angry head Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 540
+      width: 186
+      height: 163
+    spriteID: 90804c8706ee0b44e99e392cdecdfe28
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -146, y: 278}
+  - name: Folder 22 Copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 711
+      width: 186
+      height: 163
+    spriteID: 5f7d4bf6d5c01c2429f6af041b2852e7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -146, y: 449}
+  - name: Folder 23 Copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 4
+      width: 147
+      height: 167
+    spriteID: 04ccd5f892b509640b01c24c86f40e80
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 63, y: -117}
+  - name: Folder 25 Copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 295
+      width: 68
+      height: 108
+    spriteID: fa8e1b13d2af4b8479a9ffb325c5f4d2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 56, y: 251}
+  - name: Folder 26 Copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 179
+      width: 70
+      height: 108
+    spriteID: a8c0df831455a854fa9fc6eb7c9c4283
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -14, y: 135}
+  - name: Folder 27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 205
+      height: 357
+    spriteID: b503f50201581f743ae65da3d42149f9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -249, y: -75}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 512
+  importedTextureHeight: 1024
+  documentSize: {x: 480, y: 480}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 512
+  textureActualHeight: 1024
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Folder 21 Copy 2
+    spriteName: Folder 21 Copy 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e7ffc342629b19a419edb0f41bca0b22
+    layerID: 9
+    mosaicPosition: {x: 4, y: 882}
+  - name: Farmer Rigable Scared head Copy
+    spriteName: Farmer Rigable Scared head Copy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2970b1f340642904caa4b6236ee8b8eb
+    layerID: 8
+    mosaicPosition: {x: 4, y: 369}
+  - name: Farmer Rigable Angry head Copy
+    spriteName: Farmer Rigable Angry head Copy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 90804c8706ee0b44e99e392cdecdfe28
+    layerID: 7
+    mosaicPosition: {x: 4, y: 540}
+  - name: Folder 22 Copy 2
+    spriteName: Folder 22 Copy 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5f7d4bf6d5c01c2429f6af041b2852e7
+    layerID: 6
+    mosaicPosition: {x: 4, y: 711}
+  - name: Folder 23 Copy 2
+    spriteName: Folder 23 Copy 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 04ccd5f892b509640b01c24c86f40e80
+    layerID: 5
+    mosaicPosition: {x: 217, y: 4}
+  - name: Folder 25 Copy 2
+    spriteName: Folder 25 Copy 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fa8e1b13d2af4b8479a9ffb325c5f4d2
+    layerID: 3
+    mosaicPosition: {x: 217, y: 295}
+  - name: Folder 26 Copy 2
+    spriteName: Folder 26 Copy 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a8c0df831455a854fa9fc6eb7c9c4283
+    layerID: 2
+    mosaicPosition: {x: 217, y: 179}
+  - name: Folder 27
+    spriteName: Folder 27
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b503f50201581f743ae65da3d42149f9
+    layerID: 4
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones:
+    - name: bone_1
+      position: {x: 236.58513, y: 161.6811, z: 0}
+      rotation: {x: 0, y: 0, z: 0.71396154, w: 0.700185}
+      length: 57.427
+      parentId: -1
+    - name: bone_2
+      position: {x: 57.426994, y: -0.000011630819, z: 0}
+      rotation: {x: 0, y: 0, z: -0.009748826, w: 0.9999525}
+      length: 64.21717
+      parentId: 0
+    - name: bone_3
+      position: {x: 64.21718, y: 0.000028041155, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0004232461, w: 0.99999994}
+      length: 118.42477
+      parentId: 1
+    - name: bone_4
+      position: {x: 56.53621, y: -44.90738, z: 0}
+      rotation: {x: 0, y: -0, z: -0.71126676, w: 0.7029223}
+      length: 68.103806
+      parentId: 1
+    - name: bone_5
+      position: {x: 68.10382, y: 0.000022626264, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0021632533, w: 0.9999977}
+      length: 83.41302
+      parentId: 3
+    - name: bone_6
+      position: {x: 57.113953, y: 30.926954, z: 0}
+      rotation: {x: 0, y: -0, z: 0.70920986, w: 0.7049974}
+      length: 72.63554
+      parentId: 1
+    - name: bone_7
+      position: {x: 72.63553, y: -0.00001841461, z: 0}
+      rotation: {x: 0, y: 0, z: -0.003817699, w: 0.9999927}
+      length: 93.64523
+      parentId: 5
+    - name: bone_8
+      position: {x: -17.801416, y: -36.73564, z: 0}
+      rotation: {x: 0, y: -0, z: 0.99996835, w: 0.007959835}
+      length: 41.68782
+      parentId: 0
+    - name: bone_9
+      position: {x: 41.687824, y: -0.00015299636, z: 0}
+      rotation: {x: 0, y: 0, z: 0.011146193, w: -0.99993795}
+      length: 40.88942
+      parentId: 7
+    - name: bone_10
+      position: {x: -17.812578, y: 36.040436, z: 0}
+      rotation: {x: 0, y: -0, z: 0.99999607, w: 0.002820683}
+      length: 39.102295
+      parentId: 0
+    - name: bone_11
+      position: {x: 39.102287, y: 0.00022273704, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0101678595, w: -0.9999483}
+      length: 43.20249
+      parentId: 9
+    parts:
+    - spritePosition:
+        x: 22
+        y: 236
+        width: 189
+        height: 64
+      spriteId: b4e9351f4f600f24dac55abea1d6e3ed
+      bones: 0500000006000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 150
+        y: 262
+        width: 186
+        height: 163
+      spriteId: 5d67ab37190483644b3357fe7ea4538f
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 150
+        y: 262
+        width: 186
+        height: 163
+      spriteId: e9cae84df6096bf4ca80dd7f97365794
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 150
+        y: 262
+        width: 186
+        height: 163
+      spriteId: 4bf5ec57c4a2e89418ef875eaf9110cf
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 154
+        y: 121
+        width: 147
+        height: 167
+      spriteId: 8ac9a6a13eece0649a975288048fff8f
+      bones: 0000000001000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 253
+        y: 79
+        width: 205
+        height: 357
+      spriteId: 1bf72cca3ecb08a49be455212be5e0fd
+      bones: 0400000003000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 161
+        y: 44
+        width: 68
+        height: 108
+      spriteId: d66f503905e4c8b4f83eeb97b20a7af6
+      bones: 0a00000009000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 231
+        y: 44
+        width: 70
+        height: 108
+      spriteId: bfb00e582940d0146abf01c352c0bf1e
+      bones: 0800000007000000
+      parentGroup: 0
+      order: 0
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Farmer Rigable Texture
+  prefabAssetName: Farmer Rigable Prefab
+  spriteLibAssetName: Farmer Rigable Sprite Lib
+  secondarySpriteTextures: []

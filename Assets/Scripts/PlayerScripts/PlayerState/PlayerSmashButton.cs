@@ -21,13 +21,13 @@ public class PlayerSmashButton : PlayerBaseState
         Debug.Log("SmashButton");
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(true);
         _manager.SwitchToEventInput();
-        _manager.InPut.EventInput.Button5.started += Button5_started => total+=counter;
+        _manager.InPut.EventInput.Button5.started += Button5_started => total+=counter*5;
         _manager.InPut.EventInput.Button4.started += Button4_started => puzzling = false;
         _manager.InPut.EventInput.Button3.started += Button3_started => puzzling = false;
         _manager.InPut.EventInput.Button2.started += Button2_started => puzzling = false;
         _manager.InPut.EventInput.Button1.started += Button1_started => puzzling = false;
         _manager.InPut.EventInput.AllKey.started += AllKey_started => _manager.Target.GetComponent<MoraEvents>().Shake();
-       // _manager.startTutorial(3);
+        _manager.startTutorial(3);
     }
 
     public override void ExitState()
@@ -45,13 +45,17 @@ public class PlayerSmashButton : PlayerBaseState
     private void CheckIfInputEnough()
     {
         Debug.Log(total);
-        total -= Time.deltaTime*10;
-        _manager.Target.GetComponent<MoraEvents>().sBar.GetComponent<Slider>().value = total / 100;
+        total -= Time.deltaTime*20;
+        if (puzzling ==true)
+        {
+            _manager.Target.GetComponent<MoraEvents>().sBar.GetComponent<Slider>().value = total / 100;
+        }
+        
         if (total<10)
         {
             puzzling = false;
         }
-        else if(total>=99)
+        else if(total>=80)
         {
             _manager.Target.GetComponent<Reward>().Reward();
             Debug.Log("Passed");

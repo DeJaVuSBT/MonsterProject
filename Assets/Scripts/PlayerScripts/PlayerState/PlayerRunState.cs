@@ -17,16 +17,16 @@ public class PlayerRunState : PlayerBaseState
         _manager.Running = true;
         _manager.ApplyRunSpeed();
         _manager.InPut.PlayerInput.Interact.canceled += a => _manager.Running = false;
+        _manager.Animator.SetBool("IsRunning", true);
     }
 
     public override void ExitState()
     {
-
+        _manager.Animator.SetBool("IsRunning", false);
     }
 
     public override void UpdateState()
     {
-        Animation();
         Movement();
         CheckIfSwitchState();
     }
@@ -37,16 +37,5 @@ public class PlayerRunState : PlayerBaseState
         _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
-    private void Animation()
-    {
 
-        if (_manager.MoveDir != Vector3.zero)
-        {
-            _manager.Animator.SetBool("New Bool", true);
-
-        }
-        else { _manager.Animator.SetBool("New Bool", false); }
-
-
-    }
 }

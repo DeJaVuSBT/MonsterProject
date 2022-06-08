@@ -42,16 +42,19 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         hunger= (int)b;
     }
 
-    void Start()
+    void Awake()
     {
         mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
         hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
         sBar = GameObject.FindGameObjectWithTag("SmashBar");
-     //   sBar.SetActive(false);
 
     }
-    
-    public void Reward()
+    void Start()
+    {
+        sBar.SetActive(false);
+    }
+
+        public void Reward()
     {
         if (!rewarded) {
 

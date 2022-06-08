@@ -77,9 +77,7 @@ public class PlayerMoveState : PlayerBaseState
             _manager.Animator.SetBool("IsWalking", true);
 
         }
-        else { _manager.Animator.SetBool("IsRunning", false); }
-
-
+        else { _manager.Animator.SetBool("IsWalking", false); }
     }
     private void Movement()
     {

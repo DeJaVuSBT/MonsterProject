@@ -67,9 +67,6 @@ public class PlayerStateManager : MonoBehaviour
     int tutSelector;
     public GameObject[] tutorials;
 
-    [Header("UI")]
-    [SerializeField]
-    public CardScript[] cardSpace;
     
     private void Awake()
     {
@@ -160,10 +157,10 @@ public class PlayerStateManager : MonoBehaviour
             ///delete later only for test
             if (OutlinedTarget.transform.parent.tag == "temporary")
             {
-                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0, 0.5f, 0);
+                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0.5f);
                 Debug.Log("bush");
             }
-            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0, 2, 0); }
+            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 
 
             switchedTarget = false;
@@ -194,31 +191,7 @@ public class PlayerStateManager : MonoBehaviour
         tutorialIsOn = false;
     }
 
-    public CardScript lookForEmptyCardSpace()
-    {
-        CardScript emptyCard = cardSpace[0];
-        for(int i = 0; i<cardSpace.Length; i++)
-        {
-            if(cardSpace[i].cardStatus == 0)
-            {
-                emptyCard = cardSpace[i];
-            }
-        }
 
-        if(emptyCard == null)
-        {
-            //remove Old card
-        }
-
-        return emptyCard;
-    }
-
-    //CardScript cardScript;
-    public void addCard(int _deed)
-    {
-        //GameObject card = lookForEmptyCardSpace();
-        lookForEmptyCardSpace().setStatus(1);
-    }
 
     private void OnDrawGizmos()
     {

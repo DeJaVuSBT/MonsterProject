@@ -23,6 +23,12 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
     private bool shake = false;
     private float shaketime = 0;
 
+    [Header("UI")]
+    [SerializeField]
+    public CardScript[] cardSpace;
+    [SerializeField]
+    private GameObject newMbar;
+
     enum InteractType 
     { 
         Shaking,
@@ -47,6 +53,7 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
         hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
         sBar = GameObject.FindGameObjectWithTag("SmashBar");
+        newMbar = GameObject.FindGameObjectWithTag("Mbar");
 
     }
     void Start()
@@ -60,8 +67,20 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
 
             mBar.Add(morality);
             hBar.Add(hunger);
-            
-            
+            if (GoodDeedorBadDeed)
+            {
+                newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getBlue", true);
+                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getBlue", false), 3f);
+                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", true), 3f);
+                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", false), 3.5f);
+            }
+            else { newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getRed", true);
+                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getRed", false), 3f);
+                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", true), 3f);
+                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", false), 3.5f);
+            }
+
+
             if (destroyAtTheEnd)
             {
                 Destroy(this.gameObject);
@@ -97,6 +116,32 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
             }
         }
        
+    }
+
+    public CardScript lookForEmptyCardSpace()
+    {
+        CardScript emptyCard = cardSpace[0];
+        for (int i = 0; i < cardSpace.Length; i++)
+        {
+            if (cardSpace[i].cardStatus == 0)
+            {
+                emptyCard = cardSpace[i];
+            }
+        }
+
+        if (emptyCard == null)
+        {
+            //remove Old card
+        }
+
+        return emptyCard;
+    }
+
+    //CardScript cardScript;
+    public void addCard(int _deed)
+    {
+        //GameObject card = lookForEmptyCardSpace();
+        lookForEmptyCardSpace().setStatus(1);
     }
 
 }

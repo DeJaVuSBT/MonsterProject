@@ -67,7 +67,7 @@ public class PlayerMoveState : PlayerBaseState
         CheckIfSwitchState();
         Movement();
         Animation();
-        ShowArrow();
+    //    ShowArrow();
     }
     private void Animation()
     {

@@ -1,0 +1,361 @@
+fileFormatVersion: 2
+guid: 456f91cd233d2a3449656623615bdef2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Folder 5 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 425
+      width: 266
+      height: 123
+    spriteID: 6bb6095e0146f8b4dbc5fe07379f9363
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 272, y: 55}
+  - name: Folder 4 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 555
+      y: 425
+      width: 214
+      height: 99
+    spriteID: 9ecdc17282bf39143bb7cb1fbb2f4d3b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 327, y: 40}
+  - name: Folder 1 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 605
+      height: 413
+    spriteID: 29b71d7609931f143949c248bec1fc82
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -160, y: -460}
+  - name: Folder 7 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 875
+      y: 4
+      width: 133
+      height: 217
+    spriteID: c6c4f04ffec11484fa506af181f05a2b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 523, y: -79}
+  - name: Folder 6 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 617
+      y: 4
+      width: 250
+      height: 361
+    spriteID: 7e3857114418cfb4bb4e315c8382e2ca
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 257, y: -190}
+  - name: Folder 3 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 425
+      width: 269
+      height: 124
+    spriteID: 9b6e3cc067ad24849bc65973bbdf8bb2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -677, y: 51}
+  - name: Folder 2 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 777
+      y: 425
+      width: 213
+      height: 98
+    spriteID: 270f06790856a9049aa638ed5c8e4837
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 259, y: 43}
+  - name: Folder 8 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 875
+      y: 229
+      width: 114
+      height: 157
+    spriteID: 8c6915fe56f581941b2cbe43ba2d1557
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 370, y: 131}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 1024
+  documentSize: {x: 960, y: 960}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 1024
+  textureActualHeight: 1024
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Folder 9 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+  - name: Folder 5 Copy
+    spriteName: Folder 5 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6bb6095e0146f8b4dbc5fe07379f9363
+    layerID: 375670846
+    mosaicPosition: {x: 281, y: 425}
+  - name: Folder 4 Copy
+    spriteName: Folder 4 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9ecdc17282bf39143bb7cb1fbb2f4d3b
+    layerID: -594330333
+    mosaicPosition: {x: 555, y: 425}
+  - name: Folder 1 Copy
+    spriteName: Folder 1 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 29b71d7609931f143949c248bec1fc82
+    layerID: 1829251794
+    mosaicPosition: {x: 4, y: 4}
+  - name: Folder 7 Copy
+    spriteName: Folder 7 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c6c4f04ffec11484fa506af181f05a2b
+    layerID: -351119628
+    mosaicPosition: {x: 875, y: 4}
+  - name: Folder 6 Copy
+    spriteName: Folder 6 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7e3857114418cfb4bb4e315c8382e2ca
+    layerID: 456741081
+    mosaicPosition: {x: 617, y: 4}
+  - name: Folder 3 Copy
+    spriteName: Folder 3 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9b6e3cc067ad24849bc65973bbdf8bb2
+    layerID: 1102461320
+    mosaicPosition: {x: 4, y: 425}
+  - name: Folder 2 Copy
+    spriteName: Folder 2 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 270f06790856a9049aa638ed5c8e4837
+    layerID: 1910322029
+    mosaicPosition: {x: 777, y: 425}
+  - name: Folder 8 Copy
+    spriteName: Folder 8 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8c6915fe56f581941b2cbe43ba2d1557
+    layerID: -2047911281
+    mosaicPosition: {x: 875, y: 229}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Boze Gozer Riggable Texture
+  prefabAssetName: Boze Gozer Riggable Prefab
+  spriteLibAssetName: Boze Gozer Riggable Sprite Lib
+  secondarySpriteTextures: []

@@ -74,7 +74,7 @@ public class PlayerShakeState : PlayerBaseState
                 if (counter == _manager.PuzzleList.Length)
                 {
                     _manager.Target.GetComponent<Reward>().Reward();
-                    _manager.addCard(1);
+                    //_manager.addCard(1);
                     puzzling = false;
                 }
             }

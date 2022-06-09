@@ -22,8 +22,6 @@ public class PlayerMoveState : PlayerBaseState
             {
                 _manager.SwitchedTarget();
             }
-            
-            
         }
         else { _manager.Target = null; _manager.DestoryOutLinedTarget(); }
 

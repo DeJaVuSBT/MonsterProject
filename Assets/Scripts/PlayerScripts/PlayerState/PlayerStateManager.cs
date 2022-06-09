@@ -69,7 +69,7 @@ public class PlayerStateManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField]
-    public GameObject[] cardSpace;
+    public CardScript[] cardSpace;
     
     private void Awake()
     {
@@ -194,16 +194,17 @@ public class PlayerStateManager : MonoBehaviour
         tutorialIsOn = false;
     }
 
-    public GameObject lookForEmptyCardSpace()
+    public CardScript lookForEmptyCardSpace()
     {
-        GameObject emptyCard = null;
+        CardScript emptyCard = cardSpace[0];
         for(int i = 0; i<cardSpace.Length; i++)
         {
-            if(cardSpace[i].GetComponent<CardScript>().cardStatus == 0)
+            if(cardSpace[i].cardStatus == 0)
             {
                 emptyCard = cardSpace[i];
             }
         }
+
         if(emptyCard == null)
         {
             //remove Old card
@@ -212,9 +213,11 @@ public class PlayerStateManager : MonoBehaviour
         return emptyCard;
     }
 
+    //CardScript cardScript;
     public void addCard(int _deed)
     {
-        lookForEmptyCardSpace().GetComponent<CardScript>().setStatus(_deed);
+        //GameObject card = lookForEmptyCardSpace();
+        lookForEmptyCardSpace().setStatus(1);
     }
 
     private void OnDrawGizmos()

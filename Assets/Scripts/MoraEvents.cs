@@ -61,6 +61,7 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
             mBar.Add(morality);
             hBar.Add(hunger);
             
+            
             if (destroyAtTheEnd)
             {
                 Destroy(this.gameObject);

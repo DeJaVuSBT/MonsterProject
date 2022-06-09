@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -114,11 +115,27 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState();
-      //  UpdateRenderOrder();
+        flipSprite();
         ShowOutLine();
         //tutorialLogic();
     }
-    
+
+    private void flipSprite()
+    {
+        if (moveDir.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (moveDir.x == 0)
+        {
+
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
     private void ShowOutLine() {
         if (Target!=null&& switchedTarget)
         {
@@ -146,7 +163,7 @@ public class PlayerStateManager : MonoBehaviour
                 InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0, 0.5f, 0);
                 Debug.Log("bush");
             }
-            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0.5f, 2, 0.5f); }
+            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0, 2, 0); }
 
 
             switchedTarget = false;

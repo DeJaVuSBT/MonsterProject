@@ -42,10 +42,34 @@ MonoBehaviour:
     m_CategoryList:
     - m_Name: Angry
       m_Hash: 16779677
-      m_Sprite: {fileID: 8775073843576067590, guid: 32961d423fa3d8540aa370fb98447511, type: 3}
+      m_Sprite: {fileID: 3532140018201763866, guid: 03bf9d3257e8f3f42937dcd6c742d4e9, type: 3}
     - m_Name: Neutral
       m_Hash: 1805245548
-      m_Sprite: {fileID: 2706307660422059697, guid: 32961d423fa3d8540aa370fb98447511, type: 3}
+      m_Sprite: {fileID: -2469543918924256919, guid: 03bf9d3257e8f3f42937dcd6c742d4e9, type: 3}
     - m_Name: Scared
       m_Hash: 1676722332
-      m_Sprite: {fileID: 8137674418992879720, guid: 32961d423fa3d8540aa370fb98447511, type: 3}
+      m_Sprite: {fileID: -5092610550052064991, guid: 03bf9d3257e8f3f42937dcd6c742d4e9, type: 3}
+  - m_Name: Emotion NPC Adult Male 2
+    m_Hash: 128283192
+    m_CategoryList:
+    - m_Name: Angry
+      m_Hash: 16779677
+      m_Sprite: {fileID: -2137510104649507376, guid: c6d5e83c25d845846b0779ee4455475f, type: 3}
+    - m_Name: Neutral
+      m_Hash: 1805245548
+      m_Sprite: {fileID: 6640375670872188378, guid: c6d5e83c25d845846b0779ee4455475f, type: 3}
+    - m_Name: Scared
+      m_Hash: 1676722332
+      m_Sprite: {fileID: -2647245296387996698, guid: c6d5e83c25d845846b0779ee4455475f, type: 3}
+  - m_Name: Emotion Farmer
+    m_Hash: -1218680141
+    m_CategoryList:
+    - m_Name: Angry
+      m_Hash: 16779677
+      m_Sprite: {fileID: -6329268459489634571, guid: 86de1aa81bdff4345ae28e45913c4480, type: 3}
+    - m_Name: Neutral
+      m_Hash: 1805245548
+      m_Sprite: {fileID: -717202673192624159, guid: 86de1aa81bdff4345ae28e45913c4480, type: 3}
+    - m_Name: Scared
+      m_Hash: 1676722332
+      m_Sprite: {fileID: -498698317303113164, guid: 86de1aa81bdff4345ae28e45913c4480, type: 3}

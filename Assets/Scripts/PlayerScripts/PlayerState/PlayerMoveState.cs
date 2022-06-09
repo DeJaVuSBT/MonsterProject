@@ -133,5 +133,6 @@ public class PlayerMoveState : PlayerBaseState
     {
         _manager.RB.velocity = Vector3.zero;
         _manager.InteractIcon.SetActive(false);
+        _manager.Animator.SetBool("IsWalking", false);
     }
 }

@@ -4,6 +4,7 @@ public class PlayerMoveState : PlayerBaseState
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
     public override void EnterState()
     {
+        _manager.arrow.SetActive(true);
         Debug.Log("Moves");
         _manager.ApplyWalkSpeed();
     }
@@ -68,6 +69,7 @@ public class PlayerMoveState : PlayerBaseState
         CheckIfSwitchState();
         Movement();
         Animation();
+        ShowArrow();
     }
     private void Animation()
     {
@@ -122,15 +124,60 @@ public class PlayerMoveState : PlayerBaseState
             }
            
         }
-        else { return null; }
-
-      
+        else { return null; }  
+    }
+    private void ShowArrow() {
+        if (ClosedColliderAroundArrow()!=null)
+        {
+            _manager.ShowArrow(ClosedColliderAroundArrow().transform.position + new Vector3(-0.5f, 0.1f, 0.5f));
+        }
+       
     }
 
+    private GameObject ClosedColliderAroundArrow()
+    {
+        Vector3 offset = new Vector3(0, 1, 0.7f);
+        Vector3 playerPos = _manager.transform.position;
+        Collider[] ColliderAround = Physics.OverlapSphere(playerPos + offset, 10);
+
+        if (ColliderAround.Length > 1)
+        {
+            Collider Closest = null;
+            for (int i = 0; i < ColliderAround.Length; i++)
+            {
+                if (ColliderAround[i].GetComponent<MoraEvents>())
+                {
+                    if (Closest == null)
+                    {
+                        Closest = ColliderAround[i];
+                    }
+                    else
+                    {
+                        if (Vector3.Distance(playerPos, Closest.transform.position) > Vector3.Distance(playerPos, ColliderAround[i].transform.position))
+                        {
+                            Closest = ColliderAround[i];
+                        }
+                        
+                    }
+                }
+            }
+            if (Closest != null)
+            {
+                return Closest.transform.gameObject;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+        else { return null; }
+    }
     public override void ExitState()
     {
         _manager.RB.velocity = Vector3.zero;
         _manager.InteractIcon.SetActive(false);
         _manager.Animator.SetBool("IsWalking", false);
+        _manager.arrow.SetActive(false);
     }
 }

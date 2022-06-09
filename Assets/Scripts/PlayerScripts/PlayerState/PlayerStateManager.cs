@@ -25,7 +25,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField]
     private float interactRange = 1f;
     private Vector3 moveDir;
-    
+    private float oldDir;
     [Header("Input")]
     InputPlayerControl Input;
     
@@ -42,7 +42,7 @@ public class PlayerStateManager : MonoBehaviour
     private bool pushing = false;
     int[] puzzleList;
     private bool runing = false;
-
+    public GameObject arrow;
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
     public Rigidbody RB { get { return rb; } set { rb = value; } }
@@ -109,10 +109,18 @@ public class PlayerStateManager : MonoBehaviour
          filpSprite();
         ShowOutLine();
     }
+
+    public void ShowArrow(Vector3 a) {
+        arrow.transform.position = a;
+    }
     private void filpSprite() {
         if (moveDir.x<0)
         {
             this.transform.localScale = new Vector3(-1,1,1);
+        }
+        else if (moveDir.x==0)
+        {
+            //nothing
         }
         else
         {

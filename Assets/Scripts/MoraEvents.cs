@@ -76,16 +76,8 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         isInteracting = true;
     }
     private void ShakingVisual() {
-      
-        
-        if (gameObject.tag== "temporary")
-        {
-            this.gameObject.transform.localScale = new Vector3(Random.Range(0.5f, 0.7f), Random.Range(0.5f, 0.7f), Random.Range(0.5f, 0.7f));
-        }
-        else
-        {
             this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f));
-        }
+
     }
     public void Shake() {
         shake = true;

@@ -334,7 +334,7 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""id"": ""4d807dca-c959-4f14-aa54-e6aea9dde362"",
                     ""path"": ""<XInputController>/leftStick/up"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.3)"",
                     ""groups"": ""KeyBoard"",
                     ""action"": ""Button1"",
                     ""isComposite"": false,
@@ -356,7 +356,7 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""id"": ""210d557d-1b25-49fc-9f2d-becaf99fbca5"",
                     ""path"": ""<XInputController>/leftStick/down"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.3)"",
                     ""groups"": ""KeyBoard"",
                     ""action"": ""Button2"",
                     ""isComposite"": false,
@@ -378,7 +378,7 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""id"": ""b0646bb1-0fe9-40c4-8c01-8123a232753f"",
                     ""path"": ""<XInputController>/leftStick/left"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.3)"",
                     ""groups"": ""KeyBoard"",
                     ""action"": ""Button3"",
                     ""isComposite"": false,
@@ -400,7 +400,7 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""id"": ""dec6abe3-140d-4bed-baa5-bbe50cb9eafa"",
                     ""path"": ""<XInputController>/leftStick/right"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.3)"",
                     ""groups"": ""KeyBoard"",
                     ""action"": ""Button4"",
                     ""isComposite"": false,
@@ -462,164 +462,6 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""PushInput"",
-            ""id"": ""96459d28-6d29-4431-9a2e-c4e96142859e"",
-            ""actions"": [
-                {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
-                    ""id"": ""519a4788-d118-49a9-92e8-580393592926"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Interact"",
-                    ""type"": ""Button"",
-                    ""id"": ""cdd07fb6-fa47-4b21-b215-75ee96712126"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""1d78e973-2b5e-49c6-b6c2-3947202e4c2a"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""3605003a-7f74-44f5-b7ca-ecdc633c7f38"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""89dd9eb3-b1c2-4301-84c6-f9f3b2db5e44"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""8c249d60-c565-4f1a-9d2d-0bdb6dcc8abd"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""02ac1300-4019-4b21-b7ee-217c4c92dcf3"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""31bfca20-f9fe-469b-ace5-0b750574014b"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""ce54c50a-ed37-4c15-9533-3769a7573e8a"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""3362a30b-3cc8-428a-8c80-77d0843e8f1a"",
-                    ""path"": ""<XInputController>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""40ca67ef-bdbd-4728-be2a-7109c90771c5"",
-                    ""path"": ""<XInputController>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""0054ef5f-43a6-4a2d-9b95-8880d50f22a7"",
-                    ""path"": ""<XInputController>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""0c2091b3-c14e-4e6b-a68a-7d0356086fa3"",
-                    ""path"": ""<XInputController>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a1043928-50dd-4739-a380-5f544147d791"",
-                    ""path"": ""<XInputController>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": [
@@ -648,10 +490,6 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         m_EventInput_Button3 = m_EventInput.FindAction("Button3", throwIfNotFound: true);
         m_EventInput_Button4 = m_EventInput.FindAction("Button4", throwIfNotFound: true);
         m_EventInput_AllKey = m_EventInput.FindAction("AllKey", throwIfNotFound: true);
-        // PushInput
-        m_PushInput = asset.FindActionMap("PushInput", throwIfNotFound: true);
-        m_PushInput_Movement = m_PushInput.FindAction("Movement", throwIfNotFound: true);
-        m_PushInput_Interact = m_PushInput.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -821,47 +659,6 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         }
     }
     public EventInputActions @EventInput => new EventInputActions(this);
-
-    // PushInput
-    private readonly InputActionMap m_PushInput;
-    private IPushInputActions m_PushInputActionsCallbackInterface;
-    private readonly InputAction m_PushInput_Movement;
-    private readonly InputAction m_PushInput_Interact;
-    public struct PushInputActions
-    {
-        private @InputPlayerControl m_Wrapper;
-        public PushInputActions(@InputPlayerControl wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_PushInput_Movement;
-        public InputAction @Interact => m_Wrapper.m_PushInput_Interact;
-        public InputActionMap Get() { return m_Wrapper.m_PushInput; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PushInputActions set) { return set.Get(); }
-        public void SetCallbacks(IPushInputActions instance)
-        {
-            if (m_Wrapper.m_PushInputActionsCallbackInterface != null)
-            {
-                @Movement.started -= m_Wrapper.m_PushInputActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_PushInputActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_PushInputActionsCallbackInterface.OnMovement;
-                @Interact.started -= m_Wrapper.m_PushInputActionsCallbackInterface.OnInteract;
-                @Interact.performed -= m_Wrapper.m_PushInputActionsCallbackInterface.OnInteract;
-                @Interact.canceled -= m_Wrapper.m_PushInputActionsCallbackInterface.OnInteract;
-            }
-            m_Wrapper.m_PushInputActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @Interact.started += instance.OnInteract;
-                @Interact.performed += instance.OnInteract;
-                @Interact.canceled += instance.OnInteract;
-            }
-        }
-    }
-    public PushInputActions @PushInput => new PushInputActions(this);
     private int m_KeyBoardSchemeIndex = -1;
     public InputControlScheme KeyBoardScheme
     {
@@ -884,10 +681,5 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         void OnButton3(InputAction.CallbackContext context);
         void OnButton4(InputAction.CallbackContext context);
         void OnAllKey(InputAction.CallbackContext context);
-    }
-    public interface IPushInputActions
-    {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnInteract(InputAction.CallbackContext context);
     }
 }

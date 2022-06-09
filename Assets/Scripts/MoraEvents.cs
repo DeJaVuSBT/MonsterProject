@@ -42,16 +42,19 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         hunger= (int)b;
     }
 
-    void Start()
+    void Awake()
     {
         mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
         hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
         sBar = GameObject.FindGameObjectWithTag("SmashBar");
-     //   sBar.SetActive(false);
 
     }
-    
-    public void Reward()
+    void Start()
+    {
+        sBar.SetActive(false);
+    }
+
+        public void Reward()
     {
         if (!rewarded) {
 
@@ -73,16 +76,8 @@ public class MoraEvents : MonoBehaviour, Interactable,Reward
         isInteracting = true;
     }
     private void ShakingVisual() {
-      
-        
-        if (gameObject.tag== "temporary")
-        {
-            this.gameObject.transform.localScale = new Vector3(Random.Range(0.5f, 0.7f), Random.Range(0.5f, 0.7f), Random.Range(0.5f, 0.7f));
-        }
-        else
-        {
             this.gameObject.transform.localScale = new Vector3(Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f), Random.Range(0.9f, 1.1f));
-        }
+
     }
     public void Shake() {
         shake = true;

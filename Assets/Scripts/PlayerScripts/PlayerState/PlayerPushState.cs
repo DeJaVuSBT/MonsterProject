@@ -45,9 +45,9 @@ public class PlayerPushState : PlayerBaseState
 
         if (_manager.MoveDir != Vector3.zero)
         {
-            _manager.Animator.SetBool("New Bool", true);
+            _manager.Animator.SetBool("IsWalking", true);
 
         }
-        else { _manager.Animator.SetBool("New Bool", false); }
+        else { _manager.Animator.SetBool("IsWalking", false); }
     }
 }

@@ -32,7 +32,7 @@ public class NPCManager : MonoBehaviour
     //throwstone setup
     public GameObject stonePrefab;
     private GameObject stone;
-
+    float preX;
     //get set
     public GameObject Stone { get { return stone; } set { stone = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
@@ -62,16 +62,41 @@ public class NPCManager : MonoBehaviour
         states = new NPCStates(this);
         currentState = states.Idle();
         currentState.EnterState();
-
+        preX = this.transform.position.x;
     }
     public void ShowEmotion(int emoji) {
         emojiHolder.sprite = emojiList[emoji];
         emojiHolder.gameObject.SetActive(true);
         TimerAction.Create(() => emojiHolder.gameObject.SetActive(false), Random.Range(1.5f,2.5f));
     }
-
-        void Update()
+    private void filpSprite()
     {
+        if (left())
+        {
+            this.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+    private bool left() {
+        
+
+            if (agent.desiredVelocity.x < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+    }
+
+    void Update()
+    {
+        filpSprite();
         currentState.UpdateState();
     }
 }

@@ -25,7 +25,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField]
     private float interactRange = 1f;
     private Vector3 moveDir;
-    
+    private float oldDir;
     [Header("Input")]
     InputPlayerControl Input;
     
@@ -42,7 +42,7 @@ public class PlayerStateManager : MonoBehaviour
     private bool pushing = false;
     int[] puzzleList;
     private bool runing = false;
-
+    public GameObject arrow;
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
     public Rigidbody RB { get { return rb; } set { rb = value; } }
@@ -106,11 +106,28 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState();
-      //  UpdateRenderOrder();
+         filpSprite();
         ShowOutLine();
-        //tutorialLogic();
     }
-    
+
+    public void ShowArrow(Vector3 a) {
+        arrow.transform.position = a;
+    }
+    private void filpSprite() {
+        if (moveDir.x<0)
+        {
+            this.transform.localScale = new Vector3(-1,1,1);
+        }
+        else if (moveDir.x==0)
+        {
+            //nothing
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
     private void ShowOutLine() {
         if (Target!=null&& switchedTarget)
         {
@@ -135,10 +152,10 @@ public class PlayerStateManager : MonoBehaviour
             ///delete later only for test
             if (OutlinedTarget.transform.parent.tag == "temporary")
             {
-                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0, 0.5f, 0);
+                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0);
                 Debug.Log("bush");
             }
-            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0.5f, 2, 0.5f); }
+            else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 
 
             switchedTarget = false;
@@ -159,14 +176,21 @@ public class PlayerStateManager : MonoBehaviour
 
     //UI Tutorials
     public void startTutorial(int tutIndex){
-        GameObject tutorialHolder = tutorials[tutIndex];
-        tutorialHolder.SetActive(true);
+        if (tutIndex< tutorials.Length)
+        {
+            GameObject tutorialHolder = tutorials[tutIndex];
+            tutorialHolder.SetActive(true);
+        }
+        
     }
 
     public void endTutorial(int tutIndex){
-        GameObject tutorialHolder = tutorials[tutIndex];
-        tutorialHolder.SetActive(false);
-        tutorialIsOn = false;
+        if (tutIndex < tutorials.Length)
+        {
+            GameObject tutorialHolder = tutorials[tutIndex];
+            tutorialHolder.SetActive(false);
+            tutorialIsOn = false;
+        }
     }
 
     void tutorialLogic()

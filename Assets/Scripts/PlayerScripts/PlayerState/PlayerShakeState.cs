@@ -33,7 +33,7 @@ public class PlayerShakeState : PlayerBaseState
         _manager.InPut.EventInput.Button3.started += Button3_started => { currentInput = 3; Debug.Log("a"); };
         _manager.InPut.EventInput.Button2.started += Button2_started => { currentInput = 2; Debug.Log("s"); };
         _manager.InPut.EventInput.Button1.started += Button1_started => { currentInput = 1; Debug.Log("w"); };
-            _manager.startTutorial(0);
+        //_manager.startTutorial(0);
         
     }
 
@@ -41,7 +41,7 @@ public class PlayerShakeState : PlayerBaseState
     {
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
-        _manager.endTutorial(0);
+        //_manager.endTutorial(0);
     }
 
     public override void UpdateState()
@@ -74,6 +74,7 @@ public class PlayerShakeState : PlayerBaseState
                 if (counter == _manager.PuzzleList.Length)
                 {
                     _manager.Target.GetComponent<Reward>().Reward();
+                    _manager.addCard(1);
                     puzzling = false;
                 }
             }

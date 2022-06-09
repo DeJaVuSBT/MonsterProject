@@ -4,7 +4,7 @@ public class PlayerMoveState : PlayerBaseState
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
     public override void EnterState()
     {
-        _manager.arrow.SetActive(true);
+        //_manager.arrow.SetActive(true);
         Debug.Log("Moves");
         _manager.ApplyWalkSpeed();
     }
@@ -129,7 +129,7 @@ public class PlayerMoveState : PlayerBaseState
     private void ShowArrow() {
         if (ClosedColliderAroundArrow()!=null)
         {
-            _manager.ShowArrow(ClosedColliderAroundArrow().transform.position + new Vector3(-0.5f, 0.1f, 0.5f));
+            //_manager.ShowArrow(ClosedColliderAroundArrow().transform.position + new Vector3(-0.5f, 0.1f, 0.5f));
         }
        
     }
@@ -178,6 +178,6 @@ public class PlayerMoveState : PlayerBaseState
         _manager.RB.velocity = Vector3.zero;
         _manager.InteractIcon.SetActive(false);
         _manager.Animator.SetBool("IsWalking", false);
-        _manager.arrow.SetActive(false);
+        //_manager.arrow.SetActive(false);
     }
 }

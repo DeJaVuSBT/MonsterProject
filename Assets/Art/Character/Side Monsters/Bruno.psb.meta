@@ -102,7 +102,11 @@ ScriptedImporter:
       y: 4
       width: 1025
       height: 848
+<<<<<<< Updated upstream
     spriteID: 763fa8bc2aad3394c80f39c01c6f82af
+=======
+    spriteID: 8e36269652ec7214e99d87b1c113b2ee
+>>>>>>> Stashed changes
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +128,11 @@ ScriptedImporter:
       y: 860
       width: 284
       height: 316
+<<<<<<< Updated upstream
     spriteID: c794bfb07f2333f428a4cdb97b703c35
+=======
+    spriteID: b083e7714a452e545b05c9eb725d7c31
+>>>>>>> Stashed changes
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +154,11 @@ ScriptedImporter:
       y: 860
       width: 1025
       height: 768
+<<<<<<< Updated upstream
     spriteID: ef15e4b69cc4e864db2274dfb8344935
+=======
+    spriteID: d451ab09115f27c448b876a7cc0407d8
+>>>>>>> Stashed changes
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -187,21 +199,33 @@ ScriptedImporter:
     spriteName: Layer 63
     isGroup: 0
     parentIndex: 0
+<<<<<<< Updated upstream
     spriteID: 763fa8bc2aad3394c80f39c01c6f82af
+=======
+    spriteID: 8e36269652ec7214e99d87b1c113b2ee
+>>>>>>> Stashed changes
     layerID: 105
     mosaicPosition: {x: 4, y: 4}
   - name: Layer 64
     spriteName: Layer 64
     isGroup: 0
     parentIndex: 0
+<<<<<<< Updated upstream
     spriteID: c794bfb07f2333f428a4cdb97b703c35
+=======
+    spriteID: b083e7714a452e545b05c9eb725d7c31
+>>>>>>> Stashed changes
     layerID: 106
     mosaicPosition: {x: 1037, y: 860}
   - name: Layer 65
     spriteName: Layer 65
     isGroup: 0
     parentIndex: 0
+<<<<<<< Updated upstream
     spriteID: ef15e4b69cc4e864db2274dfb8344935
+=======
+    spriteID: d451ab09115f27c448b876a7cc0407d8
+>>>>>>> Stashed changes
     layerID: 107
     mosaicPosition: {x: 4, y: 860}
   - name: Jay

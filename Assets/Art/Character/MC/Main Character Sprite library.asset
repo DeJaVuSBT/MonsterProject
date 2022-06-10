@@ -12,4 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
   m_Name: Main Character Sprite library
   m_EditorClassIdentifier: 
-  m_Labels: []
+  m_Labels:
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList:
+    - m_Name: NRhead
+      m_Hash: 1089765268
+      m_Sprite: {fileID: 5791220588102256016, guid: 7e4698fe1da4ab944aa76f980b74f236, type: 3}
+    - m_Name: Ghead
+      m_Hash: -1438229820
+      m_Sprite: {fileID: 5130510880199674094, guid: f47914948ae18f343b54901eed700a66, type: 3}
+    - m_Name: Ehead
+      m_Hash: -796522076
+      m_Sprite: {fileID: -7600317620449750362, guid: 17156ee13a7fec844b5ec2b838efbd19, type: 3}
+    - m_Name: NLhead
+      m_Hash: -1625008521
+      m_Sprite: {fileID: -5684767553077724067, guid: 4d18b3cafa58afc4c82b56c1aec4be85, type: 3}

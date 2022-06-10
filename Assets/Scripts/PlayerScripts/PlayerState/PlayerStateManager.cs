@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField]
     private float interactRange = 1f;
     private Vector3 moveDir;
-    private float oldDir;
+    
     [Header("Input")]
     InputPlayerControl Input;
     
@@ -42,7 +43,7 @@ public class PlayerStateManager : MonoBehaviour
     private bool pushing = false;
     int[] puzzleList;
     private bool runing = false;
-    public GameObject arrow;
+
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
     public Rigidbody RB { get { return rb; } set { rb = value; } }
@@ -57,6 +58,7 @@ public class PlayerStateManager : MonoBehaviour
     public int[] PuzzleList { get { return puzzleList; } set { puzzleList = value; } }
     public bool Pushing { get { return pushing; } set { pushing = value; } }
 
+    int[] deedsCollected;
  
 
     [Header("UI Tutorials")]
@@ -64,6 +66,8 @@ public class PlayerStateManager : MonoBehaviour
     bool tutorialIsOn = false;
     int tutSelector;
     public GameObject[] tutorials;
+
+    
     private void Awake()
     {
         //state
@@ -80,6 +84,8 @@ public class PlayerStateManager : MonoBehaviour
         Input.PlayerInput.Enable();
         // some visual obj
         Interacticon = GameObject.Find("InteractIcon");
+
+
 
     }
 
@@ -106,25 +112,24 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState();
-         filpSprite();
+        flipSprite();
         ShowOutLine();
+        //tutorialLogic();
     }
 
-    public void ShowArrow(Vector3 a) {
-        arrow.transform.position = a;
-    }
-    private void filpSprite() {
-        if (moveDir.x<0)
+    private void flipSprite()
+    {
+        if (moveDir.x < 0)
         {
-            this.transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if (moveDir.x==0)
+        else if (moveDir.x == 0)
         {
-            //nothing
+
         }
         else
         {
-            this.transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
@@ -152,7 +157,7 @@ public class PlayerStateManager : MonoBehaviour
             ///delete later only for test
             if (OutlinedTarget.transform.parent.tag == "temporary")
             {
-                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0);
+                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0.5f);
                 Debug.Log("bush");
             }
             else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
@@ -176,31 +181,17 @@ public class PlayerStateManager : MonoBehaviour
 
     //UI Tutorials
     public void startTutorial(int tutIndex){
-        if (tutIndex< tutorials.Length)
-        {
-            GameObject tutorialHolder = tutorials[tutIndex];
-            tutorialHolder.SetActive(true);
-        }
-        
+        GameObject tutorialHolder = tutorials[tutIndex];
+        tutorialHolder.SetActive(true);
     }
 
     public void endTutorial(int tutIndex){
-        if (tutIndex < tutorials.Length)
-        {
-            GameObject tutorialHolder = tutorials[tutIndex];
-            tutorialHolder.SetActive(false);
-            tutorialIsOn = false;
-        }
+        GameObject tutorialHolder = tutorials[tutIndex];
+        tutorialHolder.SetActive(false);
+        tutorialIsOn = false;
     }
 
-    void tutorialLogic()
-    {
-        //Debug.Log(CurrentState);
-        if(currentState == states.ShakeState())
-        {
-            startTutorial(0);
-        }
-    }
+
 
     private void OnDrawGizmos()
     {

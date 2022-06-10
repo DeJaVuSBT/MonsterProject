@@ -9,13 +9,13 @@ public class PlayerPushState : PlayerBaseState
         _manager.Pushing = true;
         _manager.Target.transform.SetParent(_manager.transform);
         _manager.InPut.PlayerInput.Interact.canceled += a => _manager.Pushing = false;
-        _manager.startTutorial(2);
+        //_manager.startTutorial(0);
     }
 
     public override void ExitState()
     {
         _manager.Target.transform.SetParent(null);
-        _manager.endTutorial(2);
+        //_manager.endTutorial(2);
     }
 
     public override void CheckIfSwitchState()

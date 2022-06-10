@@ -102,7 +102,29 @@ ScriptedImporter:
       y: 4
       width: 1025
       height: 848
-    spriteID: c7a7ed1fecf7f584187d698ce531b476
+    spriteID: 69afe6f04e5cc2f4f844648f087bb124
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Layer 63_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1025
+      height: 848
+    spriteID: 4d0676cb1660bae4c828e105ccfc7824
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +146,7 @@ ScriptedImporter:
       y: 860
       width: 284
       height: 316
-    spriteID: 84456f9795726fa41a644fee9e0483fe
+    spriteID: ffeb45d00a004444daaae03c1e1d6d2f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +168,7 @@ ScriptedImporter:
       y: 860
       width: 1025
       height: 768
-    spriteID: 7913ea112f4622b4387936e02a112fc3
+    spriteID: def8ff2dbff4b9f4fa17e4ed14ee9089
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -180,35 +202,35 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 101
     mosaicPosition: {x: 0, y: 0}
   - name: Layer 63
-    spriteName: Layer 63
+    spriteName: Layer 63_1
     isGroup: 0
     parentIndex: 0
-    spriteID: c7a7ed1fecf7f584187d698ce531b476
+    spriteID: 4d0676cb1660bae4c828e105ccfc7824
     layerID: 105
     mosaicPosition: {x: 4, y: 4}
   - name: Layer 64
     spriteName: Layer 64
     isGroup: 0
     parentIndex: 0
-    spriteID: 84456f9795726fa41a644fee9e0483fe
+    spriteID: ffeb45d00a004444daaae03c1e1d6d2f
     layerID: 106
     mosaicPosition: {x: 1037, y: 860}
   - name: Layer 65
     spriteName: Layer 65
     isGroup: 0
     parentIndex: 0
-    spriteID: 7913ea112f4622b4387936e02a112fc3
+    spriteID: def8ff2dbff4b9f4fa17e4ed14ee9089
     layerID: 107
     mosaicPosition: {x: 4, y: 860}
   - name: Jay
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 26
     mosaicPosition: {x: 0, y: 0}
   characterData:

@@ -27,14 +27,14 @@ public class PlayerSmashButton : PlayerBaseState
         _manager.InPut.EventInput.Button2.started += Button2_started => puzzling = false;
         _manager.InPut.EventInput.Button1.started += Button1_started => puzzling = false;
         _manager.InPut.EventInput.AllKey.started += AllKey_started => _manager.Target.GetComponent<MoraEvents>().Shake();
-        _manager.startTutorial(3);
+        //_manager.startTutorial(2);
     }
 
     public override void ExitState()
     {
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(false);
         _manager.SwitchToPlayerInput();
-        _manager.endTutorial(3);
+        //_manager.endTutorial(2);
     }
 
     public override void UpdateState()

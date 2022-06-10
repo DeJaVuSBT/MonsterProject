@@ -1,19 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerState
 {
-   PlayerStateManager Manager;
-    public PlayerState(PlayerStateManager manager) { 
+    PlayerStateManager Manager;
+    public PlayerState(PlayerStateManager manager)
+    {
         Manager = manager;
     }
-    public PlayerBaseState MoveState() {
-        return new PlayerMoveState(Manager,this);
+    public PlayerBaseState MoveState()
+    {
+        return new PlayerMoveState(Manager, this);
     }
     public PlayerBaseState PushState()
     {
-        return new PlayerPushState(Manager,this);
+        return new PlayerPushState(Manager, this);
     }
     public PlayerBaseState ShakeState()
     {
@@ -33,4 +36,9 @@ public class PlayerState
         return new PlayerSmashButton(Manager, this);
     }
 
+    public PlayerBaseState OptionState()
+    {
+        return new PlayerOptioning(Manager, this);
+    }
 }
+

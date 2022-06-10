@@ -4,6 +4,7 @@ public class PlayerMoveState : PlayerBaseState
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
     public override void EnterState()
     {
+        _manager.InPut.PlayerInput.Enable();
         //_manager.arrow.SetActive(true);
         Debug.Log("Moves");
         _manager.ApplyWalkSpeed();
@@ -12,13 +13,13 @@ public class PlayerMoveState : PlayerBaseState
     public override void CheckIfSwitchState()
     {
         //set interact target
-        if (ClosedColliderAround()&& ClosedColliderAround().GetComponent<MoraEvents>())
+        if (ClosedColliderAround() && ClosedColliderAround().GetComponent<MoraEvents>())
         {
             //target switched!
-            GameObject preTarget=_manager.Target;
-           _manager.Target = ClosedColliderAround();
+            GameObject preTarget = _manager.Target;
+            _manager.Target = ClosedColliderAround();
 
-            if (preTarget!=_manager.Target)
+            if (preTarget != _manager.Target)
             {
                 _manager.SwitchedTarget();
             }
@@ -27,37 +28,46 @@ public class PlayerMoveState : PlayerBaseState
 
 
 
-        if ( _manager.Target != null)
+        if (_manager.Target != null)
         {
             if (_manager.InPut.PlayerInput.Interact.IsPressed())
             {
-                _manager.Target.GetComponent<Interactable>().Interact();
-                switch (_manager.Target.GetComponent<MoraEvents>().GetInteractType())
+                if (!_manager.Target.GetComponent<MoraEvents>().doubleInteraction)
                 {
-                    case 0:
-                        SwitchState(_states.ShakeState());
-                        break;
-                    case 1:
-                        SwitchState(_states.RotateState());
-                        break;
-                    case 2:
-                        SwitchState(_states.PushState());
-                        break;
-                    case 3:
-                        SwitchState(_states.SmashState());
-                        break;
-                    default:
-                        break;
+                    _manager.Target.GetComponent<Interactable>().Interact();
+                    switch (_manager.Target.GetComponent<MoraEvents>().GetInteractType())
+                    {
+                        case 0:
+                            SwitchState(_states.ShakeState());
+                            break;
+                        case 1:
+                            SwitchState(_states.RotateState());
+                            break;
+                        case 2:
+                            SwitchState(_states.PushState());
+                            break;
+                        case 3:
+                            SwitchState(_states.SmashState());
+                            break;
+                        default:
+                            break;
 
+                    }
                 }
+                else
+                {
+                    _manager.Target.GetComponent<Interactable>().Interact();
+                    SwitchState(_states.OptionState());
+                }
+
             }
         }
-        else if(_manager.Target==null)
+        else if (_manager.Target == null)
         {
-            if (_manager.InPut.PlayerInput.Interact.IsPressed()&& _manager.MoveDir != Vector3.zero)
+            if (_manager.InPut.PlayerInput.Interact.IsPressed() && _manager.MoveDir != Vector3.zero)
             {
                 SwitchState(_states.RunState());
-       
+
             }
         }
     }
@@ -67,7 +77,7 @@ public class PlayerMoveState : PlayerBaseState
         CheckIfSwitchState();
         Movement();
         Animation();
-    //    ShowArrow();
+        //    ShowArrow();
     }
     private void Animation()
     {
@@ -81,17 +91,17 @@ public class PlayerMoveState : PlayerBaseState
     }
     private void Movement()
     {
-          
+
         Vector2 moveVector = _manager.InPut.PlayerInput.Movement.ReadValue<Vector2>();
         _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
 
-    private GameObject ClosedColliderAround( )
+    private GameObject ClosedColliderAround()
     {
         Vector3 offset = new Vector3(0, 1, 0.7f);
         Vector3 playerPos = _manager.transform.position;
-        Collider[] ColliderAround = Physics.OverlapSphere(playerPos+offset, _manager.GetInteractRange);
+        Collider[] ColliderAround = Physics.OverlapSphere(playerPos + offset, _manager.GetInteractRange);
 
         if (ColliderAround.Length > 1)
         {
@@ -112,7 +122,7 @@ public class PlayerMoveState : PlayerBaseState
                     Closest = ColliderAround[i];
                 }
             }
-            if (Closest!=null)
+            if (Closest != null)
             {
                 return Closest.transform.gameObject;
             }
@@ -120,16 +130,17 @@ public class PlayerMoveState : PlayerBaseState
             {
                 return null;
             }
-           
+
         }
-        else { return null; }  
+        else { return null; }
     }
-    private void ShowArrow() {
-        if (ClosedColliderAroundArrow()!=null)
+    private void ShowArrow()
+    {
+        if (ClosedColliderAroundArrow() != null)
         {
             //_manager.ShowArrow(ClosedColliderAroundArrow().transform.position + new Vector3(-0.5f, 0.1f, 0.5f));
         }
-       
+
     }
 
     private GameObject ClosedColliderAroundArrow()
@@ -155,7 +166,7 @@ public class PlayerMoveState : PlayerBaseState
                         {
                             Closest = ColliderAround[i];
                         }
-                        
+
                     }
                 }
             }

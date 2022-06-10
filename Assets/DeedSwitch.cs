@@ -13,7 +13,6 @@ public class DeedSwitch : MonoBehaviour
         {
             cardList.Add(transform.GetChild(i).gameObject);
         }
-
     }
 
     // Update is called once per frame

@@ -52,10 +52,12 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         Debug.Log((int)interactType);
         if (doubleInteraction && selected == 1)
         {
+            GoodDeedorBadDeed = true;
             return (int)interactType;
         }
         else if (doubleInteraction && selected == 2)
         {
+            GoodDeedorBadDeed = false;
             return (int)interactType1;
         }
         else
@@ -89,19 +91,12 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
             hBar.Add(hunger);
             if (GoodDeedorBadDeed)
             {
-                newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getBlue", true);
-                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getBlue", false), 3f);
-                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", true), 3f);
-                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", false), 3.5f);
+                newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
             }
             else
             {
-                newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getRed", true);
-                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("getRed", false), 3f);
-                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", true), 3f);
-                TimerAction.Create(() => newMbar.transform.GetChild(0).GetComponent<Animator>().SetBool("removeCard", false), 3.5f);
+                newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
             }
-
 
             if (destroyAtTheEnd)
             {

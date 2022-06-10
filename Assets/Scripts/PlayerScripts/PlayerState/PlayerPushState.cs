@@ -7,6 +7,7 @@ public class PlayerPushState : PlayerBaseState
     {
         Debug.Log("Push");
         _manager.Pushing = true;
+        _manager.Animator.SetBool("isPushing", true);
         _manager.Target.transform.SetParent(_manager.transform);
         _manager.InPut.PlayerInput.Interact.canceled += a => _manager.Pushing = false;
         //_manager.startTutorial(0);
@@ -15,6 +16,7 @@ public class PlayerPushState : PlayerBaseState
     public override void ExitState()
     {
         _manager.Target.transform.SetParent(null);
+        _manager.Animator.SetBool("isPushing", false);
         //_manager.endTutorial(2);
     }
 
@@ -31,7 +33,7 @@ public class PlayerPushState : PlayerBaseState
     {
         Movement();
         CheckIfSwitchState();
-        Animation();
+   
     }
     private void Movement()
     {
@@ -40,14 +42,5 @@ public class PlayerPushState : PlayerBaseState
         _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
-    private void Animation()
-    {
-
-        if (_manager.MoveDir != Vector3.zero)
-        {
-            _manager.Animator.SetBool("IsWalking", true);
-
-        }
-        else { _manager.Animator.SetBool("IsWalking", false); }
-    }
+  
 }

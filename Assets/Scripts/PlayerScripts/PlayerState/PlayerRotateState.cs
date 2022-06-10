@@ -11,6 +11,7 @@ public class PlayerRotateState : PlayerBaseState
     public override void EnterState()
     {
         Debug.Log("Shake");
+        _manager.Animator.SetBool("isShaking", true);
         _manager.PuzzleList = null;
         _manager.SwitchToEventInput();
         _manager.InPut.EventInput.Button5.started += Button5_started => currentInput = 5;
@@ -30,6 +31,7 @@ public class PlayerRotateState : PlayerBaseState
 
     public override void ExitState()
     {
+        _manager.Animator.SetBool("isShaking", false);
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
     }

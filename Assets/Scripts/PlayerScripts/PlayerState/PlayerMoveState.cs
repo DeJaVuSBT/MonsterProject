@@ -54,7 +54,7 @@ public class PlayerMoveState : PlayerBaseState
         }
         else if(_manager.Target==null)
         {
-            if (_manager.InPut.PlayerInput.Interact.IsPressed())
+            if (_manager.InPut.PlayerInput.Interact.IsPressed()&& _manager.MoveDir != Vector3.zero)
             {
                 SwitchState(_states.RunState());
        

@@ -19,6 +19,7 @@ public class PlayerSmashButton : PlayerBaseState
     public override void EnterState()
     {
         Debug.Log("SmashButton");
+        _manager.Animator.SetBool("isHitting", true);
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(true);
         _manager.SwitchToEventInput();
         _manager.InPut.EventInput.Button5.started += Button5_started => total+=counter*5;
@@ -32,6 +33,7 @@ public class PlayerSmashButton : PlayerBaseState
 
     public override void ExitState()
     {
+        _manager.Animator.SetBool("isHitting", false);
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(false);
         _manager.SwitchToPlayerInput();
         //_manager.endTutorial(2);

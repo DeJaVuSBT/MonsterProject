@@ -24,6 +24,7 @@ public class PlayerShakeState : PlayerBaseState
     public override void EnterState()
     {
         Debug.Log("Shake");
+        _manager.Animator.SetBool("isShaking", true);
         _manager.PuzzleList = null;
         _manager.SwitchToEventInput();
         //A you are pressing and B you are also pressing
@@ -39,6 +40,7 @@ public class PlayerShakeState : PlayerBaseState
 
     public override void ExitState()
     {
+        _manager.Animator.SetBool("isShaking", false);
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
         //_manager.endTutorial(0);

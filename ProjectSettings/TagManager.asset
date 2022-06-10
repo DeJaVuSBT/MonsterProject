@@ -12,6 +12,7 @@ TagManager:
   - Emoji
   - shakeTut
   - Mbar
+  - Option
   layers:
   - Default
   - TransparentFX

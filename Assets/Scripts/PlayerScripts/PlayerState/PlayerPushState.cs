@@ -33,7 +33,7 @@ public class PlayerPushState : PlayerBaseState
     {
         Movement();
         CheckIfSwitchState();
-   
+        Animation();
     }
     private void Movement()
     {
@@ -41,6 +41,14 @@ public class PlayerPushState : PlayerBaseState
         Vector2 moveVector = _manager.InPut.PlayerInput.Movement.ReadValue<Vector2>();
         _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
+    }
+    private void Animation() {
+        if (_manager.MoveDir.x <0)
+        {
+            _manager.Animator.SetBool("isPulling", true);
+
+        }
+        else { _manager.Animator.SetBool("isPulling", false); }
     }
   
 }

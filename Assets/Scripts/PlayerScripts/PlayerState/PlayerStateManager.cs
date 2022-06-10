@@ -57,36 +57,23 @@ public class PlayerStateManager : MonoBehaviour
     public bool Running { get { return runing; } set { runing = value; } }
     public int[] PuzzleList { get { return puzzleList; } set { puzzleList = value; } }
     public bool Pushing { get { return pushing; } set { pushing = value; } }
-
-    int[] deedsCollected;
- 
-
-    [Header("UI Tutorials")]
-    [SerializeField]
-    bool tutorialIsOn = false;
-    int tutSelector;
-    public GameObject[] tutorials;
-
     
     private void Awake()
     {
-        //state
-        states= new PlayerState(this);
-        currentState = states.MoveState();
-        currentState.EnterState();
-        
+
         //rb
         rb = GetComponent<Rigidbody>();
         //set some value
-        
+
         animator = GetComponentInChildren<Animator>();
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
         // some visual obj
         Interacticon = GameObject.Find("InteractIcon");
-
-
-
+        //state  should be the last 
+        states = new PlayerState(this);
+        currentState = states.MoveState();
+        currentState.EnterState();
     }
 
     public void SwitchToEventInput()
@@ -119,18 +106,26 @@ public class PlayerStateManager : MonoBehaviour
 
     private void flipSprite()
     {
-        if (moveDir.x < 0)
+        if (pushing)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (moveDir.x == 0)
-        {
-
+            //maybe something
         }
         else
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            if (moveDir.x < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (moveDir.x == 0)
+            {
+
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
         }
+
     }
 
     private void ShowOutLine() {
@@ -178,20 +173,6 @@ public class PlayerStateManager : MonoBehaviour
     public void SwitchedTarget() {
         switchedTarget = true;
     }
-
-    //UI Tutorials
-    public void startTutorial(int tutIndex){
-        GameObject tutorialHolder = tutorials[tutIndex];
-        tutorialHolder.SetActive(true);
-    }
-
-    public void endTutorial(int tutIndex){
-        GameObject tutorialHolder = tutorials[tutIndex];
-        tutorialHolder.SetActive(false);
-        tutorialIsOn = false;
-    }
-
-
 
     private void OnDrawGizmos()
     {

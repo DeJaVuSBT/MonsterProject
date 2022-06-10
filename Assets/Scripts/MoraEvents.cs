@@ -30,10 +30,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     private int hunger;
     private bool shake = false;
     private float shaketime = 0;
-
-    [Header("UI")]
-    [SerializeField]
-    public CardScript[] cardSpace;
     [SerializeField]
     private GameObject newMbar;
     //getsett

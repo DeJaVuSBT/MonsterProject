@@ -21,9 +21,8 @@ public abstract class PlayerBaseState
 
    protected void SwitchState(PlayerBaseState newState) {
         ExitState();
-
         newState.EnterState();
-        
         _manager.CurrentState = newState;
+
     }
 }

@@ -39,8 +39,11 @@ public class FormChanger : MonoBehaviour
         }
     }
 
+
+
     private void ChangeForm()
     {
+        
         foreach (var resolver in _resolvers)
         {
             resolver.SetCategoryAndLabel(resolver.GetCategory(), _type.ToString());

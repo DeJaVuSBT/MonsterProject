@@ -11,6 +11,7 @@ public class PlayerOptioning: PlayerBaseState
     {
         if (leftorRight!=0&&optioning)
         {
+            _manager.InPut.EventInput.Disable();
             _manager.Target.GetComponent<MoraEvents>().Selected=leftorRight;
             _manager.Target.GetComponent<MoraEvents>().SelectedAnimation();
             optioning = false;
@@ -30,15 +31,17 @@ public class PlayerOptioning: PlayerBaseState
         Debug.Log("Optioning");
         _manager.Target.GetComponent<MoraEvents>().ShowOption();
         _manager.SwitchToEventInput();
-        _manager.InPut.EventInput.Button4.started += Button4_started => leftorRight=2;
-        _manager.InPut.EventInput.Button3.started += Button3_started => leftorRight=1;
+        _manager.InPut.EventInput.Button4.started += Button4_started => leftorRight = 2;  
+        _manager.InPut.EventInput.Button3.started += Button3_started => leftorRight = 1; 
 
         //_manager.startTutorial(2);
     }
 
     public override void ExitState()
     {
+
         //disable ui
+        _manager.InPut.EventInput.Enable();
         _manager.Target.GetComponent<MoraEvents>().HideOption();
     }
 
@@ -46,11 +49,6 @@ public class PlayerOptioning: PlayerBaseState
     {
         CheckIfSwitchState();
     }
-    private void CheckIfInputEnough()
-    {
-
-    }
-
 
 
     private void SwitchStateByOption() {

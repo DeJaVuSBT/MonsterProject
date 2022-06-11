@@ -16,7 +16,6 @@ public class DeedSwitch : MonoBehaviour
     public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
-        ReMoveCardByTime();
         generalP.SetActive(true);
         bigCard.SetActive(false);
     }

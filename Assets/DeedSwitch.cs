@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class DeedSwitch : MonoBehaviour
 {
+    public int timer = 3;
     [SerializeField]
-    private GameObject badP, generalP, goodP,bigCard;
+    private GameObject badP, generalP, goodP, bigCard;
     [SerializeField]
     private GameObject cardPrefab;
-    private Queue<GameObject> cardList = new Queue< GameObject>();
+    private Queue<GameObject> cardList = new Queue<GameObject>();
     private Queue<bool> cardgbList = new Queue<bool>();
-    private int bgCounter=0;
-    private bool isMaxed=false;
+    private int bgCounter = 0;
+    private bool isMaxed = false;
     private int GoodOrBadEnding = 0;
+    private float removingCounter = 0;
+    private bool isRemoving = false;
+
     public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
@@ -20,22 +24,20 @@ public class DeedSwitch : MonoBehaviour
         bigCard.SetActive(false);
     }
 
-    private void ReMoveCardByTime() {
-        TimerAction.Create(() => cardgbList.Dequeue(), 10f);
-    }
-
     public void AddCard(bool gb) {
-        AddCardAnimation( gb);
+
+        AddCardAnimation(gb);
         TimerAction.Create(() => AddCardToMbar(gb), 1.3f);
     }
 
     private void AddCardToMbar(bool gb) {
-        GameObject a = Instantiate(cardPrefab, transform);
+        GameObject a = Instantiate(cardPrefab, this.transform);
         GetBlueOrRedCheck(a, gb);
         cardList.Enqueue(a);
         cardgbList.Enqueue(gb);
         Check();
     }
+
     private void AddCardAnimation(bool gb) {
         bigCard.SetActive(true);
         bigCard.GetComponent<Animator>().SetTrigger("GainTrigger");
@@ -45,12 +47,12 @@ public class DeedSwitch : MonoBehaviour
         //need 1f time finish it
     }
 
-    private void GetBlueOrRedCheck(GameObject a,bool gb) {
+    private void GetBlueOrRedCheck(GameObject a, bool gb) {
         if (gb)
         {
             a.GetComponent<Animator>().SetTrigger("Blue");
         }
-        else 
+        else
         {
 
             a.GetComponent<Animator>().SetTrigger("Red");
@@ -58,14 +60,11 @@ public class DeedSwitch : MonoBehaviour
     }
 
     public void Check() {
-        if (cardList.Count>5)
+        if (cardList.Count > 5)
         {
-            Animator a = cardList.Dequeue().GetComponent<Animator>();
-            a.SetBool("removeCard", true);
-            TimerAction.Create(() => Destroy(a.gameObject), 1f);
-            cardgbList.Dequeue();
+            RemoveACard();
         }
-        else if (cardList.Count==5)
+        else if (cardList.Count == 5)
         {
             isMaxed = true;
             foreach (bool obj in cardgbList)
@@ -79,7 +78,7 @@ public class DeedSwitch : MonoBehaviour
 
         if (isMaxed)
         {
-            if (bgCounter>=3)
+            if (bgCounter >= 3)
             {
                 //good
                 SwitchPGood();
@@ -107,6 +106,39 @@ public class DeedSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (CheckIfTimeRemove())
+        {
+            removingCounter = 0;
+            isRemoving = true;
+        }
+        if (isRemoving)
+        {
+            removingCounter += Time.deltaTime;
+            if (removingCounter > timer)
+            {
+
+                RemoveACard();
+                if (!CheckIfTimeRemove())
+                {
+                    isRemoving = false;
+                }
+
+                removingCounter = 0;
+            }
+            Debug.Log("removing");
+        }
+
+
+    }
+
+    private void RemoveACard() {
+        Animator a = cardList.Dequeue().GetComponent<Animator>();
+        a.SetBool("removeCard", true);
+        TimerAction.Create(() => Destroy(a.gameObject), 1f);
+        cardgbList.Dequeue();
+    }
+
+    private bool CheckIfTimeRemove() {
+        return cardgbList.Count != 0&&!isRemoving;
     }
 }

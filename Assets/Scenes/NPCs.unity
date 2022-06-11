@@ -124,14 +124,19 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 --- !u!1001 &91831009
+=======
+--- !u!1001 &947949811
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: -6061301290903467672, guid: 0f0e0afe9a5e05e4f9782ce97ccf301b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7247567
@@ -901,16 +906,81 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &807145670
+=======
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -51.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.474548
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.163857
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -97064132760000933, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563879194407890395, guid: 319e9972101097d4a8193ead33557153, type: 3}
+      propertyPath: m_Name
+      value: Bruno
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: -2051980177869071340, guid: 319e9972101097d4a8193ead33557153, type: 3}
+--- !u!1 &947949812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5563879194407890395, guid: 319e9972101097d4a8193ead33557153, type: 3}
+  m_PrefabInstance: {fileID: 947949811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &947949813
+>>>>>>> Stashed changes
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 807145668}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 47c0c46677613bc40bc496321ea48e92, type: 2}
+=======
+  m_GameObject: {fileID: 947949812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+>>>>>>> Stashed changes
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -919,6 +989,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1328366762
 GameObject:
@@ -1117,9 +1190,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 10
 =======
   m_RootOrder: 9
+>>>>>>> Stashed changes
+=======
+  m_RootOrder: 11
 >>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1145424672197731920

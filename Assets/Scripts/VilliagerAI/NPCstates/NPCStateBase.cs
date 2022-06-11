@@ -23,15 +23,38 @@ public abstract class NPCStateBase
       return  Vector3.Distance(_manager.transform.position, _manager.Player.transform.position) < _manager.SeneseRange?  true: false;
     }
 
-    protected float GetMoral() {
-        return _manager.MBar.slider.value * 100;
+    protected int GetMoral() {
+        return _manager.MBar.GoodEOrBadE;
     }
     protected bool CheckIfMoralLow() {
 
-        return GetMoral() < _manager.LowMoral ? true : false;
+        if (GetMoral()==1)
+        {
+            return true;
+        }
+        else if (GetMoral()==0)
+        {
+            return false;
+        }
+        else
+        {
+            return false;
+        }
+           
     }
     protected bool CheckIfMoralHigh() {
-        return GetMoral() > _manager.HighMoral ? true : false;
+        if (GetMoral() == 1)
+        {
+            return false;
+        }
+        else if (GetMoral() == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
     
     protected void SwitchState(NPCStateBase newState)

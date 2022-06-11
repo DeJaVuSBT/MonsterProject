@@ -12,6 +12,8 @@ public class DeedSwitch : MonoBehaviour
     private Queue<bool> cardgbList = new Queue<bool>();
     private int bgCounter=0;
     private bool isMaxed=false;
+    private int GoodOrBadEnding = 0;
+    public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
         generalP.SetActive(true);
@@ -88,11 +90,13 @@ public class DeedSwitch : MonoBehaviour
     private void SwitchPBad() {
         badP.SetActive(true);
         generalP.SetActive(false);
+        GoodOrBadEnding = 1;
     }
     private void SwitchPGood()
     {
         goodP.SetActive(true);
         generalP.SetActive(false);
+        GoodOrBadEnding = 2;
     }
 
     // Update is called once per frame

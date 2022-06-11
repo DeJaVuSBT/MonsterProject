@@ -17,6 +17,7 @@ public class PlayerPushState : PlayerBaseState
     {
         _manager.Target.transform.SetParent(null);
         _manager.Animator.SetBool("isPushing", false);
+        _manager.Animator.SetBool("isPulling", false);
         //_manager.endTutorial(2);
     }
 

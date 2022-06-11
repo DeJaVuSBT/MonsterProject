@@ -12,9 +12,8 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     public bool doubleInteraction = false;
     private int selected=0;
     public bool selectedAnimationDone = false;
-    private bool destroyAtTheEnd = true;
+    public bool destroyAtTheEnd = true;
     private bool rewarded = false;
-    public MoralityBar mBar;
     public HungerBar hBar;
     public GameObject sBar;
     [SerializeField]
@@ -24,8 +23,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     private InteractType interactType;
     [SerializeField]
     private InteractType2 interactType1;
-    [SerializeField]
-    private int morality;
     [SerializeField]
     private int hunger;
     private bool shake = false;
@@ -69,7 +66,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
     void Awake()
     {
-        mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
         hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
         sBar = GameObject.FindGameObjectWithTag("SmashBar");
         newMbar = GameObject.FindGameObjectWithTag("Mbar");
@@ -86,16 +82,16 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     {
         if (!rewarded)
         {
-
-            mBar.Add(morality);
-            hBar.Add(hunger);
             if (GoodDeedorBadDeed)
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
+                hBar.Add(hunger);
+                destroyAtTheEnd = false;
             }
             else
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
+                hBar.Add(hunger);
             }
 
             if (destroyAtTheEnd)

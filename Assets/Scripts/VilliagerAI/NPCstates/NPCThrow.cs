@@ -60,8 +60,6 @@ public class NPCThrow : NPCStateBase
             _manager.Stone.GetComponent<Rigidbody>().velocity = stoneEndVelocity;
 
             TimerAction.Create(() => _manager.Stone.SetActive(false), 2f);
-
-            _manager.MBar.slider.value = 0.5f;
             SwitchState(_states.Idle());
             nowthrow = false;
            

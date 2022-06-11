@@ -10,10 +10,9 @@ public class NPCManager : MonoBehaviour
     NPCStates states;
     //obj/component
     private GameObject player;
-    private MoralityBar mBar;
+    private DeedSwitch mBar;
     private Rigidbody rb;
     private NavMeshAgent agent;
-    [SerializeField]
     private Animator animator;
     //Setting
     [SerializeField]
@@ -45,11 +44,11 @@ public class NPCManager : MonoBehaviour
     public NPCStateBase CurrentState { get { return currentState; } set { currentState = value; } }
     public Rigidbody RB { get { return rb; } set { rb = value; } }
     public GameObject Player { get { return player; } }
-    public MoralityBar MBar { get { return mBar; } set { mBar = value; } }
+    public DeedSwitch MBar { get { return mBar; } set { mBar = value; } }
     
     void Start()
     {
-        mBar = GameObject.FindGameObjectWithTag("MorBar").GetComponent<MoralityBar>();
+        mBar = GameObject.FindGameObjectWithTag("Mbar").GetComponent<DeedSwitch>();
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
         animator = GetComponentInChildren<Animator>();

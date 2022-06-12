@@ -12,7 +12,6 @@ public class DeedSwitch : MonoBehaviour
     private Queue<GameObject> cardList = new Queue<GameObject>();
     private Queue<bool> cardgbList = new Queue<bool>();
     private int bgCounter = 0;
-    private bool isMaxed = false;
     private int GoodOrBadEnding = 0;
     private float removingCounter = 0;
     private bool isRemoving = false;
@@ -66,7 +65,6 @@ public class DeedSwitch : MonoBehaviour
         }
         else if (cardList.Count == 5)
         {
-            isMaxed = true;
             foreach (bool obj in cardgbList)
             {
                 if (obj)
@@ -74,10 +72,6 @@ public class DeedSwitch : MonoBehaviour
                     bgCounter++;
                 }
             }
-        }
-
-        if (isMaxed)
-        {
             if (bgCounter >= 3)
             {
                 //good
@@ -96,6 +90,26 @@ public class DeedSwitch : MonoBehaviour
         generalP.SetActive(false);
         GoodOrBadEnding = 1;
     }
+
+    public void Reset()
+    {
+        SwitchPNormal();
+        isRemoving = false;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+        cardgbList.Clear();
+        cardList.Clear();
+    }
+
+    private void SwitchPNormal()
+    {
+        badP.SetActive(false);
+        generalP.SetActive(true);
+        GoodOrBadEnding = 0;
+    }
+
     private void SwitchPGood()
     {
         goodP.SetActive(true);
@@ -125,7 +139,6 @@ public class DeedSwitch : MonoBehaviour
 
                 removingCounter = 0;
             }
-            Debug.Log("removing");
         }
 
 

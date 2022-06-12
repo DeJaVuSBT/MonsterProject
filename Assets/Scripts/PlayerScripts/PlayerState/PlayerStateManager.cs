@@ -36,7 +36,8 @@ public class PlayerStateManager : MonoBehaviour
     private bool switchedTarget = false;
     private GameObject OutlinedTarget;
     private GameObject Interacticon;
-    
+    [SerializeField]
+    private Transform cagePos;
     
     [SerializeField]
     private Material outlineM;
@@ -44,6 +45,8 @@ public class PlayerStateManager : MonoBehaviour
     int[] puzzleList;
     private bool runing = false;
 
+
+    public Transform CagePos { get { return cagePos; } }
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
     public Rigidbody RB { get { return rb; } set { rb = value; } }
@@ -64,7 +67,7 @@ public class PlayerStateManager : MonoBehaviour
         //rb
         rb = GetComponent<Rigidbody>();
         //set some value
-
+        cagePos = GameObject.FindGameObjectWithTag("CagePos").transform;
         animator = GetComponentInChildren<Animator>();
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
@@ -103,7 +106,11 @@ public class PlayerStateManager : MonoBehaviour
         ShowOutLine();
         //tutorialLogic();
     }
-
+    public void BeingCaught() {
+        currentState.ExitState();
+        currentState = states.PassOutState();
+        currentState.EnterState();
+    }
     private void flipSprite()
     {
         if (pushing)

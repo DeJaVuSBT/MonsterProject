@@ -16,8 +16,8 @@ public class PlayerPushState : PlayerBaseState
     public override void ExitState()
     {
         _manager.Target.transform.SetParent(null);
-        _manager.Animator.SetBool("isPushing", false);
         _manager.Animator.SetBool("isPulling", false);
+        _manager.Animator.SetBool("isPushing", false);
         //_manager.endTutorial(2);
     }
 
@@ -44,12 +44,19 @@ public class PlayerPushState : PlayerBaseState
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
     private void Animation() {
-        if (_manager.MoveDir.x <0)
+        if (_manager.Animator.GetBool("isPushing"))
         {
-            _manager.Animator.SetBool("isPulling", true);
+            if (_manager.MoveDir.x < 0)
+            {
+                _manager.Animator.SetBool("isPulling", true);
 
+            }
+            else { _manager.Animator.SetBool("isPulling", false); }
         }
-        else { _manager.Animator.SetBool("isPulling", false); }
+        else
+        {
+            _manager.Animator.SetBool("isPulling", false);
+        }
     }
   
 }

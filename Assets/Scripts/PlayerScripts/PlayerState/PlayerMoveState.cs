@@ -136,10 +136,6 @@ public class PlayerMoveState : PlayerBaseState
     }
     private void ShowArrow()
     {
-        if (ClosedColliderAroundArrow() != null&&_manager.HBar.GetMoralAmount()<=50)
-        {
-          
-        }
 
     }
 

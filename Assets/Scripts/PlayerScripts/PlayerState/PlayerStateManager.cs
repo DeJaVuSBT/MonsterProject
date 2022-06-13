@@ -71,6 +71,7 @@ public class PlayerStateManager : MonoBehaviour
 
         //rb
         rb = GetComponent<Rigidbody>();
+        hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
         //set some value
         cagePos = GameObject.FindGameObjectWithTag("CagePos").transform;
         animator = GetComponentInChildren<Animator>();

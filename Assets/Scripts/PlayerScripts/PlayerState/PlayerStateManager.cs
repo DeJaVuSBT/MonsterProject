@@ -11,6 +11,7 @@ public class PlayerStateManager : MonoBehaviour
     PlayerBaseState currentState;
     PlayerState states;
 
+    HungerBar hBar;
     [Header("Animation")]
     [SerializeField]
     private Animator animator;
@@ -45,7 +46,7 @@ public class PlayerStateManager : MonoBehaviour
     int[] puzzleList;
     private bool runing = false;
 
-
+    public HungerBar HBar { get { return hBar; } set { hBar = value; } }
     public Transform CagePos { get { return cagePos; } }
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
@@ -160,9 +161,7 @@ public class PlayerStateManager : MonoBehaviour
             GameObject copyfromtarget = Target.GetComponentInChildren<MeshRenderer>().gameObject;
             GameObject CreatedoutlineObject = Instantiate(copyfromtarget, Target.transform);
             Debug.Log("created one outline");
-
             CreatedoutlineObject.GetComponent<Renderer>().material = outlineM;
-
             CreatedoutlineObject.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
 
             if (OutlinedTarget==null)
@@ -179,7 +178,6 @@ public class PlayerStateManager : MonoBehaviour
             if (OutlinedTarget.transform.parent.tag == "temporary")
             {
                 InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0.5f);
-                Debug.Log("bush");
             }
             else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 

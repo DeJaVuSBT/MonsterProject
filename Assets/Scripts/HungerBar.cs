@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HungerBar : MonoBehaviour
 {
-    public static HungerBar Instance;
     public Image slider;
     GameObject hungerVFX;
     

@@ -77,7 +77,7 @@ public class PlayerMoveState : PlayerBaseState
         CheckIfSwitchState();
         Movement();
         Animation();
-        //    ShowArrow();
+         ShowArrow();
     }
     private void Animation()
     {
@@ -136,10 +136,6 @@ public class PlayerMoveState : PlayerBaseState
     }
     private void ShowArrow()
     {
-        if (ClosedColliderAroundArrow() != null)
-        {
-            //_manager.ShowArrow(ClosedColliderAroundArrow().transform.position + new Vector3(-0.5f, 0.1f, 0.5f));
-        }
 
     }
 

@@ -29,11 +29,11 @@ public class PlayerShakeState : PlayerBaseState
         _manager.SwitchToEventInput();
         //A you are pressing and B you are also pressing
         //joystick left, pull back = cancel, go right
-<<<<<<< Updated upstream
+
         _manager.InPut.EventInput.Button5.performed += Button5_performed => { currentInput = 5; Debug.Log("space"); };
-=======
+
         _manager.InPut.EventInput.Button5.performed += Button5_started => { currentInput = 5; Debug.Log("space"); };
->>>>>>> Stashed changes
+
         _manager.InPut.EventInput.Button4.performed += Button4_started => { currentInput = 4; Debug.Log("d");};
         _manager.InPut.EventInput.Button3.performed += Button3_started => { currentInput = 3; Debug.Log("a"); };
         _manager.InPut.EventInput.Button2.performed += Button2_started => { currentInput = 2; Debug.Log("s"); };

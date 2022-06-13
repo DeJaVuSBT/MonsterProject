@@ -19,6 +19,8 @@ public class PlayerRotateState : PlayerBaseState
         _manager.InPut.EventInput.Button3.performed += Button3_started => currentInput = 3;
         _manager.InPut.EventInput.Button2.performed += Button2_started => currentInput = 2;
         _manager.InPut.EventInput.Button1.performed += Button1_started => currentInput = 1;
+
+        _manager.showTutorial("rotateOn" , true);
     }
     public override void CheckIfSwitchState()
     {
@@ -34,6 +36,8 @@ public class PlayerRotateState : PlayerBaseState
         _manager.Animator.SetBool("isShaking", false);
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
+
+        _manager.showTutorial("rotateOn" , false);
     }
 
     public override void UpdateState()

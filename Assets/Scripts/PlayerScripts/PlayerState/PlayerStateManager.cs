@@ -60,6 +60,10 @@ public class PlayerStateManager : MonoBehaviour
     public bool Running { get { return runing; } set { runing = value; } }
     public int[] PuzzleList { get { return puzzleList; } set { puzzleList = value; } }
     public bool Pushing { get { return pushing; } set { pushing = value; } }
+
+    [Header("Tutorials")]
+    [SerializeField]
+    private GameObject tutorialObj;
     
     private void Awake()
     {
@@ -77,6 +81,15 @@ public class PlayerStateManager : MonoBehaviour
         states = new PlayerState(this);
         currentState = states.MoveState();
         currentState.EnterState();
+
+        tutorialObj = GameObject.FindGameObjectWithTag("Tutorial");
+
+    }
+    private void Start()
+    {
+
+        tutorialObj.SetActive(false);
+        
     }
 
     public void SwitchToEventInput()
@@ -87,6 +100,12 @@ public class PlayerStateManager : MonoBehaviour
     public void SwitchToPlayerInput()
     {
         Input.PlayerInput.Enable();
+        Input.EventInput.Disable();
+    }
+
+    public void SwitchToWaitState()
+    {
+        Input.PlayerInput.Disable();
         Input.EventInput.Disable();
     }
 
@@ -187,5 +206,12 @@ public class PlayerStateManager : MonoBehaviour
         Vector3 playerPos = transform.position;
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(playerPos + offset, interactRange);
+    }
+
+    //show tutorials
+    public void showTutorial(string animatorParam , bool setParam)
+    {
+        tutorialObj.SetActive(setParam);
+        tutorialObj.GetComponentInChildren<Animator>().SetBool(animatorParam , setParam);
     }
 }

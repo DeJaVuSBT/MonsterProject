@@ -31,6 +31,11 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     private GameObject newMbar;
     //getsett
     public int Selected { set { selected = value; } }
+
+    //option Highlight
+    GameObject badHighlight , goodHighlight;
+
+    PlayerStateManager _manager;
     enum InteractType
     {
         Shaking,
@@ -49,12 +54,12 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         Debug.Log((int)interactType);
         if (doubleInteraction && selected == 1)
         {
-            GoodDeedorBadDeed = true;
+            GoodDeedorBadDeed = false;
             return (int)interactType;
         }
         else if (doubleInteraction && selected == 2)
         {
-            GoodDeedorBadDeed = false;
+            GoodDeedorBadDeed = true;
             return (int)interactType1;
         }
         else
@@ -70,12 +75,18 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         sBar = GameObject.FindGameObjectWithTag("SmashBar");
         newMbar = GameObject.FindGameObjectWithTag("Mbar");
         option = GameObject.FindGameObjectWithTag("Option");
+        badHighlight = GameObject.Find("badHighlight");
+        goodHighlight = GameObject.Find("goodHighlight");
+        //_manager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
 
     }
     void Start()
     {
         sBar.SetActive(false);
         option.SetActive(false);
+
+        badHighlight.SetActive(false);
+        goodHighlight.SetActive(false);
     }
 
     public void Reward()
@@ -104,6 +115,8 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
             rewarded = true;
         }
         isInteracting = false;
+
+        //TimerAction.Create(() => inputOn(), 2.0f);
     }
 
     public void Interact()
@@ -120,26 +133,53 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     public void ShowOption()
     {
         option.SetActive(true);
+        
+        setOptionsAnimations(true);
+        
     }
     public void HideOption()
     {
         option.SetActive(false);
+
+        setOptionsAnimations(false);
     }
+
+
+    //call this function to check the interact type and set the animator booleans for the bad/good options
+    public void setOptionsAnimations(bool _value)
+    {
+
+        Animator optionBad = option.transform.Find("badOption").gameObject.GetComponent<Animator>();
+        Animator optionGood = option.transform.Find("goodOption").gameObject.GetComponent<Animator>();
+
+        if((int)interactType == 0){optionBad.SetBool("shakeOn" , _value);}
+        if((int)interactType == 1){optionBad.SetBool("rotateOn" , _value);}
+        if((int)interactType == 3){optionBad.SetBool("smashOn" , _value);}
+
+        if((int)interactType1 == 0){optionGood.SetBool("shakeOn" , _value);}
+        if((int)interactType1 == 1){optionGood.SetBool("rotateOn" , _value);}
+        if((int)interactType1 == 3){optionGood.SetBool("smashOn" , _value);}
+    }
+
     public void SelectedAnimation() {
         selectedAnimationDone = false;
-        TimerAction.Create(() => SelectedAniationOn(selected), 0.3f);
-        TimerAction.Create(() => SelectedAniationoff(selected), 0.6f);
-        TimerAction.Create(() => SelectedAniationOn(selected), 0.9f);
-        TimerAction.Create(() => SelectedAniationoff(selected), 1.2f);
+        TimerAction.Create(() => SelectedAnimationOn(selected), 0.3f);
+        TimerAction.Create(() => SelectedAnimationoff(), 0.6f);
+        TimerAction.Create(() => SelectedAnimationOn(selected), 0.9f);
+        TimerAction.Create(() => SelectedAnimationoff(), 1.2f);
         TimerAction.Create(() => selectedAnimationDone=true, 1.2f);
 
     }
-    private void SelectedAniationOn(int a) {
-        option.transform.GetChild(a-1).gameObject.GetComponent<Outline>().effectDistance = new Vector2(10, 10);
+    private void SelectedAnimationOn(int a) {
+        //option.transform.GetChild(a-1).gameObject.GetComponent<Outline>().effectDistance = new Vector2(10, 10);
+        if(a == 1){badHighlight.SetActive(true);}
+        if(a == 2){goodHighlight.SetActive(true);}
     }
-    private void SelectedAniationoff(int a)
+    private void SelectedAnimationoff()
     {
-        option.transform.GetChild(a-1).gameObject.GetComponent<Outline>().effectDistance = new Vector2(1, 1);
+        //.transform.GetChild(a-1).gameObject.GetComponent<Outline>().effectDistance = new Vector2(1, 1);
+        badHighlight.SetActive(false);
+        goodHighlight.SetActive(false);
     }
 
     private void Update()
@@ -159,5 +199,14 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     private void ShakingVisual()
     {
         this.gameObject.transform.localScale = new Vector3(UnityEngine.Random.Range(0.9f, 1.1f), UnityEngine.Random.Range(0.9f, 1.1f), UnityEngine.Random.Range(0.9f, 1.1f));
+    }
+
+    void inputOn()
+    {
+        _manager.SwitchToPlayerInput();      
+    }
+    void inputOff()
+    {
+        _manager.SwitchToWaitState();
     }
 }

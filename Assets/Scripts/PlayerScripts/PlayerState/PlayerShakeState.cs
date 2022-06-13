@@ -34,7 +34,7 @@ public class PlayerShakeState : PlayerBaseState
         _manager.InPut.EventInput.Button3.performed += Button3_started => { currentInput = 3; Debug.Log("a"); };
         _manager.InPut.EventInput.Button2.performed += Button2_started => { currentInput = 2; Debug.Log("s"); };
         _manager.InPut.EventInput.Button1.performed += Button1_started => { currentInput = 1; Debug.Log("w"); };
-        //_manager.startTutorial(0);
+        _manager.showTutorial("shakeOn" , true);
         
     }
 
@@ -43,7 +43,7 @@ public class PlayerShakeState : PlayerBaseState
         _manager.Animator.SetBool("isShaking", false);
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
-        //_manager.endTutorial(0);
+        _manager.showTutorial("shakeOn" , false);
     }
 
     public override void UpdateState()
@@ -76,6 +76,7 @@ public class PlayerShakeState : PlayerBaseState
                 if (counter == _manager.PuzzleList.Length)
                 {
                     _manager.Target.GetComponent<Reward>().Reward();
+                    
                     //_manager.addCard(1);
                     puzzling = false;
                 }
@@ -86,6 +87,7 @@ public class PlayerShakeState : PlayerBaseState
             }
         }
     }
+
     private bool CheckIfInputCorrect()
     {
         if (_manager.PuzzleList[counter - 1] == AllInput[counter-1])

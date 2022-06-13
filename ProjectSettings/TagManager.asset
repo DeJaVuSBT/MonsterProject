@@ -4,24 +4,23 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Moveable
+  - Option
   - HunBar
   - SmashBar
-  - temporary
-  - Emoji
-  - shakeTut
   - Mbar
-  - Option
+  - Tutorial
+  - Emoji
+  - temporary
   - CagePos
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Moveable
-  - temporary
+  - 
+  - 
   - 
   - 
   - 

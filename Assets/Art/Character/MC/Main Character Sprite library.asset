@@ -126,7 +126,7 @@ MonoBehaviour:
       m_Sprite: {fileID: 4131747970301528845, guid: 756e0409967ad26438796e73b176903a, type: 3}
     - m_Name: G
       m_Hash: 985283518
-      m_Sprite: {fileID: -2907460453111207209, guid: 756e0409967ad26438796e73b176903a, type: 3}
+      m_Sprite: {fileID: 1770185766563406115, guid: 756e0409967ad26438796e73b176903a, type: 3}
     - m_Name: E
       m_Hash: -726377838
       m_Sprite: {fileID: -5801851643239907013, guid: 756e0409967ad26438796e73b176903a, type: 3}

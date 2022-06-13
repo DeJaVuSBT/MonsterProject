@@ -12,6 +12,7 @@ TagManager:
   - shakeTut
   - Mbar
   - Option
+  - CagePos
   layers:
   - Default
   - TransparentFX

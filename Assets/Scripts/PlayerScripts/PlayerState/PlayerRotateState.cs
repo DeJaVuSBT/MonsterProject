@@ -14,11 +14,11 @@ public class PlayerRotateState : PlayerBaseState
         _manager.Animator.SetBool("isShaking", true);
         _manager.PuzzleList = null;
         _manager.SwitchToEventInput();
-        _manager.InPut.EventInput.Button5.started += Button5_started => currentInput = 5;
-        _manager.InPut.EventInput.Button4.started += Button4_started => currentInput = 4;
-        _manager.InPut.EventInput.Button3.started += Button3_started => currentInput = 3;
-        _manager.InPut.EventInput.Button2.started += Button2_started => currentInput = 2;
-        _manager.InPut.EventInput.Button1.started += Button1_started => currentInput = 1;
+        _manager.InPut.EventInput.Button5.performed += Button5_started => currentInput = 5;
+        _manager.InPut.EventInput.Button4.performed += Button4_started => currentInput = 4;
+        _manager.InPut.EventInput.Button3.performed += Button3_started => currentInput = 3;
+        _manager.InPut.EventInput.Button2.performed += Button2_started => currentInput = 2;
+        _manager.InPut.EventInput.Button1.performed += Button1_started => currentInput = 1;
     }
     public override void CheckIfSwitchState()
     {

@@ -139,10 +139,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122cd8c84fecf294e9933433fe5e16f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoodDeedorBadDeed: 0
+  doubleInteraction: 0
+  selectedAnimationDone: 0
   destroyAtTheEnd: 1
-  mBar: {fileID: 0}
   hBar: {fileID: 0}
   sBar: {fileID: 0}
+  option: {fileID: 0}
   interactType: 3
-  morality: 0
+  interactType1: 0
   hunger: 0
+  newMbar: {fileID: 0}

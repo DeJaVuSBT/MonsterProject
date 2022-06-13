@@ -40,5 +40,10 @@ public class PlayerState
     {
         return new PlayerOptioning(Manager, this);
     }
+    public PlayerBaseState PassOutState()
+    {
+        return new PlayerPassOut(Manager, this);
+    }
+
 }
 

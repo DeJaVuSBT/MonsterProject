@@ -48,12 +48,11 @@ public class NPCThrow : NPCStateBase
         Vector3 p2 = (p3 - p1) / 2 + p1 + new Vector3(0, 2f, 0);
         
         Vector3 currPos = ThrowCurve.GetCurvePoint(p1, p2, p3, t);
-        Debug.Log(t);
         _manager.Stone.transform.position = currPos;
 
         if (t >= 1.0f)
         {
-            Debug.Log(currPos);
+            //finish throwing
             Vector3 currPos1 = ThrowCurve.GetCurvePoint(p1, p2, p3, t);
             Vector3 currPos2 = ThrowCurve.GetCurvePoint(p1, p2, p3, t - 0.1f);
             Vector3 stoneEndVelocity = 10 * (currPos1 - currPos2);
@@ -62,7 +61,9 @@ public class NPCThrow : NPCStateBase
             TimerAction.Create(() => _manager.Stone.SetActive(false), 2f);
             SwitchState(_states.Idle());
             nowthrow = false;
-           
+
+            _manager.Player.GetComponent<PlayerStateManager>().BeingCaught();
+            TimerAction.Create(() => _manager.MBar.Reset(), 3f);
         }
     }
 }

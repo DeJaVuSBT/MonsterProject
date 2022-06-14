@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1636169374167027898}
   - component: {fileID: 7554125545798045208}
+  - component: {fileID: 7711807092581562857}
+  - component: {fileID: 2775924065498975163}
   m_Layer: 0
   m_Name: cage_opened
-  m_TagString: Untagged
+  m_TagString: Cage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,6 +54,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7711807092581562857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161454919337970176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122cd8c84fecf294e9933433fe5e16f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoodDeedorBadDeed: 0
+  doubleInteraction: 0
+  selectedAnimationDone: 0
+  destroyAtTheEnd: 0
+  hBar: {fileID: 0}
+  sBar: {fileID: 0}
+  option: {fileID: 0}
+  interactType: 3
+  interactType1: 0
+  hunger: 0
+  newMbar: {fileID: 0}
+--- !u!65 &2775924065498975163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161454919337970176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33682185, y: 0.6170172, z: 0.25691938}
+  m_Center: {x: -0.28967407, y: -0.19149175, z: 1.4789584}
 --- !u!1 &4986913931919522825
 GameObject:
   m_ObjectHideFlags: 0

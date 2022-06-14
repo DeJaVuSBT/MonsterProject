@@ -1,6 +1,8 @@
 using UnityEngine;
 public class PlayerMoveState : PlayerBaseState
 {
+    private bool switched = false;
+    private GameObject outLineTarget;
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
     public override void EnterState()
     {
@@ -23,6 +25,7 @@ public class PlayerMoveState : PlayerBaseState
             {
                 _manager.SwitchedTarget();
             }
+
         }
         else { _manager.Target = null; _manager.DestoryOutLinedTarget(); }
 
@@ -136,9 +139,37 @@ public class PlayerMoveState : PlayerBaseState
     }
     private void ShowArrow()
     {
+        if (_manager.HBar.GetMoralAmount()<=50)
+        {
+
+            GameObject preobj = ClosedColliderAroundArrow();
+            if (!switched)
+            {
+                GameObject copyfromtarget = preobj.GetComponentInChildren<MeshRenderer>().gameObject;
+                GameObject CreatedoutlineObject = Object.Instantiate(copyfromtarget, preobj.transform);
+                Debug.Log("created one outline");
+                CreatedoutlineObject.GetComponent<Renderer>().material = _manager.OutLineA;
+                CreatedoutlineObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                if (outLineTarget == null)
+                {
+                    outLineTarget = CreatedoutlineObject;
+                }
+                else
+                {
+                    Object.Destroy(outLineTarget);
+                    outLineTarget = CreatedoutlineObject;
+                }
+                switched = true;
+            }
+
+            if (preobj != outLineTarget)
+            {
+                switched = false;
+            }
+               
+        }
 
     }
-
     private GameObject ClosedColliderAroundArrow()
     {
         Vector3 offset = new Vector3(0, 1, 0.7f);
@@ -152,18 +183,22 @@ public class PlayerMoveState : PlayerBaseState
             {
                 if (ColliderAround[i].GetComponent<MoraEvents>())
                 {
-                    if (Closest == null)
+                    if (ColliderAround[i].GetComponent<MoraEvents>().GetHunger!=0)
                     {
-                        Closest = ColliderAround[i];
-                    }
-                    else
-                    {
-                        if (Vector3.Distance(playerPos, Closest.transform.position) > Vector3.Distance(playerPos, ColliderAround[i].transform.position))
+                        if (Closest == null)
                         {
                             Closest = ColliderAround[i];
                         }
+                        else
+                        {
+                            if (Vector3.Distance(playerPos, Closest.transform.position) > Vector3.Distance(playerPos, ColliderAround[i].transform.position))
+                            {
+                                Closest = ColliderAround[i];
+                            }
 
+                        }
                     }
+
                 }
             }
             if (Closest != null)
@@ -184,5 +219,10 @@ public class PlayerMoveState : PlayerBaseState
         _manager.InteractIcon.SetActive(false);
         _manager.Animator.SetBool("IsWalking", false);
         //_manager.arrow.SetActive(false);
+        if (outLineTarget!=null)
+        {
+            Object.Destroy(outLineTarget);
+        }
+
     }
 }

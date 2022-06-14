@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeedSwitch : MonoBehaviour
 {
-    public int timer = 3;
+    public int timer = 10;
     [SerializeField]
     private GameObject badP, generalP, goodP, bigCard;
     [SerializeField]
@@ -95,6 +95,7 @@ public class DeedSwitch : MonoBehaviour
     {
         SwitchPNormal();
         isRemoving = false;
+        removingCounter = 0;
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);

@@ -20,8 +20,8 @@ public class PlayerPassOut : PlayerBaseState
 
     private void CutScene() {
         CinematicBars.Show_Static(4000, 2f);
-        //clean moral bar
         TimerAction.Create(() => _manager.Animator.SetBool("isDying", false), 2f);
+        TimerAction.Create(() => GameObject.FindGameObjectWithTag("Cage").GetComponent<Animator>().SetBool("Open", false), 2f);
         TimerAction.Create(() => _manager.transform.position = _manager.CagePos.position, 2f);
         TimerAction.Create(() => CinematicBars.Hide_Static(2f), 2f);
         TimerAction.Create(() => SwitchState(_states.MoveState()), 3f);

@@ -31,7 +31,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     private GameObject newMbar;
     //getsett
     public int Selected { set { selected = value; } }
-
+    public int GetHunger { get { return hunger; } }
     //option Highlight
     GameObject badHighlight , goodHighlight;
 
@@ -98,19 +98,27 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
                 hBar.Add(hunger);
                 destroyAtTheEnd = false;
-                Destroy(this);
             }
             else
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
-                hBar.Add(hunger);
-                Destroy(this);
+                hBar.Add(hunger);   
             }
 
             if (destroyAtTheEnd)
             {
                 Destroy(this.gameObject);
             }
+
+            if (this.gameObject.tag=="Cage")
+            {
+                this.GetComponent<Animator>().SetBool("Open", true);
+            }
+            else
+            {
+                Destroy(this);
+            }
+
 
             rewarded = true;
         }

@@ -12,6 +12,7 @@ TagManager:
   - Emoji
   - temporary
   - CagePos
+  - Cage
   layers:
   - Default
   - TransparentFX

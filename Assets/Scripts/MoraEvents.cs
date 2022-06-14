@@ -31,7 +31,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     private GameObject newMbar;
     //getsett
     public int Selected { set { selected = value; } }
-
+    public int GetHunger { get { return hunger; } }
     //option Highlight
     GameObject badHighlight , goodHighlight;
 

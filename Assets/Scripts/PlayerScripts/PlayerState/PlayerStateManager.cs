@@ -42,10 +42,14 @@ public class PlayerStateManager : MonoBehaviour
     
     [SerializeField]
     private Material outlineM;
+    [SerializeField]
+    private Material outlineA;
     private bool pushing = false;
     int[] puzzleList;
     private bool runing = false;
 
+
+    public Material OutLineA { get { return outlineA; } }
     public HungerBar HBar { get { return hBar; } set { hBar = value; } }
     public Transform CagePos { get { return cagePos; } }
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }

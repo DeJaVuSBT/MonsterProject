@@ -91,7 +91,11 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+<<<<<<< Updated upstream
   - name: NL_Hand1
+=======
+  - name: "Bild eingef\xFCgt"
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -104,6 +108,7 @@ ScriptedImporter:
       height: 98
     spriteID: f3460c6d8f3bafe49b3b3bc9701e47a5
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_21
       position: {x: 125.17864, y: 0.00008981118, z: 0}
@@ -452,6 +457,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 559, y: 3293}
   - name: NL_LowerArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 559, y: 3293}
+  - name: "Bild eingef\xFCgt_1"
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -464,6 +481,7 @@ ScriptedImporter:
       height: 98
     spriteID: 189918afe8a586640b10d4b325e41c7c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_20
       position: {x: 142.46887, y: -0.000003052828, z: 0}
@@ -845,6 +863,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 821, y: 585}
   - name: NL_UpperArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 821, y: 585}
+  - name: "Bild eingef\xFCgt_2"
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -857,6 +887,7 @@ ScriptedImporter:
       height: 130
     spriteID: 85f8dd4d83aadd94dba3a5b4abdc7adc
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_19
       position: {x: 140.28674, y: 87.854004, z: 0}
@@ -1739,6 +1770,40 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 553, y: -362}
   - name: NL_Leg1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 472, y: 2637}
+  - name: Head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 984
+      y: 249
+      width: 248
+      height: 237
+    spriteID: f54bac6569db98d48a9d012ab4b26cb6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 553, y: -362}
+  - name: Leg1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1751,6 +1816,7 @@ ScriptedImporter:
       height: 401
     spriteID: 094682bba0d1a054ca519412c8d480bc
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_14
       position: {x: 101.47712, y: 0.000025819245, z: 0}
@@ -2292,6 +2358,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 414, y: 2037}
   - name: NL_Torso
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 414, y: 2037}
+  - name: Torso
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -2304,6 +2382,7 @@ ScriptedImporter:
       height: 514
     spriteID: fb2d5d10897c45c4fbc1f041f6af497c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_1
       position: {x: 147.56299, y: 119.41821, z: 0}
@@ -2702,6 +2781,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 21, y: 1697}
   - name: NL_Wing1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 21, y: 1697}
+  - name: Wing1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -2714,6 +2805,7 @@ ScriptedImporter:
       height: 692
     spriteID: f0f712b954dd9ea449b186490b2be753
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_22
       position: {x: 294.45667, y: 395.77155, z: 0}
@@ -3100,6 +3192,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 266, y: -147}
   - name: NL_Wing2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 266, y: -147}
+  - name: Wing2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -3112,6 +3216,7 @@ ScriptedImporter:
       height: 570
     spriteID: 0727d3642a29b0545afe5554c4a0af25
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_23
       position: {x: 274.29596, y: 303.6306, z: 0}
@@ -3529,6 +3634,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -216, y: 1168}
   - name: NL_Leg2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -216, y: 1168}
+  - name: Leg2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -3541,6 +3658,7 @@ ScriptedImporter:
       height: 394
     spriteID: 653b8046c6a2bbd4c95790a16645287c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_15
       position: {x: 100.39434, y: -0.00006471565, z: 0}
@@ -3987,6 +4105,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 242, y: 383}
   - name: NL_UpperArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 242, y: 383}
+  - name: Upper Arm2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -3999,6 +4129,7 @@ ScriptedImporter:
       height: 129
     spriteID: c97ed79663e7f0147bd70da7f521678f
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_16
       position: {x: 47.839294, y: 96.27612, z: 0}
@@ -4444,6 +4575,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 213, y: 2368}
   - name: NL_Hand2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 213, y: 2368}
+  - name: Hand2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -4456,6 +4599,7 @@ ScriptedImporter:
       height: 90
     spriteID: 70387fd4600baeb43aa358e9512669c1
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_18
       position: {x: 124.490364, y: -0.000042593223, z: 0}
@@ -4832,6 +4976,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 486, y: -393}
   - name: NL_LowerArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 486, y: -393}
+  - name: Lower Arm2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -4844,6 +5000,7 @@ ScriptedImporter:
       height: 102
     spriteID: c4a63df90612c144ab4882048ae8e2d4
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_17
       position: {x: 146.96022, y: 0.0003047384, z: 0}
@@ -5264,6 +5421,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -534, y: 3535}
   - name: NR_Hand1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -534, y: 3535}
+  - name: Hand1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -5276,6 +5445,7 @@ ScriptedImporter:
       height: 99
     spriteID: e0ea8d1b0d812c042871bff830fd1491
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_21
       position: {x: 125.17842, y: -0.00018233337, z: 0}
@@ -5668,6 +5838,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 564, y: 3081}
   - name: NR_LowerArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 564, y: 3081}
+  - name: Lower Arm1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -5680,6 +5862,7 @@ ScriptedImporter:
       height: 91
     spriteID: 93cbbf42bf1fa144e96ea098e0e12759
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_20
       position: {x: 142.46873, y: 0.000018156614, z: 0}
@@ -6120,6 +6303,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 822, y: 797}
   - name: NR_UpperArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 822, y: 797}
+  - name: Upper Arm1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -6132,6 +6327,7 @@ ScriptedImporter:
       height: 128
     spriteID: 91c8c3dd2a8364d4c8693cda14f7ea20
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_19
       position: {x: 140.28674, y: 86.854004, z: 0}
@@ -6578,6 +6774,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 472, y: 3184}
   - name: NR_Head
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 472, y: 3184}
+  - name: Head_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -6590,6 +6798,7 @@ ScriptedImporter:
       height: 237
     spriteID: d9407b9f33579a24b904f5f8bb9b8d54
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_2
       position: {x: 127.8591, y: 1.7954102, z: 0}
@@ -7059,6 +7268,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -367, y: 3122}
   - name: NR_Leg1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -367, y: 3122}
+  - name: Leg1_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -7071,6 +7292,7 @@ ScriptedImporter:
       height: 402
     spriteID: 6c0ddb4bfe1bf2649a28e0e9769af5fe
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_14
       position: {x: 101.477135, y: 0.00008317161, z: 0}
@@ -7600,6 +7822,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 421, y: 1627}
   - name: NR_Torso
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 421, y: 1627}
+  - name: Torso_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -7612,6 +7846,7 @@ ScriptedImporter:
       height: 512
     spriteID: a93599c61d250e84bb0b67e8f426fef4
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_1
       position: {x: 142.56299, y: 118.41821, z: 0}
@@ -8040,6 +8275,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 16, y: 2218}
   - name: NR_Wing1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 16, y: 2218}
+  - name: Wing1_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -8052,6 +8299,7 @@ ScriptedImporter:
       height: 695
     spriteID: 33bc82633e4269f4a8b6a482be7e1743
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_22
       position: {x: 295.4567, y: 397.77155, z: 0}
@@ -8467,6 +8715,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -107, y: -145}
   - name: NR_Wing2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -107, y: -145}
+  - name: Wing2_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -8479,6 +8739,7 @@ ScriptedImporter:
       height: 575
     spriteID: 8ecbda2bf30ea5f478ab7430059a263c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_23
       position: {x: 261.29596, y: 313.6306, z: 0}
@@ -8842,6 +9103,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -229, y: 2334}
   - name: NR_Leg2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -229, y: 2334}
+  - name: Leg2_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -8854,6 +9127,7 @@ ScriptedImporter:
       height: 400
     spriteID: a8a0f0f8a06a78f42b9152492020cf9f
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_15
       position: {x: 100.394, y: -0.00011329064, z: 0}
@@ -9292,6 +9566,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -127, y: 3460}
   - name: NR_UpperArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -127, y: 3460}
+  - name: "Bild eingef\xFCgt_3"
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -9304,6 +9590,7 @@ ScriptedImporter:
       height: 128
     spriteID: d3ab099d5aa2a484bac3a9e8d0d9e185
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_16
       position: {x: 48.839294, y: 96.27612, z: 0}
@@ -9680,6 +9967,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 214, y: 2918}
   - name: NR_Hand2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 214, y: 2918}
+  - name: "Bild eingef\xFCgt_4"
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -9692,6 +9991,7 @@ ScriptedImporter:
       height: 89
     spriteID: fe9bb8e05b5ffed4bbe4ce63cb2e9194
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_18
       position: {x: 124.49031, y: 0.0000047982394, z: 0}
@@ -10040,6 +10340,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 486, y: -197}
   - name: NR_LowerArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 486, y: -197}
+  - name: "Bild eingef\xFCgt_5"
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -10052,6 +10364,7 @@ ScriptedImporter:
       height: 107
     spriteID: 16ee162cdfe51ac4397c7be6eeb5f89d
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_17
       position: {x: 146.95999, y: 0.0003705968, z: 0}
@@ -10473,6 +10786,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 58, y: 3508}
   - name: G_Halo
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 58, y: 3508}
+  - name: Halo
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -10485,6 +10810,7 @@ ScriptedImporter:
       height: 182
     spriteID: 44b82a12268080c4580c7af3f73dbd21
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_13
       position: {x: 177.08228, y: 90.76514, z: 0}
@@ -10953,6 +11279,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 22, y: 3124}
   - name: G_Hand1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 22, y: 3124}
+  - name: Hand1_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -10965,6 +11303,7 @@ ScriptedImporter:
       height: 98
     spriteID: 552efafad0bfda64fb431b4a6ecfa42c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_21
       position: {x: 125.17844, y: 0.0000038154103, z: 0}
@@ -11324,6 +11663,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 934, y: 1044}
   - name: G_LowerArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 934, y: 1044}
+  - name: Lower Arm1_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -11336,6 +11687,7 @@ ScriptedImporter:
       height: 98
     spriteID: ab3bbfd3db1ecff409a6098944c7da33
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_20
       position: {x: 142.46873, y: 0.000042147483, z: 0}
@@ -11718,6 +12070,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 821, y: 691}
   - name: G_UpperArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 821, y: 691}
+  - name: Upper Arm1_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -11730,6 +12094,7 @@ ScriptedImporter:
       height: 130
     spriteID: 5bf43ee8a0d2cdf43a552201d548e468
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_19
       position: {x: 140.28674, y: 87.854004, z: 0}
@@ -12138,6 +12503,21 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.39189985, y: 0.54902095}
     alignment: 9
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 472, y: 2775}
+  - name: Head_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+>>>>>>> Stashed changes
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -12147,6 +12527,7 @@ ScriptedImporter:
       height: 214
     spriteID: 926ddcca662b1344184cb44322313233
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_2
       position: {x: 67.85913, y: 0.7954712, z: 0}
@@ -12667,6 +13048,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 553, y: -117}
   - name: G_Leg1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 553, y: -117}
+  - name: Leg1_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -12679,6 +13072,7 @@ ScriptedImporter:
       height: 401
     spriteID: c8d24a111091d654e9e877e13068dafa
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_14
       position: {x: 101.47707, y: -0.000016425547, z: 0}
@@ -13229,6 +13623,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 414, y: 2446}
   - name: G_Torso
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 414, y: 2446}
+  - name: Torso_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -13241,6 +13647,7 @@ ScriptedImporter:
       height: 515
     spriteID: 97339feb6f150dc4f96a71456fd0220d
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_1
       position: {x: 147.56299, y: 120.41821, z: 0}
@@ -13649,6 +14056,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 21, y: 1175}
   - name: G_Leg2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 21, y: 1175}
+  - name: Leg2_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -13661,6 +14080,7 @@ ScriptedImporter:
       height: 400
     spriteID: a93992e7bda2711439fe91f95caca212
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_15
       position: {x: 100.39438, y: -0.000020225509, z: 0}
@@ -14088,6 +14508,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 248, y: -25}
   - name: G_Wing1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 248, y: -25}
+  - name: Wing1_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -14100,6 +14532,7 @@ ScriptedImporter:
       height: 692
     spriteID: 0b93ff27bfe4e144888c954ddc8518af
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_22
       position: {x: 294.45667, y: 395.77148, z: 0}
@@ -14486,6 +14919,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 266, y: 553}
   - name: G_Wing2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 266, y: 553}
+  - name: Wing2_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -14498,6 +14943,7 @@ ScriptedImporter:
       height: 575
     spriteID: d9d3a5037070e5347b830a973c0fab04
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_23
       position: {x: 261.29596, y: 312.6306, z: 0}
@@ -14893,6 +15339,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -229, y: 2916}
   - name: G_UpperArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -229, y: 2916}
+  - name: Upper Arm 2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -14905,6 +15363,7 @@ ScriptedImporter:
       height: 128
     spriteID: a64ecbb4e979d2345a9529ce5d45c152
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_16
       position: {x: 48.839294, y: 95.27612, z: 0}
@@ -15281,6 +15740,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 214, y: 3053}
   - name: G_Hand2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 214, y: 3053}
+  - name: Hand2_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -15293,6 +15764,7 @@ ScriptedImporter:
       height: 89
     spriteID: 14029de4a29d54b4ca8cb12d8be2c3aa
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_18
       position: {x: 124.49046, y: 0.00008933828, z: 0}
@@ -15641,6 +16113,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 486, y: -101}
   - name: G_LowerArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 486, y: -101}
+  - name: Lower Arm2_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -15653,6 +16137,7 @@ ScriptedImporter:
       height: 107
     spriteID: 58b169eacc118a04fb22533c946462f9
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_17
       position: {x: 146.96045, y: -0.00004635773, z: 0}
@@ -16074,6 +16559,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -691, y: 3535}
   - name: E_Crown
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -691, y: 3535}
+  - name: Crown
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -16086,6 +16583,7 @@ ScriptedImporter:
       height: 209
     spriteID: 115bba68f7e5c054b9cc197f0367f20a
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_13
       position: {x: 108.082275, y: 71.76514, z: 0}
@@ -16364,6 +16862,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 559, y: -75}
   - name: E_Head
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 559, y: -75}
+  - name: Head_3
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -16376,6 +16886,7 @@ ScriptedImporter:
       height: 237
     spriteID: c7d986ff1eb1e8947a484ccf6ed2d315
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_2
       position: {x: 127.85913, y: 0.7954712, z: 0}
@@ -16870,6 +17381,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 613, y: -607}
   - name: E_Hand1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 613, y: -607}
+  - name: Hand1_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -16882,6 +17405,7 @@ ScriptedImporter:
       height: 99
     spriteID: 51ed383db397cc04d90630d9f41b8593
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_21
       position: {x: 125.178635, y: -0.00028591705, z: 0}
@@ -17285,6 +17809,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 564, y: 3187}
   - name: E_LowerArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 564, y: 3187}
+  - name: Lower Arm1_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -17297,6 +17833,7 @@ ScriptedImporter:
       height: 91
     spriteID: a49d08a103980654aa6a6ed55f296830
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_20
       position: {x: 142.46867, y: 0.0000034938712, z: 0}
@@ -17697,6 +18234,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 822, y: 895}
   - name: E_UpperArm1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 822, y: 895}
+  - name: Upper Arm1_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -17709,6 +18258,7 @@ ScriptedImporter:
       height: 128
     spriteID: 495f39b14dd16d347b1acef3ae7103f0
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_19
       position: {x: 140.28674, y: 85.854004, z: 0}
@@ -18155,6 +18705,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 472, y: 3319}
   - name: E_Leg1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 472, y: 3319}
+  - name: Leg1_3
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -18167,6 +18729,7 @@ ScriptedImporter:
       height: 403
     spriteID: 10a6d958764a4b6439f0442bc9e706ce
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_14
       position: {x: 101.47721, y: -0.000057284906, z: 0}
@@ -18605,6 +19168,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 421, y: 1216}
   - name: E_Torso
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 421, y: 1216}
+  - name: Torso_3
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -18617,6 +19192,7 @@ ScriptedImporter:
       height: 511
     spriteID: 55818fd6489d5664e9a3adb4d9307c67
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_1
       position: {x: 142.56299, y: 116.41821, z: 0}
@@ -19036,6 +19612,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 16, y: 2736}
   - name: E_Leg2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 16, y: 2736}
+  - name: Leg2_3
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -19048,6 +19636,7 @@ ScriptedImporter:
       height: 394
     spriteID: ae42a313fd87f9d4c84c7789009df2d3
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_15
       position: {x: 100.39437, y: -0.000005016006, z: 0}
@@ -19526,6 +20115,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 242, y: 785}
   - name: E_UpperArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 242, y: 785}
+  - name: Upper Arm2_1
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -19538,6 +20139,7 @@ ScriptedImporter:
       height: 129
     spriteID: 48935c920f46dc248ba0eb2905b9f15c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_16
       position: {x: 47.839294, y: 96.27612, z: 0}
@@ -20033,6 +20635,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 213, y: 2505}
   - name: E_Hand2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 213, y: 2505}
+  - name: Hand2_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -20045,6 +20659,7 @@ ScriptedImporter:
       height: 90
     spriteID: c808ed6a4ce106446a23cc2c9e7d8ba7
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_18
       position: {x: 124.49049, y: -0.00003417408, z: 0}
@@ -20411,6 +21026,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 486, y: -295}
   - name: E_LowerArm2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 486, y: -295}
+  - name: Lower Arm2_2
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -20423,6 +21050,7 @@ ScriptedImporter:
       height: 102
     spriteID: b90f8a4bd14759f46b9e2378d9fd61a6
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_17
       position: {x: 146.9604, y: 0.00003610614, z: 0}
@@ -20923,6 +21551,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 289, y: 491}
   - name: E_Wing1
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 289, y: 491}
+  - name: Wing1_3
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -20935,6 +21575,7 @@ ScriptedImporter:
       height: 695
     spriteID: e6a0eeccef58440458b2d637c525822c
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_22
       position: {x: 295.4567, y: 396.77148, z: 0}
@@ -21351,6 +21992,18 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -107, y: 557}
   - name: E_Wing2
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -107, y: 557}
+  - name: Wing2_3
+>>>>>>> Stashed changes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -21363,6 +22016,7 @@ ScriptedImporter:
       height: 570
     spriteID: 9840b4d972b75c84e9b715fc5e52d23d
     internalID: 0
+<<<<<<< Updated upstream
     spriteBone:
     - name: bone_23
       position: {x: 274.29596, y: 303.6306, z: 0}
@@ -21786,6 +22440,14 @@ ScriptedImporter:
     - {x: 30, y: 29}
     - {x: 31, y: 30}
     - {x: 0, y: 31}
+=======
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+>>>>>>> Stashed changes
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -216, y: 1746}
@@ -21812,74 +22474,126 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
+=======
+    spriteID: 
+>>>>>>> Stashed changes
     layerID: 87
     mosaicPosition: {x: 0, y: 0}
   - name: Arm1
     spriteName: 
     isGroup: 1
     parentIndex: 0
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 86
     mosaicPosition: {x: 0, y: 0}
   - name: NL_Hand1
     spriteName: NL_Hand1
+=======
+    spriteID: 
+    layerID: 86
+    mosaicPosition: {x: 0, y: 0}
+  - name: "Bild eingef\xFCgt"
+    spriteName: "Bild eingef\xFCgt"
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 1
     spriteID: f3460c6d8f3bafe49b3b3bc9701e47a5
     layerID: 85
     mosaicPosition: {x: 609, y: 3702}
+<<<<<<< Updated upstream
   - name: NL_LowerArm1
     spriteName: NL_LowerArm1
+=======
+  - name: "Bild eingef\xFCgt"
+    spriteName: "Bild eingef\xFCgt_1"
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 1
     spriteID: 189918afe8a586640b10d4b325e41c7c
     layerID: 84
     mosaicPosition: {x: 984, y: 1043}
+<<<<<<< Updated upstream
   - name: NL_UpperArm1
     spriteName: NL_UpperArm1
+=======
+  - name: "Bild eingef\xFCgt"
+    spriteName: "Bild eingef\xFCgt_2"
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 1
     spriteID: 85f8dd4d83aadd94dba3a5b4abdc7adc
     layerID: 83
     mosaicPosition: {x: 753, y: 3129}
+<<<<<<< Updated upstream
   - name: NL_Head
     spriteName: NL_Head
+=======
+  - name: Head
+    spriteName: Head
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 0
     spriteID: f54bac6569db98d48a9d012ab4b26cb6
     layerID: 81
     mosaicPosition: {x: 984, y: 249}
+<<<<<<< Updated upstream
   - name: NL_Leg1
     spriteName: NL_Leg1
+=======
+  - name: Leg1
+    spriteName: Leg1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 0
     spriteID: 094682bba0d1a054ca519412c8d480bc
     layerID: 80
     mosaicPosition: {x: 753, y: 2037}
+<<<<<<< Updated upstream
   - name: NL_Torso
     spriteName: NL_Torso
+=======
+  - name: Torso
+    spriteName: Torso
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 0
     spriteID: fb2d5d10897c45c4fbc1f041f6af497c
     layerID: 79
     mosaicPosition: {x: 378, y: 1927}
+<<<<<<< Updated upstream
   - name: NL_Wing1
     spriteName: NL_Wing1
+=======
+  - name: Wing1
+    spriteName: Wing1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 0
     spriteID: f0f712b954dd9ea449b186490b2be753
     layerID: 78
     mosaicPosition: {x: 378, y: 4}
+<<<<<<< Updated upstream
   - name: NL_Wing2
     spriteName: NL_Wing2
+=======
+  - name: Wing2
+    spriteName: Wing2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 0
     spriteID: 0727d3642a29b0545afe5554c4a0af25
     layerID: 77
     mosaicPosition: {x: 4, y: 1410}
+<<<<<<< Updated upstream
   - name: NL_Leg2
     spriteName: NL_Leg2
+=======
+  - name: Leg2
+    spriteName: Leg2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 0
     spriteID: 653b8046c6a2bbd4c95790a16645287c
@@ -21889,25 +22603,43 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 75
     mosaicPosition: {x: 0, y: 0}
   - name: NL_UpperArm2
     spriteName: NL_UpperArm2
+=======
+    spriteID: 
+    layerID: 75
+    mosaicPosition: {x: 0, y: 0}
+  - name: Upper Arm2
+    spriteName: Upper Arm2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 11
     spriteID: c97ed79663e7f0147bd70da7f521678f
     layerID: 74
     mosaicPosition: {x: 753, y: 2855}
+<<<<<<< Updated upstream
   - name: NL_Hand2
     spriteName: NL_Hand2
+=======
+  - name: Hand2
+    spriteName: Hand2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 11
     spriteID: 70387fd4600baeb43aa358e9512669c1
     layerID: 73
     mosaicPosition: {x: 1300, y: 4}
+<<<<<<< Updated upstream
   - name: NL_LowerArm2
     spriteName: NL_LowerArm2
+=======
+  - name: Lower Arm2
+    spriteName: Lower Arm2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 11
     spriteID: c4a63df90612c144ab4882048ae8e2d4
@@ -21917,74 +22649,126 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
+=======
+    spriteID: 
+>>>>>>> Stashed changes
     layerID: 69
     mosaicPosition: {x: 0, y: 0}
   - name: Arm1
     spriteName: 
     isGroup: 1
     parentIndex: 15
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 68
     mosaicPosition: {x: 0, y: 0}
   - name: NR_Hand1
     spriteName: NR_Hand1
+=======
+    spriteID: 
+    layerID: 68
+    mosaicPosition: {x: 0, y: 0}
+  - name: Hand1
+    spriteName: Hand1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 16
     spriteID: e0ea8d1b0d812c042871bff830fd1491
     layerID: 67
     mosaicPosition: {x: 609, y: 3488}
+<<<<<<< Updated upstream
   - name: NR_LowerArm1
     spriteName: NR_LowerArm1
+=======
+  - name: Lower Arm1
+    spriteName: Lower Arm1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 16
     spriteID: 93cbbf42bf1fa144e96ea098e0e12759
     layerID: 66
     mosaicPosition: {x: 984, y: 1255}
+<<<<<<< Updated upstream
   - name: NR_UpperArm1
     spriteName: NR_UpperArm1
+=======
+  - name: Upper Arm1
+    spriteName: Upper Arm1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 16
     spriteID: 91c8c3dd2a8364d4c8693cda14f7ea20
     layerID: 65
     mosaicPosition: {x: 753, y: 3677}
+<<<<<<< Updated upstream
   - name: NR_Head
     spriteName: NR_Head
+=======
+  - name: Head
+    spriteName: Head_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 15
     spriteID: d9407b9f33579a24b904f5f8bb9b8d54
     layerID: 63
     mosaicPosition: {x: 4, y: 3732}
+<<<<<<< Updated upstream
   - name: NR_Leg1
     spriteName: NR_Leg1
+=======
+  - name: Leg1
+    spriteName: Leg1_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 15
     spriteID: 6c0ddb4bfe1bf2649a28e0e9769af5fe
     layerID: 62
     mosaicPosition: {x: 753, y: 1627}
+<<<<<<< Updated upstream
   - name: NR_Torso
     spriteName: NR_Torso
+=======
+  - name: Torso
+    spriteName: Torso_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 15
     spriteID: a93599c61d250e84bb0b67e8f426fef4
     layerID: 61
     mosaicPosition: {x: 378, y: 2449}
+<<<<<<< Updated upstream
   - name: NR_Wing1
     spriteName: NR_Wing1
+=======
+  - name: Wing1
+    spriteName: Wing1_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 15
     spriteID: 33bc82633e4269f4a8b6a482be7e1743
     layerID: 60
     mosaicPosition: {x: 4, y: 4}
+<<<<<<< Updated upstream
   - name: NR_Wing2
     spriteName: NR_Wing2
+=======
+  - name: Wing2
+    spriteName: Wing2_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 15
     spriteID: 8ecbda2bf30ea5f478ab7430059a263c
     layerID: 59
     mosaicPosition: {x: 4, y: 2566}
+<<<<<<< Updated upstream
   - name: NR_Leg2
     spriteName: NR_Leg2
+=======
+  - name: Leg2
+    spriteName: Leg2_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 15
     spriteID: a8a0f0f8a06a78f42b9152492020cf9f
@@ -21994,30 +22778,49 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 15
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 57
     mosaicPosition: {x: 0, y: 0}
   - name: NR_UpperArm2
     spriteName: NR_UpperArm2
+=======
+    spriteID: 
+    layerID: 57
+    mosaicPosition: {x: 0, y: 0}
+  - name: "Bild eingef\xFCgt"
+    spriteName: "Bild eingef\xFCgt_3"
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 26
     spriteID: d3ab099d5aa2a484bac3a9e8d0d9e185
     layerID: 56
     mosaicPosition: {x: 753, y: 3405}
+<<<<<<< Updated upstream
   - name: NR_Hand2
     spriteName: NR_Hand2
+=======
+  - name: "Bild eingef\xFCgt"
+    spriteName: "Bild eingef\xFCgt_4"
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 26
     spriteID: fe9bb8e05b5ffed4bbe4ce63cb2e9194
     layerID: 55
     mosaicPosition: {x: 1300, y: 200}
+<<<<<<< Updated upstream
   - name: NR_LowerArm2
     spriteName: NR_LowerArm2
+=======
+  - name: "Bild eingef\xFCgt"
+    spriteName: "Bild eingef\xFCgt_5"
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 26
     spriteID: 16ee162cdfe51ac4397c7be6eeb5f89d
     layerID: 54
     mosaicPosition: {x: 753, y: 3949}
+<<<<<<< Updated upstream
   - name: Good
     spriteName: 
     isGroup: 1
@@ -22027,6 +22830,17 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
   - name: G_Halo
     spriteName: G_Halo
+=======
+  - name: Angel
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 51
+    mosaicPosition: {x: 0, y: 0}
+  - name: Halo
+    spriteName: Halo
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: 44b82a12268080c4580c7af3f73dbd21
@@ -22036,67 +22850,115 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 30
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 49
     mosaicPosition: {x: 0, y: 0}
   - name: G_Hand1
     spriteName: G_Hand1
+=======
+    spriteID: 
+    layerID: 49
+    mosaicPosition: {x: 0, y: 0}
+  - name: Hand1
+    spriteName: Hand1_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 32
     spriteID: 552efafad0bfda64fb431b4a6ecfa42c
     layerID: 48
     mosaicPosition: {x: 984, y: 1453}
+<<<<<<< Updated upstream
   - name: G_LowerArm1
     spriteName: G_LowerArm1
+=======
+  - name: Lower Arm1
+    spriteName: Lower Arm1_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 32
     spriteID: ab3bbfd3db1ecff409a6098944c7da33
     layerID: 47
     mosaicPosition: {x: 984, y: 1149}
+<<<<<<< Updated upstream
   - name: G_UpperArm1
     spriteName: G_UpperArm1
+=======
+  - name: Upper Arm1
+    spriteName: Upper Arm1_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 32
     spriteID: 5bf43ee8a0d2cdf43a552201d548e468
     layerID: 46
     mosaicPosition: {x: 753, y: 3267}
+<<<<<<< Updated upstream
   - name: G_Head
     spriteName: G_Head
+=======
+  - name: Head
+    spriteName: Head_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: 926ddcca662b1344184cb44322313233
     layerID: 44
     mosaicPosition: {x: 984, y: 494}
+<<<<<<< Updated upstream
   - name: G_Leg1
     spriteName: G_Leg1
+=======
+  - name: Leg1
+    spriteName: Leg1_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: c8d24a111091d654e9e877e13068dafa
     layerID: 43
     mosaicPosition: {x: 753, y: 2446}
+<<<<<<< Updated upstream
   - name: G_Torso
     spriteName: G_Torso
+=======
+  - name: Torso
+    spriteName: Torso_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: 97339feb6f150dc4f96a71456fd0220d
     layerID: 42
     mosaicPosition: {x: 378, y: 1404}
+<<<<<<< Updated upstream
   - name: G_Leg2
     spriteName: G_Leg2
+=======
+  - name: Leg2
+    spriteName: Leg2_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: a93992e7bda2711439fe91f95caca212
     layerID: 41
     mosaicPosition: {x: 753, y: 4}
+<<<<<<< Updated upstream
   - name: G_Wing1
     spriteName: G_Wing1
+=======
+  - name: Wing1
+    spriteName: Wing1_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: 0b93ff27bfe4e144888c954ddc8518af
     layerID: 40
     mosaicPosition: {x: 378, y: 704}
+<<<<<<< Updated upstream
   - name: G_Wing2
     spriteName: G_Wing2
+=======
+  - name: Wing2
+    spriteName: Wing2_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 30
     spriteID: d9d3a5037070e5347b830a973c0fab04
@@ -22106,30 +22968,49 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 30
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 38
     mosaicPosition: {x: 0, y: 0}
   - name: G_UpperArm2
     spriteName: G_UpperArm2
+=======
+    spriteID: 
+    layerID: 38
+    mosaicPosition: {x: 0, y: 0}
+  - name: Upper Arm 2
+    spriteName: Upper Arm 2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 42
     spriteID: a64ecbb4e979d2345a9529ce5d45c152
     layerID: 37
     mosaicPosition: {x: 753, y: 3541}
+<<<<<<< Updated upstream
   - name: G_Hand2
     spriteName: G_Hand2
+=======
+  - name: Hand2
+    spriteName: Hand2_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 42
     spriteID: 14029de4a29d54b4ca8cb12d8be2c3aa
     layerID: 36
     mosaicPosition: {x: 1300, y: 297}
+<<<<<<< Updated upstream
   - name: G_LowerArm2
     spriteName: G_LowerArm2
+=======
+  - name: Lower Arm2
+    spriteName: Lower Arm2_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 42
     spriteID: 58b169eacc118a04fb22533c946462f9
     layerID: 35
     mosaicPosition: {x: 4, y: 3977}
+<<<<<<< Updated upstream
   - name: Evil
     spriteName: 
     isGroup: 1
@@ -22139,13 +23020,29 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
   - name: E_Crown
     spriteName: E_Crown
+=======
+  - name: Demon
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 32
+    mosaicPosition: {x: 0, y: 0}
+  - name: Crown
+    spriteName: Crown
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: 115bba68f7e5c054b9cc197f0367f20a
     layerID: 18
     mosaicPosition: {x: 984, y: 716}
+<<<<<<< Updated upstream
   - name: E_Head
     spriteName: E_Head
+=======
+  - name: Head
+    spriteName: Head_3
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: c7d986ff1eb1e8947a484ccf6ed2d315
@@ -22155,46 +23052,79 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 46
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 16
     mosaicPosition: {x: 0, y: 0}
   - name: E_Hand1
     spriteName: E_Hand1
+=======
+    spriteID: 
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+  - name: Hand1
+    spriteName: Hand1_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 49
     spriteID: 51ed383db397cc04d90630d9f41b8593
     layerID: 15
     mosaicPosition: {x: 609, y: 3595}
+<<<<<<< Updated upstream
   - name: E_LowerArm1
     spriteName: E_LowerArm1
+=======
+  - name: Lower Arm1
+    spriteName: Lower Arm1_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 49
     spriteID: a49d08a103980654aa6a6ed55f296830
     layerID: 14
     mosaicPosition: {x: 984, y: 1354}
+<<<<<<< Updated upstream
   - name: E_UpperArm1
     spriteName: E_UpperArm1
+=======
+  - name: Upper Arm1
+    spriteName: Upper Arm1_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 49
     spriteID: 495f39b14dd16d347b1acef3ae7103f0
     layerID: 13
     mosaicPosition: {x: 753, y: 3813}
+<<<<<<< Updated upstream
   - name: E_Leg1
     spriteName: E_Leg1
+=======
+  - name: Leg1
+    spriteName: Leg1_3
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: 10a6d958764a4b6439f0442bc9e706ce
     layerID: 11
     mosaicPosition: {x: 753, y: 1216}
+<<<<<<< Updated upstream
   - name: E_Torso
     spriteName: E_Torso
+=======
+  - name: Torso
+    spriteName: Torso_3
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: 55818fd6489d5664e9a3adb4d9307c67
     layerID: 10
     mosaicPosition: {x: 378, y: 2969}
+<<<<<<< Updated upstream
   - name: E_Leg2
     spriteName: E_Leg2
+=======
+  - name: Leg2
+    spriteName: Leg2_3
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: ae42a313fd87f9d4c84c7789009df2d3
@@ -22204,45 +23134,74 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 46
+<<<<<<< Updated upstream
     spriteID: 00000000000000000000000000000000
     layerID: 9
     mosaicPosition: {x: 0, y: 0}
   - name: E_UpperArm2
     spriteName: E_UpperArm2
+=======
+    spriteID: 
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+  - name: Upper Arm2
+    spriteName: Upper Arm2_1
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 56
     spriteID: 48935c920f46dc248ba0eb2905b9f15c
     layerID: 8
     mosaicPosition: {x: 753, y: 2992}
+<<<<<<< Updated upstream
   - name: E_Hand2
     spriteName: E_Hand2
+=======
+  - name: Hand2
+    spriteName: Hand2_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 56
     spriteID: c808ed6a4ce106446a23cc2c9e7d8ba7
     layerID: 7
     mosaicPosition: {x: 1300, y: 102}
+<<<<<<< Updated upstream
   - name: E_LowerArm2
     spriteName: E_LowerArm2
+=======
+  - name: Lower Arm2
+    spriteName: Lower Arm2_2
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 56
     spriteID: b90f8a4bd14759f46b9e2378d9fd61a6
     layerID: 6
     mosaicPosition: {x: 984, y: 933}
+<<<<<<< Updated upstream
   - name: E_Wing1
     spriteName: E_Wing1
+=======
+  - name: Wing1
+    spriteName: Wing1_3
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: e6a0eeccef58440458b2d637c525822c
     layerID: 3
     mosaicPosition: {x: 4, y: 707}
+<<<<<<< Updated upstream
   - name: E_Wing2
     spriteName: E_Wing2
+=======
+  - name: Wing2
+    spriteName: Wing2_3
+>>>>>>> Stashed changes
     isGroup: 0
     parentIndex: 46
     spriteID: 9840b4d972b75c84e9b715fc5e52d23d
     layerID: 2
     mosaicPosition: {x: 4, y: 1988}
   characterData:
+<<<<<<< Updated upstream
     bones:
     - name: bone_1
       position: {x: 504.56302, y: 349.41815, z: 0}
@@ -22780,6 +23739,10 @@ ScriptedImporter:
       bones: 10000000
       parentGroup: 0
       order: 0
+=======
+    bones: []
+    parts: []
+>>>>>>> Stashed changes
     dimension: {x: 0, y: 0}
     characterGroups: []
   generateGOHierarchy: 0

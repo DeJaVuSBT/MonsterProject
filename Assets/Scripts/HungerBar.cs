@@ -4,6 +4,8 @@ public class HungerBar : MonoBehaviour
 {
     public Image slider;
     GameObject hungerVFX;
+    private PlayerStateManager playerManager;
+    private bool resetH=false;
     
     [SerializeField]
     private float speed=1;
@@ -11,7 +13,7 @@ public class HungerBar : MonoBehaviour
     private void Awake()
     {
         hungerVFX = GameObject.Find("HungerVFX");
-
+        playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
     }
     void Start()
     {
@@ -46,5 +48,13 @@ public class HungerBar : MonoBehaviour
             hungerVFX.SetActive(false);
         }
 
+
+        if (slider.fillAmount < 0.01f) { resetH = true; }
+        if(resetH)
+        {
+            slider.fillAmount = 0.8f;
+            playerManager.BeingCaught();
+            resetH = false;
+        }
     }
 }

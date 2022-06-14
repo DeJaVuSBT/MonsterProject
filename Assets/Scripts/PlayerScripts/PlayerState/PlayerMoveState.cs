@@ -181,20 +181,24 @@ public class PlayerMoveState : PlayerBaseState
             Collider Closest = null;
             for (int i = 0; i < ColliderAround.Length; i++)
             {
-                if (ColliderAround[i].GetComponent<MoraEvents>().GetHunger!=0)
+                if (ColliderAround[i].GetComponent<MoraEvents>())
                 {
-                    if (Closest == null)
+                    if (ColliderAround[i].GetComponent<MoraEvents>().GetHunger!=0)
                     {
-                        Closest = ColliderAround[i];
-                    }
-                    else
-                    {
-                        if (Vector3.Distance(playerPos, Closest.transform.position) > Vector3.Distance(playerPos, ColliderAround[i].transform.position))
+                        if (Closest == null)
                         {
                             Closest = ColliderAround[i];
                         }
+                        else
+                        {
+                            if (Vector3.Distance(playerPos, Closest.transform.position) > Vector3.Distance(playerPos, ColliderAround[i].transform.position))
+                            {
+                                Closest = ColliderAround[i];
+                            }
 
+                        }
                     }
+
                 }
             }
             if (Closest != null)
@@ -215,5 +219,10 @@ public class PlayerMoveState : PlayerBaseState
         _manager.InteractIcon.SetActive(false);
         _manager.Animator.SetBool("IsWalking", false);
         //_manager.arrow.SetActive(false);
+        if (outLineTarget!=null)
+        {
+            Object.Destroy(outLineTarget);
+        }
+
     }
 }

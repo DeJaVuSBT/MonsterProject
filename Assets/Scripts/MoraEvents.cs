@@ -98,19 +98,27 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
                 hBar.Add(hunger);
                 destroyAtTheEnd = false;
-                Destroy(this);
             }
             else
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
-                hBar.Add(hunger);
-                Destroy(this);
+                hBar.Add(hunger);   
             }
 
             if (destroyAtTheEnd)
             {
                 Destroy(this.gameObject);
             }
+
+            if (this.gameObject.tag=="Cage")
+            {
+                this.GetComponent<Animator>().SetBool("Open", true);
+            }
+            else
+            {
+                Destroy(this);
+            }
+
 
             rewarded = true;
         }

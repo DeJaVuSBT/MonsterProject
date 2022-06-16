@@ -15,10 +15,12 @@ public class DeedSwitch : MonoBehaviour
     private int GoodOrBadEnding = 0;
     private float removingCounter = 0;
     private bool isRemoving = false;
+    private PlayerStateManager pm;
 
     public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
+        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
         generalP.SetActive(true);
         bigCard.SetActive(false);
     }
@@ -63,26 +65,42 @@ public class DeedSwitch : MonoBehaviour
         {
             RemoveACard();
         }
-        else if (cardList.Count == 5)
+        if (cardList.Count > 2)
         {
-            foreach (bool obj in cardgbList)
+            int badCard = 0;
+            int goodCard = 0;
+            foreach (bool bg in cardgbList)
             {
-                if (obj)
+                if (bg)
                 {
-                    bgCounter++;
+                    goodCard++;
+                }
+                else
+                {
+                    badCard++;
                 }
             }
-            if (bgCounter >= 3)
+            if (goodCard == 5)
             {
                 //good
                 SwitchPGood();
+                pm.Getfc.SetType = FormChanger.UnitType.G;
             }
-            else
+            else if(badCard>=3)
             {
                 //bad
                 SwitchPBad();
+                pm.Getfc.SetType = FormChanger.UnitType.E;
+            }
+            else
+            {
+                //neutral
+                SwitchPNormal();
+                pm.Getfc.SetType = FormChanger.UnitType.NL;
+
             }
         }
+
     }
 
     private void SwitchPBad() {

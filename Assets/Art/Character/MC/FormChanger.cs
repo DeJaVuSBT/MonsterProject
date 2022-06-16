@@ -7,35 +7,21 @@ public class FormChanger : MonoBehaviour
 {
     private List<SpriteResolver> _resolvers;
     private UnitType _type;
-
-    // Start is called before the first frame update
+    private UnitType _oldtype;
+    public UnitType SetType { get { return _type; } set { _type = value; } }
     private void Start()
     {
         _resolvers = GetComponentsInChildren<SpriteResolver>().ToList();
+        _oldtype = _type;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (_oldtype!=_type)
         {
-            _type = UnitType.E;
             ChangeForm();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _type = UnitType.NL;
-            ChangeForm();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _type = UnitType.NR;
-            ChangeForm();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            _type = UnitType.G;
-            ChangeForm();
+            _oldtype = _type;
         }
     }
 
@@ -50,7 +36,7 @@ public class FormChanger : MonoBehaviour
         }
     }
 
-    private enum UnitType
+    public enum UnitType
     {
         NL,
         NR,

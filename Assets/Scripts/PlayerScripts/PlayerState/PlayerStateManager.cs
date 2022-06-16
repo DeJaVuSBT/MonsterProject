@@ -48,6 +48,7 @@ public class PlayerStateManager : MonoBehaviour
     int[] puzzleList;
     private bool runing = false;
 
+    private FormChanger fc;
 
     public Material OutLineA { get { return outlineA; } }
     public HungerBar HBar { get { return hBar; } set { hBar = value; } }
@@ -65,6 +66,8 @@ public class PlayerStateManager : MonoBehaviour
     public bool Running { get { return runing; } set { runing = value; } }
     public int[] PuzzleList { get { return puzzleList; } set { puzzleList = value; } }
     public bool Pushing { get { return pushing; } set { pushing = value; } }
+
+    public FormChanger Getfc { get { return fc; } set { fc = value; } }
 
     [Header("Tutorials")]
     [SerializeField]
@@ -89,6 +92,7 @@ public class PlayerStateManager : MonoBehaviour
         currentState.EnterState();
 
         tutorialObj = GameObject.FindGameObjectWithTag("Tutorial");
+        fc = GetComponentInChildren<FormChanger>();
 
     }
     private void Start()
@@ -123,13 +127,12 @@ public class PlayerStateManager : MonoBehaviour
         moveSpeed = walkSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentState.UpdateState();
         flipSprite();
         ShowOutLine();
-        //tutorialLogic();
+
     }
     public void BeingCaught() {
         currentState.ExitState();
@@ -147,6 +150,11 @@ public class PlayerStateManager : MonoBehaviour
             if (moveDir.x < 0)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
+                if (fc.SetType== FormChanger.UnitType.NL)
+                {
+                    fc.SetType = FormChanger.UnitType.NR;
+                }
+                
             }
             else if (moveDir.x == 0)
             {
@@ -155,6 +163,11 @@ public class PlayerStateManager : MonoBehaviour
             else
             {
                 transform.localScale = new Vector3(1, 1, 1);
+                if (fc.SetType == FormChanger.UnitType.NR)
+                {
+                    fc.SetType = FormChanger.UnitType.NL;
+                }
+               
             }
         }
 

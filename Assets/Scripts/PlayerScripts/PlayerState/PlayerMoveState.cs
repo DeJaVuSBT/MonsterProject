@@ -3,6 +3,7 @@ public class PlayerMoveState : PlayerBaseState
 {
     private bool switched = false;
     private GameObject outLineTarget;
+    private GameObject PreObj;
     public PlayerMoveState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
     public override void EnterState()
     {
@@ -139,15 +140,21 @@ public class PlayerMoveState : PlayerBaseState
     }
     private void ShowArrow()
     {
-        if (_manager.HBar.GetMoralAmount()<=50)
+        if (_manager.HBar.GetMoralAmount() <= 50)
         {
 
-            GameObject preobj = ClosedColliderAroundArrow();
+
+            GameObject obj = ClosedColliderAroundArrow();
+            if (PreObj != obj)
+            {
+                Debug.Log("swaptargedt");
+                switched = false;
+            }
             if (!switched)
             {
-                GameObject copyfromtarget = preobj.GetComponentInChildren<MeshRenderer>().gameObject;
-                GameObject CreatedoutlineObject = Object.Instantiate(copyfromtarget, preobj.transform);
-                Debug.Log("created one outline");
+                PreObj = obj;
+                GameObject copyfromtarget = obj.GetComponentInChildren<MeshRenderer>().gameObject;
+                GameObject CreatedoutlineObject = Object.Instantiate(copyfromtarget, obj.transform);
                 CreatedoutlineObject.GetComponent<Renderer>().material = _manager.OutLineA;
                 CreatedoutlineObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                 if (outLineTarget == null)
@@ -162,11 +169,12 @@ public class PlayerMoveState : PlayerBaseState
                 switched = true;
             }
 
-            if (preobj != outLineTarget)
+        }
+        else {
+            if (outLineTarget!=null)
             {
-                switched = false;
+                Object.Destroy(outLineTarget);
             }
-               
         }
 
     }

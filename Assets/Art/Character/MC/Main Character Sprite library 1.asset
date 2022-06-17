@@ -27,7 +27,7 @@ MonoBehaviour:
       m_Sprite: {fileID: -5767617973002493108, guid: 756e0409967ad26438796e73b176903a, type: 3}
     - m_Name: NL
       m_Hash: 1346993615
-      m_Sprite: {fileID: 6869410952780758461, guid: 756e0409967ad26438796e73b176903a, type: 3}
+      m_Sprite: {fileID: 4397558049614077007, guid: 756e0409967ad26438796e73b176903a, type: 3}
   - m_Name: Hand2
     m_Hash: -1506513414
     m_CategoryList:

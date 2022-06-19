@@ -49,7 +49,8 @@ public class PlayerStateManager : MonoBehaviour
     private bool runing = false;
 
     private FormChanger fc;
-
+    [SerializeField]
+    public SoundManager soundManager;
     public Material OutLineA { get { return outlineA; } }
     public HungerBar HBar { get { return hBar; } set { hBar = value; } }
     public Transform CagePos { get { return cagePos; } }
@@ -68,6 +69,7 @@ public class PlayerStateManager : MonoBehaviour
     public bool Pushing { get { return pushing; } set { pushing = value; } }
 
     public FormChanger Getfc { get { return fc; } set { fc = value; } }
+
 
     [Header("Tutorials")]
     [SerializeField]
@@ -90,7 +92,6 @@ public class PlayerStateManager : MonoBehaviour
         states = new PlayerState(this);
         currentState = states.MoveState();
         currentState.EnterState();
-
         tutorialObj = GameObject.FindGameObjectWithTag("Tutorial");
         fc = GetComponentInChildren<FormChanger>();
 

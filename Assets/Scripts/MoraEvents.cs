@@ -121,7 +121,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
             if (gameObject.tag=="House")
             {
-                GameObject.FindGameObjectWithTag("Boze").GetComponent<ShakeHouse>().Counter++;
+                GameObject.FindGameObjectWithTag("Boze").GetComponent<BozeQuest>().Counter++;
             }
 
             rewarded = true;

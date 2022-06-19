@@ -197,6 +197,10 @@ public class PlayerStateManager : MonoBehaviour
             {
                 InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0.5f);
             }
+            else if (OutlinedTarget.transform.parent.tag == "House")
+            {
+                InteractIcon.transform.position = new Vector3(0, 100f, 0);
+            }
             else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 
 

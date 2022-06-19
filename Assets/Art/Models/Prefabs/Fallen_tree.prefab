@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3551446149889512191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.16, y: 0, z: -0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6107237376294985160}
@@ -125,8 +125,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5917958, y: 0.7567022, z: 1.4078166}
-  m_Center: {x: -0.5485919, y: 0.32228696, z: 1.0727218}
+  m_Size: {x: 0.6325672, y: 0.48122835, z: 1.470954}
+  m_Center: {x: -0.3997453, y: 0.18455005, z: 0.7471563}
 --- !u!114 &6297283732088118700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,10 +139,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122cd8c84fecf294e9933433fe5e16f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoodDeedorBadDeed: 1
+  doubleInteraction: 0
+  selectedAnimationDone: 0
   destroyAtTheEnd: 1
-  mBar: {fileID: 0}
   hBar: {fileID: 0}
   sBar: {fileID: 0}
+  option: {fileID: 0}
   interactType: 2
-  morality: 0
+  interactType1: 0
   hunger: 0
+  newMbar: {fileID: 0}

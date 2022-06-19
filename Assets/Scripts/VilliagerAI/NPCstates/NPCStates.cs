@@ -26,4 +26,8 @@ public class NPCStates
     {
         return new NPCToCage(manager, this);
     }
+    public NPCStateBase Flee()
+    {
+        return new NPCFlee(manager, this);
+    }
 }

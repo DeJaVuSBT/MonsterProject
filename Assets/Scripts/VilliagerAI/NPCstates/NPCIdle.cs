@@ -9,8 +9,16 @@ public class NPCIdle : NPCStateBase
     {
         if (CheckIfPlayerClose()&&CheckIfMoralLow())
         {
-            TimerAction.StopTimer("MHRoaming");
-            SwitchState(_states.Chase());
+            if (_manager.gameObject.tag == "MH")
+            {
+                TimerAction.StopTimer("MHRoaming");
+                SwitchState(_states.Chase());
+            }
+            else 
+            {
+                SwitchState(_states.Flee());
+            }
+
         }
     }
 

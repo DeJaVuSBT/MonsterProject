@@ -119,6 +119,10 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
                 Destroy(this);
             }
 
+            if (gameObject.tag=="House")
+            {
+                GameObject.FindGameObjectWithTag("Boze").GetComponent<ShakeHouse>().Counter++;
+            }
 
             rewarded = true;
         }
@@ -206,7 +210,11 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     }
     private void ShakingVisual()
     {
-        this.gameObject.transform.localScale = new Vector3(UnityEngine.Random.Range(0.9f, 1.1f), UnityEngine.Random.Range(0.9f, 1.1f), UnityEngine.Random.Range(0.9f, 1.1f));
+        if (this.gameObject.tag == "House")
+        {
+            this.gameObject.transform.localScale = new Vector3(UnityEngine.Random.Range(1.4f, 1.6f), UnityEngine.Random.Range(1.4f, 1.6f), UnityEngine.Random.Range(1.4f, 1.6f));
+        }
+        else { this.gameObject.transform.localScale = new Vector3(UnityEngine.Random.Range(0.9f, 1.1f), UnityEngine.Random.Range(0.9f, 1.1f), UnityEngine.Random.Range(0.9f, 1.1f)); }
     }
 
     void inputOn()

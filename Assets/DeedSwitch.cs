@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeedSwitch : MonoBehaviour
 {
@@ -16,11 +17,14 @@ public class DeedSwitch : MonoBehaviour
     private float removingCounter = 0;
     private bool isRemoving = false;
     private PlayerStateManager pm;
+    private HorizontalLayoutGroup layoutGroup;
+
 
     public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
         pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
+        layoutGroup = this.GetComponent<HorizontalLayoutGroup>();
         generalP.SetActive(true);
         bigCard.SetActive(false);
     }
@@ -161,6 +165,12 @@ public class DeedSwitch : MonoBehaviour
         }
 
 
+        //Changes the padding of the horlayout group so that cards appear from left and fit the ui
+        layoutGroup.padding.right = 730 - 130*cardList.Count;
+        foreach(RectTransform rect in this.GetComponent<RectTransform>())
+        {
+            LayoutRebuilder.MarkLayoutForRebuild(rect);
+        }
     }
 
     private void RemoveACard() {
@@ -168,6 +178,19 @@ public class DeedSwitch : MonoBehaviour
         a.SetBool("removeCard", true);
         TimerAction.Create(() => Destroy(a.gameObject), 1f);
         cardgbList.Dequeue();
+    }
+
+    private int getRightPadding()
+    {
+        /*
+        if(cardList.Count == 1){return new Vector2(75 , 600);}
+        if(cardList.Count == 2){return new Vector2(75 , 465);}
+        if(cardList.Count == 3){return new Vector2(75 , 335);}
+        if(cardList.Count == 4){return new Vector2(75 , 205);}
+        if(cardList.Count == 5){return new Vector2(75 , 75);}
+        */
+
+        return 730 - 130*cardList.Count;
     }
 
     private bool CheckIfTimeRemove() {

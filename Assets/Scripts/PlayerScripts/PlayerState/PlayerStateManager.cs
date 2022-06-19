@@ -25,7 +25,7 @@ public class PlayerStateManager : MonoBehaviour
     private float walkSpeed = 4f;
    
     [SerializeField]
-    private float interactRange = 1f;
+    private float interactRange = 2f;
     private Vector3 moveDir;
     
     [Header("Input")]
@@ -218,7 +218,7 @@ public class PlayerStateManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Vector3 offset = new Vector3(0, 1, 0.7f);
+        Vector3 offset = new Vector3(0, 1, 0);
         Vector3 playerPos = transform.position;
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(playerPos + offset, interactRange);

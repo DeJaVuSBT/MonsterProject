@@ -83,7 +83,7 @@ MonoBehaviour:
   target: {fileID: 0}
   cagePos: {fileID: 0}
   outlineM: {fileID: 2100000, guid: 262ad1d6ef5ac744caa1cefc1a2fd2d0, type: 2}
-  outlineA: {fileID: 0}
+  outlineA: {fileID: 2100000, guid: ce12092d1630f5344804a67b84f1e41c, type: 2}
   tutorialObj: {fileID: 0}
 --- !u!1 &1616571178370785922
 GameObject:

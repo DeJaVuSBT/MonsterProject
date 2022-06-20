@@ -39,6 +39,7 @@ public class PlayerStateManager : MonoBehaviour
     private GameObject Interacticon;
     [SerializeField]
     private Transform cagePos;
+    private GameObject cageObj;
     
     [SerializeField]
     private Material outlineM;
@@ -54,6 +55,7 @@ public class PlayerStateManager : MonoBehaviour
     public Material OutLineA { get { return outlineA; } }
     public HungerBar HBar { get { return hBar; } set { hBar = value; } }
     public Transform CagePos { get { return cagePos; } }
+    public GameObject CageObj {get { return cageObj; } }
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; } }
     public Animator Animator { get { return animator; } set { animator = value; } }
     public Rigidbody RB { get { return rb; } set { rb = value; } }
@@ -70,11 +72,14 @@ public class PlayerStateManager : MonoBehaviour
 
     public FormChanger Getfc { get { return fc; } set { fc = value; } }
 
+    public bool OutOfCage { get { return outOfCage; } set { outOfCage = value;}}
+
 
     [Header("Tutorials")]
     [SerializeField]
     private GameObject tutorialObj;
-    
+    public bool destroyCage = false;
+    private bool outOfCage = true; 
     private void Awake()
     {
 
@@ -83,6 +88,8 @@ public class PlayerStateManager : MonoBehaviour
         hBar = GameObject.FindGameObjectWithTag("HunBar").GetComponent<HungerBar>();
         //set some value
         cagePos = GameObject.FindGameObjectWithTag("CagePos").transform;
+        cageObj = GameObject.FindGameObjectWithTag("Cage");
+
         animator = GetComponentInChildren<Animator>();
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
@@ -100,7 +107,13 @@ public class PlayerStateManager : MonoBehaviour
     {
 
         tutorialObj.SetActive(false);
-        
+        firstSpawn();
+    }
+
+    public void firstSpawn()
+    {
+        cageObj.GetComponent<Animator>().SetBool("Open", false);
+        transform.position = cagePos.position;
     }
 
     public void SwitchToEventInput()
@@ -133,8 +146,9 @@ public class PlayerStateManager : MonoBehaviour
         currentState.UpdateState();
         flipSprite();
         ShowOutLine();
-
+        if(outOfCage) {cageDisappear();}
     }
+
     public void BeingCaught() {
         currentState.ExitState();
         currentState = states.PassOutState();
@@ -227,6 +241,7 @@ public class PlayerStateManager : MonoBehaviour
         Vector3 playerPos = transform.position;
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(playerPos + offset, interactRange);
+        //Gizmos.DrawSphere(cageObj.transform.position , 2f);
     }
 
     //show tutorials
@@ -234,5 +249,17 @@ public class PlayerStateManager : MonoBehaviour
     {
         tutorialObj.SetActive(setParam);
         tutorialObj.GetComponentInChildren<Animator>().SetBool(animatorParam , setParam);
+    }
+
+    public void cageDisappear() //Called in FixedUpdate
+    {
+        Debug.Log("Cage Disappearing");
+        //Check Distance from cage and plays the disappear animation
+        if(Vector3.Distance(transform.position , cageObj.transform.position) > 2f)
+        {
+            cageObj.GetComponent<Animator>().SetBool("destroyCage" , true);
+            outOfCage = false; //Reset Value
+        }
+
     }
 }

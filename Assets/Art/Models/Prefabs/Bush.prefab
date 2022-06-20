@@ -146,7 +146,7 @@ MonoBehaviour:
   hBar: {fileID: 0}
   sBar: {fileID: 0}
   option: {fileID: 0}
-  interactType: 1
-  interactType1: 2
+  interactType: 3
+  interactType1: 1
   hunger: 20
   newMbar: {fileID: 0}

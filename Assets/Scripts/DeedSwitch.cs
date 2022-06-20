@@ -177,7 +177,7 @@ public class DeedSwitch : MonoBehaviour
     private void RemoveACard() {
         Animator a = cardList.Dequeue().GetComponent<Animator>();
         a.SetBool("removeCard", true);
-        TimerAction.Create(() => Destroy(a.gameObject), 1f);
+        TimerAction.Create(() => Destroy(a.gameObject), 1.25f);
         cardgbList.Dequeue();
     }
 

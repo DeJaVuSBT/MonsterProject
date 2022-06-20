@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1280333743984770919}
   m_Layer: 0
   m_Name: fruitTree
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,8 +65,8 @@ MonoBehaviour:
   hBar: {fileID: 0}
   sBar: {fileID: 0}
   option: {fileID: 0}
-  interactType: 0
-  interactType1: 2
+  interactType: 3
+  interactType1: 0
   hunger: 30
   newMbar: {fileID: 0}
 --- !u!1 &7044112002519910551

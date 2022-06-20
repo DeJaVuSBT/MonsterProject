@@ -17,12 +17,13 @@ public class DeedSwitch : MonoBehaviour
     private bool isRemoving = false;
     private PlayerStateManager pm;
     private HorizontalLayoutGroup layoutGroup;
-
+    SoundManager sm;
 
     public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
         pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
+        sm = GameObject.FindGameObjectWithTag("SM").GetComponent<SoundManager>();
         layoutGroup = this.GetComponent<HorizontalLayoutGroup>();
         generalP.SetActive(true);
         bigCard.SetActive(false);
@@ -110,6 +111,7 @@ public class DeedSwitch : MonoBehaviour
         badP.SetActive(true);
         generalP.SetActive(false);
         GoodOrBadEnding = 1;
+        sm.PlaySound(SoundManager.Sound.Demon);
     }
 
     public void Reset()
@@ -130,6 +132,7 @@ public class DeedSwitch : MonoBehaviour
         badP.SetActive(false);
         generalP.SetActive(true);
         GoodOrBadEnding = 0;
+        
     }
 
     private void SwitchPGood()
@@ -137,6 +140,7 @@ public class DeedSwitch : MonoBehaviour
         goodP.SetActive(true);
         generalP.SetActive(false);
         GoodOrBadEnding = 2;
+        sm.PlaySound(SoundManager.Sound.Angle);
     }
 
     // Update is called once per frame

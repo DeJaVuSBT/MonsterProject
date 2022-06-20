@@ -35,6 +35,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     GameObject badHighlight , goodHighlight;
 
     PlayerStateManager _manager;
+    SoundManager sm;
     enum InteractType
     {
         Shaking,
@@ -76,6 +77,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         option = GameObject.FindGameObjectWithTag("Option");
         badHighlight = GameObject.Find("badHighlight");
         goodHighlight = GameObject.Find("goodHighlight");
+        sm = GameObject.FindGameObjectWithTag("SM").GetComponent<SoundManager>();
         //_manager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
 
     }
@@ -95,17 +97,18 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
             if (GoodDeedorBadDeed)
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
-                hBar.Add(hunger);
+                GainFood();
                 destroyAtTheEnd = false;
             }
             else
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
-                hBar.Add(hunger);   
+                GainFood();
             }
 
             if (destroyAtTheEnd)
             {
+                sm.PlaySound(SoundManager.Sound.TreeFall);
                 Destroy(this.gameObject);
             }
 
@@ -132,6 +135,14 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         }
     }
 
+    private void GainFood() {
+        if (hunger!=0)
+        {
+            hBar.Add(hunger);
+
+        }
+    }
+
     public void Interact()
     {
         selectedAnimationDone = false;
@@ -142,6 +153,27 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         shaketime = 0;
     }
 
+    public void SoundWhenShake() {
+        if (this.gameObject.tag=="Tree")
+        {
+            sm.PlaySound(SoundManager.Sound.TreeShake);
+        }
+        else if (this.gameObject.tag == "temporary")
+        {
+            sm.PlaySound(SoundManager.Sound.BushShake);
+        }
+
+    }
+    public void SoundWhenHit() {
+        if (this.gameObject.tag == "Tree")
+        {
+            sm.PlaySound(SoundManager.Sound.TreeHit);
+        }
+        else if (this.gameObject.tag == "temporary")
+        {
+            sm.PlaySound(SoundManager.Sound.BushHit);
+        }
+    }
     public void ShowOption()
     {
         option.SetActive(true);

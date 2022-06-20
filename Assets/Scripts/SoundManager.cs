@@ -7,7 +7,6 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField]
     SoundHolder soundHolder;
-    Queue<AudioSource> destroy=new Queue<AudioSource>();
     GameObject temp;
     AudioSource audioSource;
     public enum Sound
@@ -20,10 +19,10 @@ public class SoundManager : MonoBehaviour
         Hunger0,
         Demon,
         BushHit,
-        BushCollect,
-        Angle
+        BushShake,
+        Angle,
+        Eat
     }
-    private static Dictionary<Sound, float> soundplusTimer;
 
     public void PlaySound(Sound sound)
     {

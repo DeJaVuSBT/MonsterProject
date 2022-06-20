@@ -54,7 +54,7 @@ public class PlayerShakeState : PlayerBaseState
             AllInput.Add(currentInput);
             preInput = currentInput;
             counter++;
-            _manager.soundManager.PlaySound(SoundManager.Sound.TreeHit);
+            _manager.Target.GetComponent<MoraEvents>().SoundWhenShake();
             _manager.Target.GetComponent<MoraEvents>().Shake();
             if (counter==1)
             {

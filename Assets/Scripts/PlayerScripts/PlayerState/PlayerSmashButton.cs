@@ -34,9 +34,10 @@ public class PlayerSmashButton : PlayerBaseState
 
     private void Button5_started(InputAction.CallbackContext obj)
     {
+        _manager.Target.GetComponent<MoraEvents>().SoundWhenHit();
         _manager.Target.GetComponent<MoraEvents>().Shake();
         total += counter * 5;
-        _manager.soundManager.PlaySound(SoundManager.Sound.TreeHit);
+        
     }
 
     public override void ExitState()

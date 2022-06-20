@@ -12,7 +12,6 @@ public class DeedSwitch : MonoBehaviour
     private GameObject cardPrefab;
     private Queue<GameObject> cardList = new Queue<GameObject>();
     private Queue<bool> cardgbList = new Queue<bool>();
-    private int bgCounter = 0;
     private int GoodOrBadEnding = 0;
     private float removingCounter = 0;
     private bool isRemoving = false;

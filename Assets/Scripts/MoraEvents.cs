@@ -18,7 +18,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     public GameObject sBar;
     [SerializeField]
     private GameObject option;
-    private bool isInteracting = false;
     [SerializeField]
     private InteractType interactType;
     [SerializeField]
@@ -126,7 +125,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
             rewarded = true;
         }
-        isInteracting = false;
 
         if (this.gameObject.tag == "Cage")
         {
@@ -136,7 +134,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
     public void Interact()
     {
-        isInteracting = true;
         selectedAnimationDone = false;
     }
     public void Shake()

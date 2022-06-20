@@ -1154,9 +1154,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5428119427405457592}
   - component: {fileID: 1145424671927293117}
+  - component: {fileID: 8591531973418401651}
   m_Layer: 0
   m_Name: Boze Gozer Riggable
-  m_TagString: Untagged
+  m_TagString: Boze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1203,3 +1204,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8591531973418401651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148600726607174421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96974047e3d6e4d4c98141e1ef17a94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1145424671927293117}

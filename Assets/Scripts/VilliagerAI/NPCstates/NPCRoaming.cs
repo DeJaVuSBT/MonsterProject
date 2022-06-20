@@ -9,7 +9,15 @@ public class NPCRoaming : NPCStateBase
     {
         if (CheckIfPlayerClose() && CheckIfMoralLow())
         {
-            SwitchState(_states.Chase());
+            
+            if (_manager.gameObject.tag=="MH")
+            {
+                SwitchState(_states.Chase()); 
+            }
+            else
+            {
+                SwitchState(_states.Flee());
+            }
         }
         if (_manager.Agent.remainingDistance<0.1f||_manager.Agent.pathStatus== NavMeshPathStatus.PathPartial|| _manager.Agent.pathStatus == NavMeshPathStatus.PathInvalid)
         {
@@ -34,7 +42,6 @@ public class NPCRoaming : NPCStateBase
     public override void UpdateState()
     {
         CheckIfSwitchState();
-        //Debug.Log(_manager.Agent.pathStatus);
     }
     Vector3 GetNextPos() {
         Vector3 nPos = new Vector3(Random.Range(-3f, 3f), 0, Random.Range(-3f,3f)) + _manager.OriginalPos;

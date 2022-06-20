@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1456273219717653059}
   m_Layer: 0
   m_Name: MonsterHunter
-  m_TagString: Untagged
+  m_TagString: MH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   senseRange: 6
+  roamingRange: 6
   emojiList:
   - {fileID: 5105872417998669553, guid: 4348cd616d90d3847aaa609c00b0a984, type: 3}
   - {fileID: 2600608309789540088, guid: 4348cd616d90d3847aaa609c00b0a984, type: 3}
@@ -56,6 +57,7 @@ MonoBehaviour:
   - {fileID: 2425206766623913628, guid: 4348cd616d90d3847aaa609c00b0a984, type: 3}
   - {fileID: -8399433550313846346, guid: 4348cd616d90d3847aaa609c00b0a984, type: 3}
   emojiHolder: {fileID: 1456273220132291525}
+  stonePrefab: {fileID: 8856240389909186808, guid: 7ad284c6c33bcdb4e81918971b99bb7f, type: 3}
 --- !u!1 &1456273220132291524
 GameObject:
   m_ObjectHideFlags: 0

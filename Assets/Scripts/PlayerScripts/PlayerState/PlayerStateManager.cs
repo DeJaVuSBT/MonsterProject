@@ -49,7 +49,8 @@ public class PlayerStateManager : MonoBehaviour
     private bool runing = false;
 
     private FormChanger fc;
-
+    [SerializeField]
+    public SoundManager soundManager;
     public Material OutLineA { get { return outlineA; } }
     public HungerBar HBar { get { return hBar; } set { hBar = value; } }
     public Transform CagePos { get { return cagePos; } }
@@ -68,6 +69,7 @@ public class PlayerStateManager : MonoBehaviour
     public bool Pushing { get { return pushing; } set { pushing = value; } }
 
     public FormChanger Getfc { get { return fc; } set { fc = value; } }
+
 
     [Header("Tutorials")]
     [SerializeField]
@@ -90,7 +92,6 @@ public class PlayerStateManager : MonoBehaviour
         states = new PlayerState(this);
         currentState = states.MoveState();
         currentState.EnterState();
-
         tutorialObj = GameObject.FindGameObjectWithTag("Tutorial");
         fc = GetComponentInChildren<FormChanger>();
 
@@ -196,6 +197,10 @@ public class PlayerStateManager : MonoBehaviour
             if (OutlinedTarget.transform.parent.tag == "temporary")
             {
                 InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 0.5f, 0.5f);
+            }
+            else if (OutlinedTarget.transform.parent.tag == "House")
+            {
+                InteractIcon.transform.position = new Vector3(0, 100f, 0);
             }
             else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 

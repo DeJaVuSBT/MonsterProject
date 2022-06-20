@@ -27,7 +27,6 @@ public class PlayerShakeState : PlayerBaseState
         _manager.Animator.SetBool("isShaking", true);
         _manager.PuzzleList = null;
         _manager.SwitchToEventInput();
-        _manager.InPut.EventInput.Button5.performed += Button5_performed => { currentInput = 5; Debug.Log("space"); };
         _manager.InPut.EventInput.Button5.performed += Button5_started => { currentInput = 5; Debug.Log("space"); };
         _manager.InPut.EventInput.Button4.performed += Button4_started => { currentInput = 4; Debug.Log("d");};
         _manager.InPut.EventInput.Button3.performed += Button3_started => { currentInput = 3; Debug.Log("a"); };
@@ -57,6 +56,7 @@ public class PlayerShakeState : PlayerBaseState
             AllInput.Add(currentInput);
             preInput = currentInput;
             counter++;
+            _manager.soundManager.PlaySound(SoundManager.Sound.TreeHit);
             _manager.Target.GetComponent<MoraEvents>().Shake();
             if (counter==1)
             {

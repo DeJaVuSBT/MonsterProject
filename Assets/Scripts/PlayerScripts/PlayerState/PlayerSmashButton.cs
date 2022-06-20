@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -22,17 +23,25 @@ public class PlayerSmashButton : PlayerBaseState
         _manager.Animator.SetBool("isHitting", true);
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(true);
         _manager.SwitchToEventInput();
-        _manager.InPut.EventInput.Button5.started += Button5_started => total+=counter*5;
+        _manager.InPut.EventInput.Button5.started += Button5_started;
         _manager.InPut.EventInput.Button4.started += Button4_started => puzzling = false;
         _manager.InPut.EventInput.Button3.started += Button3_started => puzzling = false;
         _manager.InPut.EventInput.Button2.started += Button2_started => puzzling = false;
         _manager.InPut.EventInput.Button1.started += Button1_started => puzzling = false;
-        _manager.InPut.EventInput.AllKey.started += AllKey_started => _manager.Target.GetComponent<MoraEvents>().Shake();
         _manager.showTutorial("smashOn" , true);
+
+    }
+
+    private void Button5_started(InputAction.CallbackContext obj)
+    {
+        _manager.Target.GetComponent<MoraEvents>().Shake();
+        total += counter * 5;
+        _manager.soundManager.PlaySound(SoundManager.Sound.TreeHit);
     }
 
     public override void ExitState()
     {
+        _manager.InPut.EventInput.Button5.started -= Button5_started;
         _manager.Animator.SetBool("isHitting", false);
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(false);
         _manager.SwitchToPlayerInput();
@@ -46,7 +55,6 @@ public class PlayerSmashButton : PlayerBaseState
     }
     private void CheckIfInputEnough()
     {
-        Debug.Log(total);
         total -= Time.deltaTime*20;
         if (puzzling ==true)
         {
@@ -60,9 +68,11 @@ public class PlayerSmashButton : PlayerBaseState
         else if(total>=80)
         {
             _manager.Target.GetComponent<Reward>().Reward();
-            Debug.Log("Passed");
             puzzling = false;
         }
+
+       
+
     }
 
 }

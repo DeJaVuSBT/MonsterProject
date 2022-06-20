@@ -13,6 +13,12 @@ TagManager:
   - temporary
   - CagePos
   - Cage
+  - House
+  - Boze
+  - MH
+  - BrunoRock
+  - Twin
+  - SM
   layers:
   - Default
   - TransparentFX

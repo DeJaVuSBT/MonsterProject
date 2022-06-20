@@ -69,7 +69,7 @@ public class DeedSwitch : MonoBehaviour
         {
             RemoveACard();
         }
-        if (cardList.Count > 2)
+        if (cardList.Count > 0)
         {
             int badCard = 0;
             int goodCard = 0;
@@ -155,6 +155,7 @@ public class DeedSwitch : MonoBehaviour
             {
 
                 RemoveACard();
+                Check();
                 if (!CheckIfTimeRemove())
                 {
                     isRemoving = false;

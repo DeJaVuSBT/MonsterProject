@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2570321153873227415}
-  - component: {fileID: 1442355768166064434}
-  - component: {fileID: 3738183008840504824}
   m_Layer: 0
   m_Name: Crops_destroyed
   m_TagString: Untagged
@@ -28,25 +26,58 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.63, y: 0.215, z: 0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7778888254986960039}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1442355768166064434
+--- !u!1 &6971564577243063837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7778888254986960039}
+  - component: {fileID: 6655179171334697730}
+  - component: {fileID: 8916851817316042696}
+  m_Layer: 0
+  m_Name: Farm_destroyed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7778888254986960039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971564577243063837}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.457, y: -0.194, z: -0.484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2570321153873227415}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6655179171334697730
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945439730268468269}
-  m_Mesh: {fileID: 1141555489591264234, guid: f603300939e647148ad12939a85e0a78, type: 3}
---- !u!23 &3738183008840504824
+  m_GameObject: {fileID: 6971564577243063837}
+  m_Mesh: {fileID: 1141555489591264234, guid: b03fb39e79cac614084f63ce2af4c37d, type: 3}
+--- !u!23 &8916851817316042696
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945439730268468269}
+  m_GameObject: {fileID: 6971564577243063837}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +90,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 762154acd4478364eab11ba514e6b66d, type: 2}
+  - {fileID: 2100000, guid: 2cbe05cd001e08f48bc1c36d39e0af9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

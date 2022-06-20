@@ -17,8 +17,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Jude scene for testing controller/NPC BACKUP.unity
     guid: 706e01ce83949c94ab0036477d61f27c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Exhibition_Build.unity
     guid: 3c0706012d389ae4c82cc4baa0d7d1e9
+  - enabled: 1
+    path: Assets/Scenes/Exhibition/RightScene David.unity
+    guid: b1bcd4be98a2e124e81051313159fdc9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a835bd22f345e014ebdf81108085645e, type: 2}

@@ -440,6 +440,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SystemInput",
+            "id": "a9f5e081-49a7-40c8-9e8b-041b22551b57",
+            "actions": [
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "3ff2095d-f7bf-4770-bc0f-3842e1f208ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Restart",
+                    "type": "Button",
+                    "id": "5b092acc-6393-4796-beba-cf8cebb3a279",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d5380a8f-d7c1-4f07-96d6-73b36eeaeb8c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c0b55ddb-6662-4125-8d1b-7a7cdaf178f7",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

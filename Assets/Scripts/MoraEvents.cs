@@ -112,7 +112,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
             if (this.gameObject.tag=="Cage")
             {
-                this.GetComponent<Animator>().SetBool("Open", true);
+                //do nothing
             }
             else
             {
@@ -128,7 +128,10 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         }
         isInteracting = false;
 
-        //TimerAction.Create(() => inputOn(), 2.0f);
+        if (this.gameObject.tag == "Cage")
+        {
+            this.GetComponent<Animator>().SetBool("Open", true);
+        }
     }
 
     public void Interact()

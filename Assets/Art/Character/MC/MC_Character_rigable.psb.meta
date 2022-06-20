@@ -1236,14 +1236,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 87
     mosaicPosition: {x: 0, y: 0}
   - name: Arm1
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 86
     mosaicPosition: {x: 0, y: 0}
   - name: NL_Hand1
@@ -1313,7 +1313,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 75
     mosaicPosition: {x: 0, y: 0}
   - name: NL_UpperArm2
@@ -1341,14 +1341,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 69
     mosaicPosition: {x: 0, y: 0}
   - name: Arm1
     spriteName: 
     isGroup: 1
     parentIndex: 15
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 68
     mosaicPosition: {x: 0, y: 0}
   - name: NR_Hand1
@@ -1418,7 +1418,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 15
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 57
     mosaicPosition: {x: 0, y: 0}
   - name: NR_UpperArm2
@@ -1446,7 +1446,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 51
     mosaicPosition: {x: 0, y: 0}
   - name: G_Halo
@@ -1460,7 +1460,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 30
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 49
     mosaicPosition: {x: 0, y: 0}
   - name: G_Hand1
@@ -1530,7 +1530,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 30
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 38
     mosaicPosition: {x: 0, y: 0}
   - name: G_UpperArm2
@@ -1558,7 +1558,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 32
     mosaicPosition: {x: 0, y: 0}
   - name: E_Crown
@@ -1579,7 +1579,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 46
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 16
     mosaicPosition: {x: 0, y: 0}
   - name: E_Hand1
@@ -1628,7 +1628,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 46
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 9
     mosaicPosition: {x: 0, y: 0}
   - name: E_UpperArm2

@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  runSpeed: 8
-  walkSpeed: 4
+  runSpeed: 4.75
+  walkSpeed: 2.5
   interactRange: 1
   target: {fileID: 0}
   cagePos: {fileID: 0}
@@ -87,6 +87,7 @@ MonoBehaviour:
   outlineA: {fileID: 2100000, guid: ce12092d1630f5344804a67b84f1e41c, type: 2}
   soundManager: {fileID: 4141740650556594612}
   tutorialObj: {fileID: 0}
+  destroyCage: 0
 --- !u!1 &1616571178370785922
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,11 +164,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundAudioClips:
   - sound: 1
-    withTimer: 0
     a:
     - {fileID: 8300000, guid: 72b927b993016b04db91bf640dd6f24f, type: 3}
     - {fileID: 8300000, guid: b85f6b60d3c819545912bc21a53dba42, type: 3}
     - {fileID: 8300000, guid: b0da178564a0e3844ba0c5ff10a9cc34, type: 3}
+  - sound: 0
+    a:
+    - {fileID: 8300000, guid: 936ae3aba8f6f2e4fbab92ec09e08c2c, type: 3}
+  - sound: 2
+    a:
+    - {fileID: 8300000, guid: 72b927b993016b04db91bf640dd6f24f, type: 3}
+  - sound: 2
+    a:
+    - {fileID: 8300000, guid: b5a9b43e3c29e3a46b46fddfa4394170, type: 3}
+  - sound: 3
+    a:
+    - {fileID: 8300000, guid: 0faaff25aee844a44bcc0658d5384b30, type: 3}
+  - sound: 4
+    a:
+    - {fileID: 8300000, guid: 4f308259357d0ab4f839b7daeb1f3541, type: 3}
+  - sound: 5
+    a:
+    - {fileID: 8300000, guid: aeee0eb84b425304aaffba7b31ec73c4, type: 3}
+  - sound: 6
+    a:
+    - {fileID: 8300000, guid: acf9d06bf35bd2947b627bd4bc158664, type: 3}
+  - sound: 9
+    a:
+    - {fileID: 8300000, guid: e036848e8ef8af040acae32488cf8b4c, type: 3}
+  - sound: 7
+    a:
+    - {fileID: 8300000, guid: 522d3e069093bee4ea356b971096c0fe, type: 3}
+    - {fileID: 8300000, guid: 023361bcba02afe4b91deb4e673b718d, type: 3}
+    - {fileID: 8300000, guid: baeae0bc4473ab14298550d87acd54b3, type: 3}
+  - sound: 8
+    a:
+    - {fileID: 8300000, guid: d880e9e14224b374ebaf4c34a290c957, type: 3}
 --- !u!114 &4141740650556594612
 MonoBehaviour:
   m_ObjectHideFlags: 0

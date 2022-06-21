@@ -21,19 +21,78 @@ public class SoundManager : MonoBehaviour
         BushHit,
         BushShake,
         Angle,
-        Eat
+        Eat,
+        Walking,
+        Runing
     }
+    private Dictionary<Sound, float> soundWithTimer;
 
+    private void Awake()
+    {
+        soundWithTimer = new Dictionary<Sound, float>();
+        soundWithTimer[Sound.Walking] = 0f;
+        soundWithTimer[Sound.Runing] = 0f;
+    }
     public void PlaySound(Sound sound)
     {
-        if (temp==null)
+        if (CanPlay(sound))
         {
-            temp = new GameObject("Sound");
-            audioSource = temp.AddComponent<AudioSource>();
+            if (temp == null)
+            {
+                temp = new GameObject("Sound");
+                audioSource = temp.AddComponent<AudioSource>();
+            }
+            audioSource.volume = GetAudioVolum(sound);
+            audioSource.PlayOneShot(GetAudioClip(sound));
         }
-        audioSource.PlayOneShot(GetAudioClip(sound));
-    }
 
+    }
+    private bool CanPlay(Sound sound) {
+        switch (sound) {
+            default:
+                return true;
+            case Sound.Walking:
+                if (soundWithTimer.ContainsKey(sound))
+                {
+                    float prePlay = soundWithTimer[sound];
+                    float timeGap = 0.7f;
+                    if (prePlay + timeGap<Time.time)
+                    {
+                        soundWithTimer[sound] = Time.time;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            case Sound.Runing:
+                if (soundWithTimer.ContainsKey(sound))
+                {
+                    float prePlay = soundWithTimer[sound];
+                    float timeGap = 0.55f;
+                    if (prePlay + timeGap < Time.time)
+                    {
+                        soundWithTimer[sound] = Time.time;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+
+        }
+    
+    }
 
     private AudioClip GetAudioClip(Sound sound)
     {
@@ -46,6 +105,18 @@ public class SoundManager : MonoBehaviour
         }
         Debug.LogError("Sound" + sound + "not found~");
         return null;
+    }
+    private float GetAudioVolum(Sound sound)
+    {
+        foreach (SoundHolder.SoundAudioClip clip in soundHolder.soundAudioClips)
+        {
+            if (clip.sound == sound)
+            {
+                return clip.volum;
+            }
+        }
+        Debug.LogError("Sound" + sound + "not found~");
+        return 1;
     }
 
 }

@@ -89,6 +89,7 @@ public class PlayerMoveState : PlayerBaseState
         if (_manager.MoveDir != Vector3.zero)
         {
             _manager.Animator.SetBool("IsWalking", true);
+            _manager.soundManager.PlaySound(SoundManager.Sound.Walking);
 
         }
         else { _manager.Animator.SetBool("IsWalking", false); }

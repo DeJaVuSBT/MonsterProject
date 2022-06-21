@@ -18,7 +18,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     public GameObject sBar;
     [SerializeField]
     private GameObject option;
-    private bool isInteracting = false;
     [SerializeField]
     private InteractType interactType;
     [SerializeField]
@@ -36,6 +35,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     GameObject badHighlight , goodHighlight;
 
     PlayerStateManager _manager;
+    SoundManager sm;
     enum InteractType
     {
         Shaking,
@@ -77,6 +77,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         option = GameObject.FindGameObjectWithTag("Option");
         badHighlight = GameObject.Find("badHighlight");
         goodHighlight = GameObject.Find("goodHighlight");
+        sm = GameObject.FindGameObjectWithTag("SM").GetComponent<SoundManager>();
         //_manager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateManager>();
 
     }
@@ -96,23 +97,24 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
             if (GoodDeedorBadDeed)
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
-                hBar.Add(hunger);
+                GainFood();
                 destroyAtTheEnd = false;
             }
             else
             {
                 newMbar.GetComponent<DeedSwitch>().AddCard(GoodDeedorBadDeed);
-                hBar.Add(hunger);   
+                GainFood();
             }
 
             if (destroyAtTheEnd)
             {
+                sm.PlaySound(SoundManager.Sound.TreeFall);
                 Destroy(this.gameObject);
             }
 
             if (this.gameObject.tag=="Cage")
             {
-                this.GetComponent<Animator>().SetBool("Open", true);
+                //do nothing
             }
             else
             {
@@ -126,14 +128,23 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
             rewarded = true;
         }
-        isInteracting = false;
 
-        //TimerAction.Create(() => inputOn(), 2.0f);
+        if (this.gameObject.tag == "Cage")
+        {
+            this.GetComponent<Animator>().SetBool("Open", true);
+        }
+    }
+
+    private void GainFood() {
+        if (hunger!=0)
+        {
+            hBar.Add(hunger);
+
+        }
     }
 
     public void Interact()
     {
-        isInteracting = true;
         selectedAnimationDone = false;
     }
     public void Shake()
@@ -142,6 +153,27 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         shaketime = 0;
     }
 
+    public void SoundWhenShake() {
+        if (this.gameObject.tag=="Tree")
+        {
+            sm.PlaySound(SoundManager.Sound.TreeShake);
+        }
+        else if (this.gameObject.tag == "temporary")
+        {
+            sm.PlaySound(SoundManager.Sound.BushShake);
+        }
+
+    }
+    public void SoundWhenHit() {
+        if (this.gameObject.tag == "Tree")
+        {
+            sm.PlaySound(SoundManager.Sound.TreeHit);
+        }
+        else if (this.gameObject.tag == "temporary")
+        {
+            sm.PlaySound(SoundManager.Sound.BushHit);
+        }
+    }
     public void ShowOption()
     {
         option.SetActive(true);

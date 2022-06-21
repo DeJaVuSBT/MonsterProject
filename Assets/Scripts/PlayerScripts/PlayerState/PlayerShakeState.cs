@@ -8,10 +8,8 @@ public class PlayerShakeState : PlayerBaseState
     private int preInput = 0;
     private List<int> AllInput = new List<int>();
     private int counter = 0;
-    //private int[] puzzleList=null;
     private bool puzzling = true;
     public PlayerShakeState(PlayerStateManager manager, PlayerState states) : base(manager, states) { }
-    GameObject tutObj;
 
     public override void CheckIfSwitchState()
     {
@@ -56,7 +54,7 @@ public class PlayerShakeState : PlayerBaseState
             AllInput.Add(currentInput);
             preInput = currentInput;
             counter++;
-            _manager.soundManager.PlaySound(SoundManager.Sound.TreeHit);
+            _manager.Target.GetComponent<MoraEvents>().SoundWhenShake();
             _manager.Target.GetComponent<MoraEvents>().Shake();
             if (counter==1)
             {

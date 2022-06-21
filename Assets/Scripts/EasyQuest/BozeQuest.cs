@@ -11,17 +11,11 @@ public class BozeQuest : MonoBehaviour
     GameObject box;
     bool complete = false;
     public int Counter { get { return counter; } set { counter = value; } }
-    void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (counter >=5 && !complete)
         {
-            //animation
-
+            animator.SetBool("Complete", true);
             box.SetActive(false);
             TimerAction.Create(() => Reset(), 50f);
             complete = true;
@@ -30,9 +24,9 @@ public class BozeQuest : MonoBehaviour
 
      private void Reset()
     {
-        //rock back
         counter = 0;
         complete = false;
+        animator.SetBool("Complete", true);
     }
 
 private void OnTriggerEnter(Collider other)

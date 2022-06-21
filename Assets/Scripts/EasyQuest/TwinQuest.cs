@@ -11,17 +11,13 @@ public class TwinQuest : MonoBehaviour
     bool complete=false;
     bool collected = false;
     public bool GetCandy { set { collected = value; } }
-    void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (collected&& !complete)
         {
             //animation
-
+            animator.SetBool("Complete", true);
+            animator1.SetBool("Complete", true);
             box.SetActive(false);
             candyBag.SetActive(false);
             TimerAction.Create(() => Reset(), 50f);
@@ -31,10 +27,12 @@ public class TwinQuest : MonoBehaviour
 
     private void Reset()
     {
-        //rock back
         candyBag.SetActive(true);
+        collected = false;
         complete = false;
         //animation
+        animator.SetBool("Complete", false);
+        animator1.SetBool("Complete", false);
     }
 
     private void OnTriggerEnter(Collider other)

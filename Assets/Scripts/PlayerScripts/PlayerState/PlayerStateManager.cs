@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
+
 public class PlayerStateManager : MonoBehaviour
 {
     //state
@@ -78,8 +79,14 @@ public class PlayerStateManager : MonoBehaviour
     [Header("Tutorials")]
     [SerializeField]
     private GameObject tutorialObj;
-    public bool destroyCage = false;
-    private bool outOfCage = true; 
+
+    //cage variables
+    private bool destroyCage = false;
+    private bool outOfCage = true;
+    
+    private sceneManager _sceneManager;
+
+
     private void Awake()
     {
 
@@ -93,6 +100,7 @@ public class PlayerStateManager : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         Input = new InputPlayerControl();
         Input.PlayerInput.Enable();
+        Input.SystemInput.Enable();
         // some visual obj
         Interacticon = GameObject.Find("InteractIcon");
         //state  should be the last 
@@ -102,12 +110,16 @@ public class PlayerStateManager : MonoBehaviour
         tutorialObj = GameObject.FindGameObjectWithTag("Tutorial");
         fc = GetComponentInChildren<FormChanger>();
 
+        _sceneManager = GameObject.Find("SceneManager").GetComponent<sceneManager>();
     }
     private void Start()
     {
 
         tutorialObj.SetActive(false);
         firstSpawn();
+
+        Input.SystemInput.Escape.performed += _sceneManager.quitGame;
+        Input.SystemInput.Restart.performed += _sceneManager.restartGame;
     }
 
     public void firstSpawn()

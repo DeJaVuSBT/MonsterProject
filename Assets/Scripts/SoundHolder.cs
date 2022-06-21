@@ -15,7 +15,6 @@ public class SoundHolder : MonoBehaviour
         public SoundManager.Sound sound;
        // public AudioClip clip;
         public AudioClip clip (){  return a [Random.Range(0, a.Length)]; }
-        public bool withTimer;
         public AudioClip[] a;
 
   

@@ -53,6 +53,7 @@ public class PlayerRotateState : PlayerBaseState
             AllInput.Add(currentInput);
             preInput = currentInput;
             counter++;
+            _manager.Target.GetComponent<MoraEvents>().SoundWhenShake();
             _manager.Target.GetComponent<MoraEvents>().Shake();
             if (counter == 1)
             {

@@ -11,6 +11,10 @@ public class BrunoQuest : MonoBehaviour
     [SerializeField]
     GameObject box;
     private bool complete=false;
+    [SerializeField]
+    GameObject[] RocksList;
+    [SerializeField]
+    GameObject[] RockPosList;
 
     private int counter;
 
@@ -31,9 +35,9 @@ public class BrunoQuest : MonoBehaviour
         if (RockCount==0&& !complete)
         {
             //animation
-
+            animator.SetBool("Complete", true);
             box.SetActive(false);
-            TimerAction.Create(() => Reset(), 50f);
+            TimerAction.Create(() => Reset(), 5f);
             complete = true;
         }
     }
@@ -41,7 +45,15 @@ public class BrunoQuest : MonoBehaviour
     private void Reset()
     {
         //rock back
+        for (int i = 0; i < RocksList.Length; i++)
+        {
+            RocksList[i].transform.position = RockPosList[i].transform.position;
+        }
+
+
+        RockCount = 4;
         complete = false;
+        animator.SetBool("Complete", false);
     }
 
     private void OnTriggerEnter(Collider other)

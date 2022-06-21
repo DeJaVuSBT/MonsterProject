@@ -462,6 +462,54 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""SystemInput"",
+            ""id"": ""a9f5e081-49a7-40c8-9e8b-041b22551b57"",
+            ""actions"": [
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ff2095d-f7bf-4770-bc0f-3842e1f208ee"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Restart"",
+                    ""type"": ""Button"",
+                    ""id"": ""5b092acc-6393-4796-beba-cf8cebb3a279"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d5380a8f-d7c1-4f07-96d6-73b36eeaeb8c"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c0b55ddb-6662-4125-8d1b-7a7cdaf178f7"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Restart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -490,6 +538,10 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         m_EventInput_Button3 = m_EventInput.FindAction("Button3", throwIfNotFound: true);
         m_EventInput_Button4 = m_EventInput.FindAction("Button4", throwIfNotFound: true);
         m_EventInput_AllKey = m_EventInput.FindAction("AllKey", throwIfNotFound: true);
+        // SystemInput
+        m_SystemInput = asset.FindActionMap("SystemInput", throwIfNotFound: true);
+        m_SystemInput_Escape = m_SystemInput.FindAction("Escape", throwIfNotFound: true);
+        m_SystemInput_Restart = m_SystemInput.FindAction("Restart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -659,6 +711,47 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         }
     }
     public EventInputActions @EventInput => new EventInputActions(this);
+
+    // SystemInput
+    private readonly InputActionMap m_SystemInput;
+    private ISystemInputActions m_SystemInputActionsCallbackInterface;
+    private readonly InputAction m_SystemInput_Escape;
+    private readonly InputAction m_SystemInput_Restart;
+    public struct SystemInputActions
+    {
+        private @InputPlayerControl m_Wrapper;
+        public SystemInputActions(@InputPlayerControl wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Escape => m_Wrapper.m_SystemInput_Escape;
+        public InputAction @Restart => m_Wrapper.m_SystemInput_Restart;
+        public InputActionMap Get() { return m_Wrapper.m_SystemInput; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SystemInputActions set) { return set.Get(); }
+        public void SetCallbacks(ISystemInputActions instance)
+        {
+            if (m_Wrapper.m_SystemInputActionsCallbackInterface != null)
+            {
+                @Escape.started -= m_Wrapper.m_SystemInputActionsCallbackInterface.OnEscape;
+                @Escape.performed -= m_Wrapper.m_SystemInputActionsCallbackInterface.OnEscape;
+                @Escape.canceled -= m_Wrapper.m_SystemInputActionsCallbackInterface.OnEscape;
+                @Restart.started -= m_Wrapper.m_SystemInputActionsCallbackInterface.OnRestart;
+                @Restart.performed -= m_Wrapper.m_SystemInputActionsCallbackInterface.OnRestart;
+                @Restart.canceled -= m_Wrapper.m_SystemInputActionsCallbackInterface.OnRestart;
+            }
+            m_Wrapper.m_SystemInputActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Escape.started += instance.OnEscape;
+                @Escape.performed += instance.OnEscape;
+                @Escape.canceled += instance.OnEscape;
+                @Restart.started += instance.OnRestart;
+                @Restart.performed += instance.OnRestart;
+                @Restart.canceled += instance.OnRestart;
+            }
+        }
+    }
+    public SystemInputActions @SystemInput => new SystemInputActions(this);
     private int m_KeyBoardSchemeIndex = -1;
     public InputControlScheme KeyBoardScheme
     {
@@ -681,5 +774,10 @@ public partial class @InputPlayerControl : IInputActionCollection2, IDisposable
         void OnButton3(InputAction.CallbackContext context);
         void OnButton4(InputAction.CallbackContext context);
         void OnAllKey(InputAction.CallbackContext context);
+    }
+    public interface ISystemInputActions
+    {
+        void OnEscape(InputAction.CallbackContext context);
+        void OnRestart(InputAction.CallbackContext context);
     }
 }

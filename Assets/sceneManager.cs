@@ -20,10 +20,11 @@ public class sceneManager : MonoBehaviour
     public void quitGame(InputAction.CallbackContext obj)
     {
         Application.Quit();
+        /*
         if(EditorApplication.isPlaying)
         {
             EditorApplication.ExitPlaymode();
-        }
+        }*/
     }
     public void restartGame(InputAction.CallbackContext obj)
     {

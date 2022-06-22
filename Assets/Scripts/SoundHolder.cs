@@ -16,7 +16,8 @@ public class SoundHolder : MonoBehaviour
        // public AudioClip clip;
         public AudioClip clip (){  return a [Random.Range(0, a.Length)]; }
         public AudioClip[] a;
-
+        [Range(0,1)]
+        public float volum=1;
   
     }
 

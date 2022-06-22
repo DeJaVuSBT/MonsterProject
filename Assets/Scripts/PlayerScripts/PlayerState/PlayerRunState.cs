@@ -35,6 +35,10 @@ public class PlayerRunState : PlayerBaseState
 
         Vector2 moveVector = _manager.InPut.PlayerInput.Movement.ReadValue<Vector2>();
         _manager.MoveDir = new Vector3(moveVector.x, 0, moveVector.y);
+        if (_manager.MoveDir!=Vector3.zero)
+        {
+            _manager.soundManager.PlaySound(SoundManager.Sound.Runing);
+        }
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
 

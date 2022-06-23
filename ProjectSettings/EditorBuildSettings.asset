@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Scene 123 Andrei.unity
+    path: Assets/Scenes/Andrei/Scene 123 Andrei.unity
     guid: 1a5269f1e0d1ba940b3b6b7cb2a3227d
   - enabled: 0
     path: 

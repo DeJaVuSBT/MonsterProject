@@ -265,7 +265,6 @@ public class PlayerStateManager : MonoBehaviour
 
     public void cageDisappear() //Called in FixedUpdate
     {
-        Debug.Log("Cage Disappearing");
         //Check Distance from cage and plays the disappear animation
         if(Vector3.Distance(transform.position , cageObj.transform.position) > 2f)
         {

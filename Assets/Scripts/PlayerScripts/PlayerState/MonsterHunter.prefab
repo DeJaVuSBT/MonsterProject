@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 2425206766623913628, guid: 4348cd616d90d3847aaa609c00b0a984, type: 3}
   - {fileID: -8399433550313846346, guid: 4348cd616d90d3847aaa609c00b0a984, type: 3}
   emojiHolder: {fileID: 832668450302805242}
-  stonePrefab: {fileID: 8856240389909186808, guid: 7ad284c6c33bcdb4e81918971b99bb7f, type: 3}
+  stonePrefab: {fileID: 7911874932221921988, guid: 93f45643ccee19b43b5cb653304914aa, type: 3}
 --- !u!195 &2286565598287988781
 NavMeshAgent:
   m_ObjectHideFlags: 0

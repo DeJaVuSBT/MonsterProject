@@ -7,7 +7,7 @@ public class DeedSwitch : MonoBehaviour
 {
     public int timer = 10;
     [SerializeField]
-    private GameObject badP, generalP, goodP, bigCard;
+    private GameObject badP, generalP, goodP, bigCard, goodEffect, neutralEffect;
     [SerializeField]
     private GameObject cardPrefab;
     private Queue<GameObject> cardList = new Queue<GameObject>();
@@ -129,7 +129,10 @@ public class DeedSwitch : MonoBehaviour
 
     private void SwitchPNormal()
     {
+        goodEffect.SetActive(false);
+        neutralEffect.SetActive(true);
         badP.SetActive(false);
+        goodP.SetActive(false);
         generalP.SetActive(true);
         GoodOrBadEnding = 0;
         
@@ -137,6 +140,8 @@ public class DeedSwitch : MonoBehaviour
 
     private void SwitchPGood()
     {
+        neutralEffect.SetActive(false);
+        goodEffect.SetActive(true);
         goodP.SetActive(true);
         generalP.SetActive(false);
         GoodOrBadEnding = 2;

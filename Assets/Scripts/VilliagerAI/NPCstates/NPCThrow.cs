@@ -61,7 +61,6 @@ public class NPCThrow : NPCStateBase
             TimerAction.Create(() => _manager.Stone.SetActive(false), 2f);
             SwitchState(_states.Idle());
             nowthrow = false;
-
             _manager.Player.GetComponent<PlayerStateManager>().BeingCaught();
             TimerAction.Create(() => _manager.MBar.Reset(), 3f);
         }

@@ -148,7 +148,6 @@ public class PlayerMoveState : PlayerBaseState
             GameObject obj = ClosedColliderAroundArrow();
             if (PreObj != obj)
             {
-                Debug.Log("swaptargedt");
                 switched = false;
             }
             if (!switched)

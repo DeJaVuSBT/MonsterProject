@@ -162,7 +162,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         {
             sm.PlaySound(SoundManager.Sound.BushShake);
         }
-
     }
     public void SoundWhenHit() {
         if (this.gameObject.tag == "Tree")

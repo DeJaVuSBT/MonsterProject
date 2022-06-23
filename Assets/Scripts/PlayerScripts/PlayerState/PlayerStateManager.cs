@@ -228,6 +228,10 @@ public class PlayerStateManager : MonoBehaviour
             {
                 InteractIcon.transform.position = new Vector3(0, 100f, 0);
             }
+            else if (OutlinedTarget.transform.parent.tag == "Cage")
+            {
+                InteractIcon.transform.position = new Vector3(0, 100f, 0);
+            }
             else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 
 

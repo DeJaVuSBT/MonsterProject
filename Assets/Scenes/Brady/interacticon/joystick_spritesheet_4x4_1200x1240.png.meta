@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: c7c663c1e48742749ac697e23e2e81bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5433392942265081306
+    second: joystick_spritesheet_4x4_1200x1240_0
+  - first:
+      213: 4636591926048068992
+    second: joystick_spritesheet_4x4_1200x1240_1
+  - first:
+      213: 5545216409229280377
+    second: joystick_spritesheet_4x4_1200x1240_2
+  - first:
+      213: 7995804709599721681
+    second: joystick_spritesheet_4x4_1200x1240_3
+  - first:
+      213: 1360003742710970387
+    second: joystick_spritesheet_4x4_1200x1240_4
+  - first:
+      213: 2026689636124619450
+    second: joystick_spritesheet_4x4_1200x1240_5
+  - first:
+      213: 2118671977403959264
+    second: joystick_spritesheet_4x4_1200x1240_6
+  - first:
+      213: -7562283608240489768
+    second: joystick_spritesheet_4x4_1200x1240_7
+  - first:
+      213: -5810896192757663224
+    second: joystick_spritesheet_4x4_1200x1240_8
+  - first:
+      213: -4241707255671830264
+    second: joystick_spritesheet_4x4_1200x1240_9
+  - first:
+      213: -8498789735002613166
+    second: joystick_spritesheet_4x4_1200x1240_10
+  - first:
+      213: 8351483241186681944
+    second: joystick_spritesheet_4x4_1200x1240_11
+  - first:
+      213: -8979143822695627343
+    second: joystick_spritesheet_4x4_1200x1240_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_0
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2479
+        width: 959
+        height: 2481
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622ec2708e5b894b0800000000000000
+      internalID: -5433392942265081306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_1
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 3719
+        width: 961
+        height: 1241
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0851a808acb785040800000000000000
+      internalID: 4636591926048068992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_2
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 3719
+        width: 1066
+        height: 1094
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97447c2c1f094fc40800000000000000
+      internalID: 5545216409229280377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_3
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 3719
+        width: 961
+        height: 1196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d83611150ec6fe60800000000000000
+      internalID: 7995804709599721681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_4
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2479
+        width: 961
+        height: 1196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3183d79c234bfd210800000000000000
+      internalID: 1360003742710970387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_5
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 2479
+        width: 1095
+        height: 1094
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab27c277c7f302c10800000000000000
+      internalID: 2026689636124619450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_6
+      rect:
+        serializedVersion: 2
+        x: 3709
+        y: 2479
+        width: 978
+        height: 961
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7ccb030f8076d10800000000000000
+      internalID: 2118671977403959264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1239
+        width: 1081
+        height: 1210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8daf010002f5d0790800000000000000
+      internalID: -7562283608240489768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_8
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1239
+        width: 1065
+        height: 1094
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a720c33bc8b5fa0800000000000000
+      internalID: -5810896192757663224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_9
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1239
+        width: 961
+        height: 1211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809cb7879bd6225c0800000000000000
+      internalID: -4241707255671830264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_10
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 1239
+        width: 1089
+        height: 1094
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ade68b3cb3e0a80800000000000000
+      internalID: -8498789735002613166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 961
+        height: 682
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8546f8282cd66e370800000000000000
+      internalID: 8351483241186681944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joystick_spritesheet_4x4_1200x1240_12
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 0
+        width: 966
+        height: 592
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5851d444ca36380800000000000000
+      internalID: -8979143822695627343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

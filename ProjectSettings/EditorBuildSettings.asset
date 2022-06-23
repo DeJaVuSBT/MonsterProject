@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Exhibition_Build.unity
     guid: 3c0706012d389ae4c82cc4baa0d7d1e9
   - enabled: 1
-    path: Assets/Scenes/Exhibition/RightScene David.unity
+    path: Assets/Scenes/Brady/RightScene David.unity
     guid: b1bcd4be98a2e124e81051313159fdc9
   - enabled: 1
     path: Assets/Scenes/Exhibition/Latest Use this!!.unity

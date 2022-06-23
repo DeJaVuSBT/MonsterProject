@@ -20,9 +20,10 @@ public class UI_Animation : MonoBehaviour
             FoodAnim();
         }
 
-        void FoodAnim()
-        {
-            Instantiate(foodPop, mainCanvas.transform.position, Quaternion.identity);
-        }
+     
+    }
+    void FoodAnim()
+    {
+        Instantiate(foodPop, mainCanvas.transform.position, Quaternion.identity);
     }
 }

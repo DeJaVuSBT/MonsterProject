@@ -35,6 +35,7 @@ public class PlayerSmashButton : PlayerBaseState
     private void Button5_started(InputAction.CallbackContext obj)
     {
         _manager.Target.GetComponent<MoraEvents>().SoundWhenHit();
+        Debug.Log("SPacebar");
         _manager.Target.GetComponent<MoraEvents>().Shake();
         total += counter * 5;
         
@@ -45,7 +46,6 @@ public class PlayerSmashButton : PlayerBaseState
         _manager.InPut.EventInput.Button5.started -= Button5_started;
         _manager.Animator.SetBool("isHitting", false);
         _manager.Target.GetComponent<MoraEvents>().sBar.SetActive(false);
-        _manager.SwitchToPlayerInput();
         _manager.showTutorial("smashOn" , false);
     }
 

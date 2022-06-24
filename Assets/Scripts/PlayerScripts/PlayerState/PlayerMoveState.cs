@@ -34,36 +34,42 @@ public class PlayerMoveState : PlayerBaseState
 
         if (_manager.Target != null)
         {
-            if (_manager.InPut.PlayerInput.Interact.IsPressed())
+            if (!_manager.Target.GetComponent<MoraEvents>().interacted)
             {
-                if (!_manager.Target.GetComponent<MoraEvents>().doubleInteraction)
+
+
+                if (_manager.InPut.PlayerInput.Interact.IsPressed())
                 {
-                    _manager.Target.GetComponent<Interactable>().Interact();
-                    switch (_manager.Target.GetComponent<MoraEvents>().GetInteractType())
+                    if (!_manager.Target.GetComponent<MoraEvents>().doubleInteraction)
                     {
-                        case 0:
-                            SwitchState(_states.ShakeState());
-                            break;
-                        case 1:
-                            SwitchState(_states.RotateState());
-                            break;
-                        case 2:
-                            SwitchState(_states.PushState());
-                            break;
-                        case 3:
-                            SwitchState(_states.SmashState());
-                            break;
-                        default:
-                            break;
+                        _manager.Target.GetComponent<Interactable>().Interact();
 
+                        switch (_manager.Target.GetComponent<MoraEvents>().GetInteractType())
+                        {
+                            case 0:
+                                SwitchState(_states.ShakeState());
+                                break;
+                            case 1:
+                                SwitchState(_states.RotateState());
+                                break;
+                            case 2:
+                                SwitchState(_states.PushState());
+                                break;
+                            case 3:
+                                SwitchState(_states.SmashState());
+                                break;
+                            default:
+                                break;
+
+                        }
                     }
-                }
-                else
-                {
-                    _manager.Target.GetComponent<Interactable>().Interact();
-                    SwitchState(_states.OptionState());
-                }
+                    else
+                    {
+                        _manager.Target.GetComponent<Interactable>().Interact();
+                        SwitchState(_states.OptionState());
+                    }
 
+                }
             }
         }
         else if (_manager.Target == null)

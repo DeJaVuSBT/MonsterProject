@@ -18,7 +18,7 @@ public class SoundHolder : MonoBehaviour
         public AudioClip[] a;
         [Range(0,1)]
         public float volum=1;
-  
+        public bool loop;
     }
 
 

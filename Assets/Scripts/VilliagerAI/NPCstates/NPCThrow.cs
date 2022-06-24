@@ -52,14 +52,10 @@ public class NPCThrow : NPCStateBase
 
         if (t >= 1.0f)
         {
-            //finish throwing
-            Vector3 currPos1 = ThrowCurve.GetCurvePoint(p1, p2, p3, t);
-            Vector3 currPos2 = ThrowCurve.GetCurvePoint(p1, p2, p3, t - 0.1f);
-          //  Vector3 stoneEndVelocity = 10 * (currPos1 - currPos2);
-            _manager.Stone.GetComponent<Rigidbody>().velocity = Vector3.down*8;
+            _manager.Stone.GetComponent<Rigidbody>().velocity = Vector3.down*4;
             TimerAction.Create(() => _manager.Stone.GetComponent<Rigidbody>().velocity=Vector3.zero, 0.2f);
             TimerAction.Create(() => _manager.Stone.SetActive(false), 2f);
-            SwitchState(_states.Idle());
+            TimerAction.Create(() => SwitchState(_states.Idle()), 3f); 
             nowthrow = false;
             _manager.Player.GetComponent<PlayerStateManager>().BeingCaught();
             TimerAction.Create(() => _manager.MBar.Reset(), 3f);

@@ -18,7 +18,7 @@ public class DeedSwitch : MonoBehaviour
     private PlayerStateManager pm;
     private HorizontalLayoutGroup layoutGroup;
     SoundManager sm;
-
+    private bool demon;
     public int GoodEOrBadE { get { return GoodOrBadEnding; } }
     void Start()
     {
@@ -100,7 +100,15 @@ public class DeedSwitch : MonoBehaviour
             {
                 //neutral
                 SwitchPNormal();
-                pm.Getfc.SetType = FormChanger.UnitType.NL;
+                if (!pm.GetOldDir)
+                {
+                        pm.Getfc.SetType = FormChanger.UnitType.NL;
+                }
+                else
+                {
+                    pm.Getfc.SetType = FormChanger.UnitType.NR; 
+                }
+               
 
             }
         }
@@ -111,7 +119,12 @@ public class DeedSwitch : MonoBehaviour
         badP.SetActive(true);
         generalP.SetActive(false);
         GoodOrBadEnding = 1;
-        sm.PlaySound(SoundManager.Sound.Demon);
+        if (!demon)
+        {
+            sm.PlaySound(SoundManager.Sound.Demon);
+            demon = true;
+        }
+       
     }
 
     public void Reset()
@@ -125,6 +138,7 @@ public class DeedSwitch : MonoBehaviour
         }
         cardgbList.Clear();
         cardList.Clear();
+        demon = false;
     }
 
     private void SwitchPNormal()
@@ -135,7 +149,7 @@ public class DeedSwitch : MonoBehaviour
         goodP.SetActive(false);
         generalP.SetActive(true);
         GoodOrBadEnding = 0;
-        
+        demon = false;
     }
 
     private void SwitchPGood()

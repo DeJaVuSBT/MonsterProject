@@ -36,6 +36,7 @@ public class PlayerShakeState : PlayerBaseState
 
     public override void ExitState()
     {
+        _manager.soundManager.StopSound();
         _manager.Animator.SetBool("isShaking", false);
         _manager.SwitchToPlayerInput();
         _manager.PuzzleList = null;
@@ -54,11 +55,11 @@ public class PlayerShakeState : PlayerBaseState
             AllInput.Add(currentInput);
             preInput = currentInput;
             counter++;
-            _manager.Target.GetComponent<MoraEvents>().SoundWhenShake();
             _manager.Target.GetComponent<MoraEvents>().Shake();
             if (counter==1)
             {
                 CheckTheFirstInput();
+                _manager.soundManager.PlaySound(SoundManager.Sound.TreeShake);
             }
         }
     }

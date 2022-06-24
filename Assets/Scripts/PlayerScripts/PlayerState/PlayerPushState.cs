@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerPushState : PlayerBaseState
 {
@@ -8,17 +10,44 @@ public class PlayerPushState : PlayerBaseState
         Debug.Log("Push");
         _manager.Pushing = true;
         _manager.Animator.SetBool("isPushing", true);
+        
+        if (_manager.transform.position.x > _manager.Target.transform.position.x)
+        {
+            if (!_manager.GetOldDir)
+            {
+               _manager.Getfc.SetType = FormChanger.UnitType.NR;
+            }
+            _manager.transform.localScale = new Vector3(-1, 1, 1);
+            _manager.GetOldDir = true;
+        }
+        else
+        {
+            if (_manager.GetOldDir)
+            {
+                _manager.Getfc.SetType = FormChanger.UnitType.NL;
+            }
+            _manager.transform.localScale = new Vector3(1, 1, 1);
+            _manager.GetOldDir = false;
+        }
+        _manager.Target.GetComponent<MoraEvents>().SoundWhenDrag();
         _manager.Target.transform.SetParent(_manager.transform);
-        _manager.InPut.PlayerInput.Interact.canceled += a => _manager.Pushing = false;
+        _manager.InPut.PlayerInput.Interact.canceled += a;
         //_manager.startTutorial(0);
+    }
+
+    private void a(InputAction.CallbackContext obj)
+    {
+         _manager.Pushing = false;
+        _manager.Animator.SetBool("isPulling", false);
+        _manager.Animator.SetBool("isPushing", false);
     }
 
     public override void ExitState()
     {
         _manager.Target.transform.SetParent(null);
-        _manager.Animator.SetBool("isPulling", false);
-        _manager.Animator.SetBool("isPushing", false);
+        _manager.InPut.PlayerInput.Interact.canceled -= a;
         //_manager.endTutorial(2);
+        _manager.soundManager.StopSound();
     }
 
     public override void CheckIfSwitchState()
@@ -44,18 +73,37 @@ public class PlayerPushState : PlayerBaseState
         _manager.RB.velocity = _manager.MoveDir * _manager.MoveSpeed;
     }
     private void Animation() {
-        if (_manager.Animator.GetBool("isPushing"))
+        if (_manager.GetOldDir)
         {
-            if (_manager.MoveDir.x < 0)
+            if (_manager.Animator.GetBool("isPushing"))
             {
-                _manager.Animator.SetBool("isPulling", true);
+                if (_manager.MoveDir.x < 0)
+                {
+                    _manager.Animator.SetBool("isPulling", false);
 
+                }
+                else { _manager.Animator.SetBool("isPulling", true); }
             }
-            else { _manager.Animator.SetBool("isPulling", false); }
+            else
+            {
+                _manager.Animator.SetBool("isPulling", false);
+            }
         }
         else
         {
-            _manager.Animator.SetBool("isPulling", false);
+            if (_manager.Animator.GetBool("isPushing"))
+            {
+                if (_manager.MoveDir.x < 0)
+                {
+                    _manager.Animator.SetBool("isPulling", true);
+
+                }
+                else { _manager.Animator.SetBool("isPulling", false); }
+            }
+            else
+            {
+                _manager.Animator.SetBool("isPulling", false);
+            }
         }
     }
   

@@ -12,6 +12,7 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
     public bool doubleInteraction = false;
     private int selected=0;
     public bool selectedAnimationDone = false;
+    public bool interacted=false;
     public bool destroyAtTheEnd = true;
     private bool rewarded = false;
     public HungerBar hBar;
@@ -108,13 +109,14 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
 
             if (destroyAtTheEnd)
             {
-                sm.PlaySound(SoundManager.Sound.TreeFall);
-                Destroy(this.gameObject);
+                    sm.PlaySound(SoundManager.Sound.TreeFall);
+                    Destroy(this.gameObject);
+              
             }
 
             if (this.gameObject.tag=="Cage")
             {
-                //do nothing
+                interacted = true;
             }
             else
             {
@@ -153,16 +155,6 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         shaketime = 0;
     }
 
-    public void SoundWhenShake() {
-        if (this.gameObject.tag=="Tree")
-        {
-            sm.PlaySound(SoundManager.Sound.TreeShake);
-        }
-        else if (this.gameObject.tag == "temporary")
-        {
-            sm.PlaySound(SoundManager.Sound.BushShake);
-        }
-    }
     public void SoundWhenHit() {
         if (this.gameObject.tag == "Tree")
         {
@@ -172,6 +164,21 @@ public class MoraEvents : MonoBehaviour, Interactable, Reward
         {
             sm.PlaySound(SoundManager.Sound.BushHit);
         }
+        else if (gameObject.tag == "Cage") {
+            sm.PlaySound(SoundManager.Sound.CageHit);
+        }
+    }
+    public void SoundWhenDrag()
+    {
+        if (this.gameObject.tag == "BrunoRock")
+        {
+            sm.PlaySound(SoundManager.Sound.RockDrag);
+        }
+        else if (this.gameObject.tag == "Log")
+        {
+            sm.PlaySound(SoundManager.Sound.LogDrag);
+        }
+
     }
     public void ShowOption()
     {

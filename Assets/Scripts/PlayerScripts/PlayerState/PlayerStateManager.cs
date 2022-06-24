@@ -49,10 +49,14 @@ public class PlayerStateManager : MonoBehaviour
     private bool pushing = false;
     int[] puzzleList;
     private bool runing = false;
-
+    //left true right false
+    private bool oldDir=false;
+    private bool outCage = false;
+    public bool OutCage { get { return outCage; } set { outCage = value; } }
     private FormChanger fc;
     [SerializeField]
     public SoundManager soundManager;
+    public bool GetOldDir { get { return oldDir; } set { oldDir = value; } }
     public Material OutLineA { get { return outlineA; } }
     public HungerBar HBar { get { return hBar; } set { hBar = value; } }
     public Transform CagePos { get { return cagePos; } }
@@ -109,7 +113,7 @@ public class PlayerStateManager : MonoBehaviour
         currentState.EnterState();
         tutorialObj = GameObject.FindGameObjectWithTag("Tutorial");
         fc = GetComponentInChildren<FormChanger>();
-
+        Getfc.SetType = FormChanger.UnitType.NR;
         _sceneManager = GameObject.Find("SceneManager").GetComponent<sceneManager>();
     }
     private void Start()
@@ -168,35 +172,42 @@ public class PlayerStateManager : MonoBehaviour
     }
     private void flipSprite()
     {
-        if (pushing)
+
+        if (!pushing)
         {
             //maybe something
+        
+         if (fc.SetType==FormChanger.UnitType.NL || fc.SetType == FormChanger.UnitType.NR)
+        {
+            if (!oldDir)
+            {
+                fc.SetType = FormChanger.UnitType.NL;
+            }
+            if (oldDir)
+            {
+                fc.SetType = FormChanger.UnitType.NR;
+            }
+
+        }
+
+        if (moveDir.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+
+            oldDir = true;
+
+        }
+        else if (moveDir.x == 0)
+        {
+
         }
         else
         {
-            if (moveDir.x < 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-                if (fc.SetType== FormChanger.UnitType.NL)
-                {
-                    fc.SetType = FormChanger.UnitType.NR;
-                }
-                
-            }
-            else if (moveDir.x == 0)
-            {
-
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-                if (fc.SetType == FormChanger.UnitType.NR)
-                {
-                    fc.SetType = FormChanger.UnitType.NL;
-                }
-               
-            }
+            transform.localScale = new Vector3(1, 1, 1);
+            oldDir = false;
         }
+        }
+
 
     }
 
@@ -230,7 +241,7 @@ public class PlayerStateManager : MonoBehaviour
             }
             else if (OutlinedTarget.transform.parent.tag == "Cage")
             {
-                InteractIcon.transform.position = new Vector3(0, 100f, 0);
+                InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(0.1f,3, 0f);
             }
             else { InteractIcon.transform.position = OutlinedTarget.transform.parent.position + new Vector3(-0.5f, 2, 0.5f); }
 

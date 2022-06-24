@@ -24,10 +24,6 @@ public class NPCManager : MonoBehaviour
     private const int lowMoral=20;
     [SerializeField]
     private const int highMoral = 75;
-    [SerializeField]
-    private Sprite[] emojiList;
-    [SerializeField]
-    private SpriteRenderer emojiHolder;
     //throwstone setup
     public GameObject stonePrefab;
     private GameObject stone;
@@ -52,21 +48,19 @@ public class NPCManager : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
         animator = GetComponentInChildren<Animator>();
-        emojiHolder.gameObject.SetActive(false);
         agent = GetComponent<NavMeshAgent>();
-        stone = Instantiate(stonePrefab);
-        stone.SetActive(false);
+        if (this.gameObject.tag=="MH")
+        {
+            stone = Instantiate(stonePrefab);
+            stone.SetActive(false);
+        }
         //initial state
         originalPos = transform.position;
         states = new NPCStates(this);
         currentState = states.Idle();
         currentState.EnterState();
         preX = this.transform.position.x;
-    }
-    public void ShowEmotion(int emoji) {
-        emojiHolder.sprite = emojiList[emoji];
-        emojiHolder.gameObject.SetActive(true);
-        TimerAction.Create(() => emojiHolder.gameObject.SetActive(false), Random.Range(1.5f,2.5f));
+    
     }
     private void filpSprite()
     {

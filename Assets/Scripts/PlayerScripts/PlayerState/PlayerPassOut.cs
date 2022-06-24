@@ -21,11 +21,12 @@ public class PlayerPassOut : PlayerBaseState
 
 
     private void CutScene() {
-        CinematicBars.Show_Static(4000, 2f);
+        CinematicBars.Show_Static(4000, 1f);
         TimerAction.Create(() => _manager.Animator.SetBool("isDying", false), 2f);
         TimerAction.Create(() => _manager.CageObj.GetComponent<Animator>().SetBool("Open", false), 2f);
+        TimerAction.Create(() => _manager.CageObj.GetComponent<MoraEvents>().interacted=false, 2f);
         TimerAction.Create(() => _manager.transform.position = _manager.CagePos.position, 2f);
-        TimerAction.Create(() => CinematicBars.Hide_Static(2f), 2f);
+        TimerAction.Create(() => CinematicBars.Hide_Static(1f), 2f);
         TimerAction.Create(() => SwitchState(_states.MoveState()), 2f);
         TimerAction.Create(() => _manager.OutOfCage = true , 2f);
     }

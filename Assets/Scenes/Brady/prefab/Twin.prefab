@@ -316,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7175141198133479682}
   - component: {fileID: 6906738036590371636}
+  - component: {fileID: 5153806193905916317}
   m_Layer: 0
   m_Name: Twin
   m_TagString: Untagged
@@ -355,8 +356,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candyBag: {fileID: 5240049858528123050}
   box: {fileID: 4751026092759465856}
+  bagUI: {fileID: 1274973895363543824, guid: 0f835037f9f33ac46868e4aafc624355, type: 3}
   animator: {fileID: 3916756368862945452}
   animator1: {fileID: 7039642058081241990}
+--- !u!65 &5153806193905916317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335404133428866675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &533976747194166593
 PrefabInstance:
   m_ObjectHideFlags: 0

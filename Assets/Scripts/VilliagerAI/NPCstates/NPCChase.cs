@@ -17,7 +17,6 @@ public class NPCChase : NPCStateBase
     public override void EnterState()
     {
         Debug.Log("AI Chasing");
-        _manager.ShowEmotion(7);
         //spot player animation
         _manager.Animator.SetBool("IsSpotting", true);
         //wait animationdone

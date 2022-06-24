@@ -23,7 +23,10 @@ public class SoundManager : MonoBehaviour
         Angle,
         Eat,
         Walking,
-        Runing
+        Runing,
+        CageHit,
+        LogDrag,
+        RockDrag
     }
     private Dictionary<Sound, float> soundWithTimer;
 
@@ -43,9 +46,25 @@ public class SoundManager : MonoBehaviour
                 audioSource = temp.AddComponent<AudioSource>();
             }
             audioSource.volume = GetAudioVolum(sound);
-            audioSource.PlayOneShot(GetAudioClip(sound));
+            if (IfIsLoop(sound))
+            {
+                audioSource.loop=true;
+                audioSource.clip = GetAudioClip(sound);
+                audioSource.Play();
+            }
+            else
+            {
+                audioSource.loop = false;
+                audioSource.PlayOneShot(GetAudioClip(sound));
+            }
+           
         }
 
+    }
+
+    public void StopSound()
+    {
+        audioSource.Stop();
     }
     private bool CanPlay(Sound sound) {
         switch (sound) {
@@ -89,6 +108,7 @@ public class SoundManager : MonoBehaviour
                 {
                     return false;
                 }
+            
 
         }
     
@@ -117,6 +137,18 @@ public class SoundManager : MonoBehaviour
         }
         Debug.LogError("Sound" + sound + "not found~");
         return 1;
+    }
+    private bool IfIsLoop(Sound sound)
+    {
+        foreach (SoundHolder.SoundAudioClip clip in soundHolder.soundAudioClips)
+        {
+            if (clip.sound == sound)
+            {
+                return clip.loop;
+            }
+        }
+        Debug.LogError("Sound" + sound + "not found~");
+        return false;
     }
 
 }

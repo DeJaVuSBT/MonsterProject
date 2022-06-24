@@ -13,8 +13,7 @@ public class BrunoQuest : MonoBehaviour
     private bool complete=false;
     [SerializeField]
     GameObject[] RocksList;
-    [SerializeField]
-    GameObject[] RockPosList;
+    Vector3[] RockPosList=new Vector3[4];
 
     private int counter;
 
@@ -29,6 +28,10 @@ public class BrunoQuest : MonoBehaviour
     {
         RockCount = 4;
         box.SetActive(false);
+        for (int i = 0; i < RockPosList.Length; i++)
+        {
+            RockPosList[i] = RocksList[i].transform.position;
+        }
     }
     private void Update()
     {
@@ -47,7 +50,7 @@ public class BrunoQuest : MonoBehaviour
         //rock back
         for (int i = 0; i < RocksList.Length; i++)
         {
-            RocksList[i].transform.position = RockPosList[i].transform.position;
+            RocksList[i].transform.position = RockPosList[i];
         }
 
 

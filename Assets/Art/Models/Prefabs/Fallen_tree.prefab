@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6297283732088118700}
   m_Layer: 0
   m_Name: Fallen_tree
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   GoodDeedorBadDeed: 1
   doubleInteraction: 0
   selectedAnimationDone: 0
+  interacted: 0
   destroyAtTheEnd: 1
   hBar: {fileID: 0}
   sBar: {fileID: 0}
